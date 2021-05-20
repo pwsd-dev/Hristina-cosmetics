@@ -1,1 +1,2 @@
-# Hristina-cosmetics
+# template
+template for start project

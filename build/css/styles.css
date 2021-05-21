@@ -469,6 +469,28 @@ a {
   position: relative;
 }
 
+.page__btn_2 {
+  cursor: pointer;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
+  text-decoration: none;
+  height: 68px;
+  font-size: 20px;
+  line-height: 30px;
+  font-family: "Montserrat-SemiBold";
+  font-size: 14px;
+  border: transparent;
+  width: 200px;
+  height: 51px;
+  color: #fff;
+  background: transparent;
+  position: relative;
+}
+
 .header .bg-grey {
   background-color: #f6f6f6;
   padding: 11px 0;
@@ -996,6 +1018,119 @@ a {
   left: 52px;
   top: 50%;
   z-index: 100;
+}
+
+.about-second {
+  padding-bottom: 120px;
+}
+
+.about-second .about-second-wrapper {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+}
+
+.about-second .about-second-wrapper .left {
+  width: 564px;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-pack: center;
+          justify-content: center;
+}
+
+.about-second .about-second-wrapper .left .page__title-h2 {
+  margin: 15px 0 70px 0;
+  position: relative;
+}
+
+.about-second .about-second-wrapper .left .page__title-h2::after {
+  content: '';
+  width: 68px;
+  height: 1px;
+  background-color: #9ca896;
+  position: absolute;
+  top: 90px;
+  left: 0;
+}
+
+.about-second .about-second-wrapper .left .page__text {
+  margin-bottom: 30px;
+}
+
+.about-second .about-second-wrapper .left .button {
+  position: relative;
+  width: 200px;
+  height: 60px;
+}
+
+.about-second .about-second-wrapper .left .button:hover .bg-button {
+  -webkit-transform: translate(5%, 5%);
+          transform: translate(5%, 5%);
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+.about-second .about-second-wrapper .left .button .page__btn_1 {
+  position: relative;
+  color: #69755d;
+}
+
+.about-second .about-second-wrapper .left .button .page__btn_1::after {
+  content: '';
+  position: absolute;
+  width: 98%;
+  height: 1px;
+  background-color: #9ca896;
+  left: -5px;
+  top: -6px;
+}
+
+.about-second .about-second-wrapper .left .button .page__btn_1::before {
+  content: '';
+  position: absolute;
+  width: 98%;
+  height: 1px;
+  background-color: #9ca896;
+  left: -5px;
+  bottom: 6px;
+}
+
+.about-second .about-second-wrapper .left .button .page__btn_1 span {
+  position: relative;
+}
+
+.about-second .about-second-wrapper .left .button .page__btn_1 span::before {
+  content: '';
+  position: absolute;
+  height: 50px;
+  width: 1px;
+  background-color: #9ca896;
+  left: -62px;
+  top: -16px;
+}
+
+.about-second .about-second-wrapper .left .button .page__btn_1 span::after {
+  content: '';
+  position: absolute;
+  height: 50px;
+  width: 1px;
+  background-color: #9ca896;
+  right: -48.5px;
+  top: -16px;
+}
+
+.about-second .about-second-wrapper .left .button .bg-button {
+  background-color: #e9ebe7;
+  width: 200px;
+  height: 53px;
+  margin: 0 auto;
+  position: absolute;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
 }
 
 @media screen and (max-width: 1920px) {

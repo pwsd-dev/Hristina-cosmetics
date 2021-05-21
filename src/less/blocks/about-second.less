@@ -1,0 +1,115 @@
+.about-second {
+    padding-bottom: 120px;
+    .about-second-wrapper {
+        display: flex;
+        justify-content: space-between;
+        
+        .left {
+            width: 564px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            .page__title-h2 {
+                margin: 15px 0 70px 0;
+                position: relative;
+            
+                &::after {
+                    content: '';
+                    width: 68px;
+                    height: 1px;
+                    background-color: #9ca896;
+                    position: absolute;
+                    top: 90px;
+                    left: 0;
+                }
+            }
+
+            .page__text {
+                margin-bottom: 30px;
+            }
+
+            .button {
+                position: relative;
+                width: 200px;
+                height: 60px;
+                // margin: 0 auto;
+                &:hover {
+                  .bg-button {
+                    transform: translate(5%, 5%);
+                    transition: .5s ease-in-out;
+                  }
+                }
+          
+                .page__btn_1 {
+                  position: relative;
+
+                  color: #69755d;
+                  &::after {
+                    content: '';
+                    position: absolute;
+                    width: 98%;
+                    height: 1px;
+                    background-color: #9ca896;
+                    left: -5px;
+                    top: -6px;
+                  }
+          
+                  &::before {
+                    content: '';
+                    position: absolute;
+                    width: 98%;
+                    height: 1px;
+                    background-color: #9ca896;
+                    left: -5px;
+                    bottom: 6px;
+                  }
+          
+          
+                  span {
+                    position: relative;
+                    &::before {
+                      content: '';
+                      position: absolute;
+                      height: 50px;
+                      width: 1px;
+                      background-color: #9ca896;
+                      left: -62px;
+                      top: -16px;
+                    }
+                    
+                    &::after {
+                      content: '';
+                      position: absolute;
+                      height: 50px;
+                      width: 1px;
+                      background-color: #9ca896;
+                      right: -48.5px;
+                      top: -16px;
+                    }
+          
+                  }
+                }
+          
+                .bg-button {
+                 
+                  background-color: #e9ebe7;
+                  width: 200px;
+                  height: 53px;
+                  margin: 0 auto;
+                  position: absolute;
+                  transition: .5s ease;
+                  &:hover { 
+                    // transform: translate(5%,5%);
+                    // transition: .5s ease-in-out;
+                  }
+            
+                  
+                }
+              }
+        }
+        
+    }
+
+    
+}

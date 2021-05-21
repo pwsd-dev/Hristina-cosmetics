@@ -934,6 +934,17 @@ a {
 
 .leaders .leaders-top-wrapper .page__title-h2 {
   margin-bottom: 60px;
+  position: relative;
+}
+
+.leaders .leaders-top-wrapper .page__title-h2::after {
+  content: '';
+  position: absolute;
+  width: 68px;
+  height: 1px;
+  background-color: #9ca896;
+  bottom: -30px;
+  left: 37%;
 }
 
 .leaders .leaders-item-slider {
@@ -1124,6 +1135,195 @@ a {
 }
 
 .about-second .about-second-wrapper .left .button .bg-button {
+  background-color: #e9ebe7;
+  width: 200px;
+  height: 53px;
+  margin: 0 auto;
+  position: absolute;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.products {
+  position: relative;
+  padding-bottom: 90px;
+}
+
+.products .products-top-wrapper {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-align: center;
+          align-items: center;
+}
+
+.products .products-top-wrapper .page__title-h2 {
+  position: relative;
+  margin-bottom: 60px;
+}
+
+.products .products-top-wrapper .page__title-h2::after {
+  content: '';
+  position: absolute;
+  width: 68px;
+  height: 1px;
+  background-color: #9ca896;
+  bottom: -30px;
+  left: 37%;
+}
+
+.products .products-item-slider {
+  background: transparent;
+  position: relative;
+  margin-bottom: 60px;
+}
+
+.products .products-item-slider .slick-list {
+  overflow: hidden;
+}
+
+.products .products-item-slider .slick-track {
+  display: -webkit-box;
+  display: flex;
+}
+
+.products .products-item-slider .slick-arrow {
+  display: -webkit-box;
+  display: flex;
+  z-index: 200;
+}
+
+.products .products-item-slider .slick-dots li {
+  list-style: none;
+}
+
+.products .products-item-slider .slick-dots li button {
+  height: 67px;
+  width: 10px;
+  font-size: 0;
+  border-radius: 50%;
+  border: transparent;
+  margin: 0 40px;
+  background-color: #000;
+}
+
+.products .products-item-slider .leader-item .page__img {
+  width: 280px;
+  overflow: hidden;
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+}
+
+.products .products-item-slider .leader-item .page__img img {
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+}
+
+.products .products-item-slider .leader-item .page__img:hover img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
+}
+
+.products .products-item-slider .leader-item .text {
+  max-width: 280px;
+  text-align: center;
+}
+
+.products .products-item-slider .leader-item .text .page__text_19 {
+  margin-bottom: 20px;
+}
+
+.products .products-item-slider .leader-item .text .page__text_sm_bold {
+  margin-bottom: 14px;
+}
+
+.products #nextArrow-3 {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 35%;
+  right: 52px;
+  z-index: 100;
+}
+
+.products #prevArrow-3 {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  left: 52px;
+  top: 35%;
+  z-index: 100;
+}
+
+.products .button {
+  position: relative;
+  width: 200px;
+  height: 60px;
+  margin: 0 auto;
+}
+
+.products .button:hover .bg-button {
+  -webkit-transform: translate(5%, 5%);
+          transform: translate(5%, 5%);
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+.products .button .page__btn_1 {
+  position: relative;
+  color: #69755d;
+}
+
+.products .button .page__btn_1::after {
+  content: '';
+  position: absolute;
+  width: 98%;
+  height: 1px;
+  background-color: #9ca896;
+  left: -5px;
+  top: -6px;
+}
+
+.products .button .page__btn_1::before {
+  content: '';
+  position: absolute;
+  width: 98%;
+  height: 1px;
+  background-color: #9ca896;
+  left: -5px;
+  bottom: 6px;
+}
+
+.products .button .page__btn_1 span {
+  position: relative;
+}
+
+.products .button .page__btn_1 span::before {
+  content: '';
+  position: absolute;
+  height: 50px;
+  width: 1px;
+  background-color: #9ca896;
+  left: -38px;
+  top: -16px;
+}
+
+.products .button .page__btn_1 span::after {
+  content: '';
+  position: absolute;
+  height: 50px;
+  width: 1px;
+  background-color: #9ca896;
+  right: -25px;
+  top: -16px;
+}
+
+.products .button .bg-button {
   background-color: #e9ebe7;
   width: 200px;
   height: 53px;

@@ -15,6 +15,18 @@
 
         .page__title-h2 {
             margin-bottom: 60px;
+            position: relative;
+
+            &::after{ 
+                content: '';
+                position: absolute;
+                width: 68px;
+                height: 1px;
+                background-color: #9ca896;
+                bottom: -30px;
+                left: 37%;
+            }
+
 
         }
     }

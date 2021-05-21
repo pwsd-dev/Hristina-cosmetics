@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru"> 
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
+		<base href="../">
+		<title>Sample page</title>
+		<link rel="stylesheet" href="css/styles.css" type="text/css">
+	</head>
+	<body>
+		<div class="page">
+			<button class="debugGrid-btn debugGrid-btn__create" onclick="debugGridCreate()"></button>
+			<button class="debugGrid-btn debugGrid-btn__remove debugGrid-btn__hidden" onclick="debugGridRemove()"></button>
+			<div class="debugGrid debugGrid__z-index-negative"></div>
+			<header class="header">
+				<div class="bg-grey">
+					<div class="wrapper">
+						<nav class="nav-top">
+							<div class="left"><a class="page__link" href="#">Акции / Скидки</a><a class="page__link" href="#">О бренде</a><a class="page__link" href="#">Контакты</a><a class="page__link" href="#">Доставка / Оплата</a></div>
+							<div class="right">
+								<div class="page__img"><img src="assets/img/heart-icon.svg" alt=""></div><a class="page__link" href="#">Список желаний </a>
+								<div class="counter">(0)</div>
+							</div>
+						</nav>
+					</div>
+				</div>
+				<div class="bg-white">
+					<div class="wrapper">
+						<nav class="nav-mid">
+							<div class="left">
+								<div class="phone-wrapper">
+									<div class="page__img"><img src="assets/img/phone-icon.svg" alt=""></div><a class="page__link" href="">+7 915 358-55-77</a>
+								</div>
+								<p class="page__text_sm">Ежедневно с 10:00 до 18:00</p>
+							</div>
+							<div class="mid"><a href="../">
+									<div class="page__img"><img src="assets/img/logo.svg" alt=""></div></a></div>
+							<div class="right">
+								<div class="basket"><img src="assets/img/basket-icon.svg" alt=""></div><a class="page__link" href="">Корзина</a>
+							</div>
+						</nav>
+						<nav class="nav-bottom">
+							<div class="left">
+								<div class="burger"></div>
+								<p class="page__catalog">Каталог</p>
+							</div>
+							<div class="mid"><a class="page__link" href="#">Уход за телом</a><a class="page__link" href="#">Уход за лицом</a><a class="page__link" href="#">Уход за волосами</a><a class="page__link" href="#">Коллекция “Любовь”</a><a class="page__link" href="#">Профессиональная косметика</a><a class="page__link" href="#">ЭКО-товары</a></div>
+							<div class="right">
+								<form class="form" action="">
+									<input type="search" placeholder="Поиск">
+									<button type="submit"></button>
+								</form>
+							</div>
+						</nav>
+					</div>
+				</div>
+			</header>
+			<section class="sample-page">
+				<div class="wrapper">
+					<div class="sample-page-content">
+						<div>Sample Page</div>
+					</div>
+				</div>
+			</section>
+		</div><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.9.0/slick/slick.min.js"></script>
+		<script src="js/debug-grid-create.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>

@@ -1,9 +1,157 @@
 .header{
-    .parent{
-        .row-flex();
-        .child{
-            .col();
-            .size(1);
+    
+    
+    
+    .bg-grey {
+        background-color: #f6f6f6;
+        padding: 11px 0;
+    }
+    .bg-white {
+        background-color: #fff;
+    }
+    .nav-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+
+        .left {
+            .page__link {
+                margin-right: 45px;
+            }
+        }
+
+        .right {
+            display: flex;
+            align-items: center;
+
+            .page__link {
+                font-family: "@{Montserrat}-Italic";
+                margin: 0 5px 0 15px;
+            }
+
+            .counter {
+                font-family: "@{Montserrat}-Italic";
+                font-size: 13px;
+            }
+        }
+    }
+    
+    .nav-mid {
+        padding: 48px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .left {
+            width: 200px;
+
+            .phone-wrapper {
+                display: flex;
+                align-items: center;
+                margin-bottom: 4px;
+
+                .page__img {
+                    margin-right: 18px;
+                }
+
+                .page__link {
+                    font-family: "@{Montserrat}-Bold";
+                    font-size: 16px;
+                    color: #2f3327;
+
+                }
+            }
+
+            .page__text_sm {
+                opacity: .6;
+            }
+        }
+
+        .mid {
+            width: 200px;
+        }
+
+        .right {
+            width: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            .page__link {
+                font-family: "@{Montserrat}-Bold";
+                font-size: 16px;
+                margin-left: 20px;
+                color: #2f3327;
+
+            }
+        }
+    }
+
+    .nav-bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 32px;
+        .left {
+            margin-right: 118px;
+            .page__catalog {
+                font-family: "@{Montserrat}-Bold";
+                font-size: 14px;
+                line-height: 17px;
+                text-transform: uppercase;
+                color: #2f3327;
+                
+            }
+        }
+
+        .mid {
+            
+            .page__link {
+                font-family: "@{Montserrat}-Bold";
+                font-size: 14px;
+                line-height: 17px;
+                margin-right: 34px;
+                position: relative;
+                color:#2f3327;
+                &:nth-child(4){
+                    
+                    
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        top: -10px;
+                        width: 43px;
+                        height: 38px;
+                        background-image: url(../assets/img/red-heart-icon.svg);
+                        background-repeat: no-repeat;
+                    }
+                }
+            }
+        }
+
+        .right {
+            .form {
+                display: flex;
+                align-items: center;
+                input {
+                    font-family: "@{Montserrat}-Bold";
+                    font-size: 13px;
+                    line-height: 15px;
+                    color: #2f3327;
+                    opacity: .6;
+                    border: transparent;
+                    width: 130px;
+                }
+
+                button {
+                    width: 43px;
+                    height: 38px;
+                    background-color: #699c3f;
+                    background-image: url(../assets/img/search-icon.svg);
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    border: transparent;
+                }
+            }
         }
     }
 }

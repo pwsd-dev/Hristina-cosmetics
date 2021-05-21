@@ -1,5 +1,46 @@
 header.header
-    .wrapper
-        .parent
-            div.child Header
-            div.child Header2
+    .bg-grey
+        .wrapper
+            nav.nav-top
+                .left
+                    a(href="#").page__link Акции / Скидки
+                    a(href="#").page__link О бренде
+                    a(href="#").page__link Контакты
+                    a(href="#").page__link Доставка / Оплата
+                .right
+                    .page__img
+                        img(src="assets/img/heart-icon.svg", alt="")
+                    a(href="#").page__link Список желаний 
+                    .counter (0)
+    .bg-white
+        .wrapper
+            nav.nav-mid
+                .left
+                    .phone-wrapper
+                        .page__img
+                            img(src="assets/img/phone-icon.svg", alt="")
+                        a(href="").page__link +7 915 358-55-77
+                    p.page__text_sm Ежедневно с 10:00 до 18:00
+                .mid
+                    a(href="../")
+                        .page__img
+                            img(src="assets/img/logo.svg", alt="")
+                .right
+                    .basket
+                        img(src="assets/img/basket-icon.svg", alt="")
+                    a(href="").page__link Корзина
+            nav.nav-bottom
+                .left
+                    .burger
+                    p.page__catalog Каталог
+                .mid
+                    a(href="#").page__link Уход за телом
+                    a(href="#").page__link Уход за лицом
+                    a(href="#").page__link Уход за волосами
+                    a(href="#").page__link Коллекция “Любовь”
+                    a(href="#").page__link Профессиональная косметика
+                    a(href="#").page__link ЭКО-товары
+                .right
+                    form.form(action="")
+                        input(type="search" placeholder="Поиск")
+                        button(type="submit")

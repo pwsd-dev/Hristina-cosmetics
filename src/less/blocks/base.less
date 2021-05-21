@@ -20,6 +20,30 @@
   .font(@font; @fontRegular);
 }
 
+@font-face {
+  .font(@Montserrat; "@{Montserrat}-Regular");
+}
+
+@font-face {
+  .font(@Montserrat; "@{Montserrat}-Bold");
+}
+
+@font-face {
+  .font(@Montserrat; "@{Montserrat}-Italic");
+}
+
+@font-face {
+  .font(@Gilroy; "@{Gilroy}-SemiBold");
+}
+
+@font-face {
+  .font(@Gilroy; "@{Gilroy}-Bold");
+}
+
+@font-face {
+  .font(@Montserrat; "@{Montserrat}-SemiBold");
+}
+
 body {
   font-family: @fontRegular;
 }
@@ -34,4 +58,8 @@ input{
   &:focus{
       outline: none;
   }
+}
+
+a {
+  text-decoration: none;
 }

@@ -1,11 +1,11 @@
 $(document).ready(function () {
     $('.slider-banner').slick({
-        arrows: false,
-        // dots: true,
+        arrows: true,
+        dots: false,
         slidesToShow: 1,
         autoplay: false,
         infinite: true,
-        speed: 2500,
+        speed: 1800,
         adaptiveHeight: false,
         pauseOnFocus: true,
         pauseOnHover: true,

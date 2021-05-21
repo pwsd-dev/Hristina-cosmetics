@@ -217,6 +217,13 @@ img {
 }
 
 @font-face {
+  font-family: 'Solena-Regular';
+  src: url('../fonts/Solena/Solena-Regular.ttf') format('truetype'), url("../fonts/Solena/Solena-Regular.woff") format("woff"), url("../fonts/Solena/Solena-Regular.eot") format("eot");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'Montserrat-Bold';
   src: url('../fonts/Montserrat/Montserrat-Bold.ttf') format('truetype'), url("../fonts/Montserrat/Montserrat-Bold.woff") format("woff"), url("../fonts/Montserrat/Montserrat-Bold.eot") format("eot");
   font-weight: normal;
@@ -275,6 +282,11 @@ input:focus {
 
 a {
   text-decoration: none;
+}
+
+.wrapper-1370 {
+  max-width: 1370px;
+  margin: 0 auto;
 }
 
 .debugGrid {
@@ -360,6 +372,27 @@ a {
   color: #fff;
 }
 
+.page__title-h2 {
+  font-family: "Gilroy-SemiBold";
+  font-size: 38px;
+  line-height: 56px;
+  color: #2f3327;
+}
+
+.page__text {
+  font-family: "Montserrat-Regular";
+  font-size: 16px;
+  line-height: 28px;
+  color: #80827e;
+}
+
+.page__text_w {
+  font-family: "Montserrat-Regular";
+  font-size: 16px;
+  line-height: 28px;
+  color: #fff;
+}
+
 .page__text_sm {
   font-family: "Montserrat-Regular";
   font-size: 14px;
@@ -371,6 +404,13 @@ a {
   font-family: "Montserrat-SemiBold";
   font-size: 22px;
   line-height: 32px;
+  color: #fff;
+}
+
+.page__text_solena {
+  font-family: "Solena-Regular";
+  font-size: 43px;
+  line-height: 48px;
   color: #fff;
 }
 
@@ -569,6 +609,7 @@ a {
 
 .banner {
   position: relative;
+  background-color: #d4ccc6;
 }
 
 .banner .slider-banner {
@@ -586,18 +627,9 @@ a {
 }
 
 .banner .slider-banner .slick-arrow {
-  display: none;
-}
-
-.banner .slider-banner .slick-dots {
   display: -webkit-box;
   display: flex;
-  -webkit-box-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-          justify-content: center;
-  list-style: none;
-  padding-top: 10%;
+  z-index: 200;
 }
 
 .banner .slider-banner .slick-dots li {
@@ -616,6 +648,26 @@ a {
 
 .banner .slider-banner .page__img img {
   width: 100%;
+}
+
+.banner #nextArrow {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 45.5%;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  right: 52px;
+  z-index: 100;
+}
+
+.banner #prevArrow {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  left: 52px;
+  top: 50%;
+  z-index: 100;
 }
 
 .banner-description {
@@ -710,6 +762,103 @@ a {
   height: 53px;
   margin: 0 auto;
   position: absolute;
+}
+
+.about {
+  padding: 120px 0 170px 0;
+}
+
+.about-wrapper {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+}
+
+.about-wrapper .right {
+  width: 634px;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-pack: center;
+          justify-content: center;
+}
+
+.about-wrapper .right .page__title-h2 {
+  margin: 15px 0 70px 0;
+  position: relative;
+}
+
+.about-wrapper .right .page__title-h2::after {
+  content: '';
+  position: absolute;
+  width: 68px;
+  height: 1px;
+  background-color: #9ca896;
+  bottom: -30px;
+  left: 0;
+}
+
+.about-wrapper .right .page__text {
+  margin: 30px 0 50px 0;
+}
+
+.about-wrapper .right .item-wrapper-about {
+  display: -webkit-box;
+  display: flex;
+}
+
+.about-wrapper .right .item-wrapper-about .item-about {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: start;
+          align-items: flex-start;
+}
+
+.about-wrapper .right .item-wrapper-about .item-about .page__img {
+  margin-right: 24px;
+}
+
+.about-wrapper .right .item-wrapper-about .item-about .page__text {
+  max-width: 235px;
+  margin: 0;
+}
+
+.advantages {
+  background-image: url(../assets/img/bg-advantages.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 143px 0 120px 0;
+}
+
+.advantages-wrapper {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+          align-items: flex-start;
+}
+
+.advantages-wrapper .item-advantages {
+  width: 330px;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+}
+
+.advantages-wrapper .item-advantages .page__text_solena {
+  margin: 20px 0 27px 0;
+}
+
+.advantages-wrapper .item-advantages .page__img {
+  height: 80px;
 }
 
 @media screen and (max-width: 1920px) {

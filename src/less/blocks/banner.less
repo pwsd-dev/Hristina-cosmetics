@@ -1,28 +1,50 @@
 .banner{
   position: relative;
+  background-color: #d4ccc6;
   .slider-banner {
       background: transparent;
-      // height: 50vh;
       position: relative;
-      // padding: 60px 60px 10px 60px;
+      // z-index: 100;
+      
       .slick-list {
           overflow: hidden;
       }
       .slick-track{
           display: flex;
       }
-     
       .slick-arrow{
-          display: none;
+        display: flex;
+        z-index: 200;
           
       }
-      .slick-dots {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          list-style: none;
-          padding-top: 10%;
-      }
+
+      // #nextArrow {
+      //   width: 20px;
+      //   height: 20px;
+
+      //   position: absolute;
+      //   background-image: url(../assets/img/arrow-banner.svg);
+      //   background-color: #000;
+      //   z-index: 100;
+      //   top: 130px;
+        
+      // }
+
+      // #prevArrow {
+      //   width: 40px;
+      //   height: 40px;
+      //   position: absolute;
+      //   background-image: url(../assets/img/arrow-banner.svg);
+      //   background-color: #000;
+      //   z-index: 100;
+      // }
+      // .slick-dots {
+      //     display: flex;
+      //     align-items: center;
+      //     justify-content: center;
+      //     list-style: none;
+      //     padding-top: 10%;
+      // }
 
       .slick-dots li {
           list-style: none;
@@ -40,7 +62,7 @@
       }
 
       .slick-dots li.slick-active button {
-          // background-color: @color_red;
+        // background-color: @color_red;
     }
 
     .page__img {
@@ -49,7 +71,29 @@
       }
     }
   }
+  #nextArrow {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    // background-color: #000;
+    top: 45.5%;
+    // left: 20px;
+    transform: rotate(180deg);
+    right: 52px;
+    z-index: 100;
+    
+  }
 
+  #prevArrow {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    // background-color: #000;
+    left: 52px;
+    top: 50%;
+    z-index: 100;
+  }
+  
   &-description {
     position: absolute;
     text-align: center;

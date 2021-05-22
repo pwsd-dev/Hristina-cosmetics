@@ -1928,7 +1928,18 @@ a {
   display: flex;
   -webkit-box-pack: justify;
           justify-content: space-between;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.footer-wrapper::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: #68745c;
+  bottom: -30px;
+  opacity: 0.4;
 }
 
 .footer-wrapper .left {
@@ -2007,8 +2018,12 @@ a {
           align-items: center;
 }
 
+.footer .copyright .right .page__text_sm {
+  margin-right: 19px;
+}
+
 .footer .copyright .right .page__img {
-  margin: 0px 15px;
+  margin: 0px 10px;
 }
 
 @media screen and (max-width: 1920px) {

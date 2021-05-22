@@ -231,6 +231,13 @@ img {
 }
 
 @font-face {
+  font-family: 'Montserrat-LightItalic';
+  src: url('../fonts/Montserrat/Montserrat-LightItalic.ttf') format('truetype'), url("../fonts/Montserrat/Montserrat-LightItalic.woff") format("woff"), url("../fonts/Montserrat/Montserrat-LightItalic.eot") format("eot");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'Montserrat-Italic';
   src: url('../fonts/Montserrat/Montserrat-Italic.ttf') format('truetype'), url("../fonts/Montserrat/Montserrat-Italic.woff") format("woff"), url("../fonts/Montserrat/Montserrat-Italic.eot") format("eot");
   font-weight: normal;
@@ -438,6 +445,20 @@ a {
   font-size: 43px;
   line-height: 48px;
   color: #fff;
+}
+
+.page__text_lightItalic {
+  font-family: "Montserrat-LightItalic";
+  font-size: 16px;
+  line-height: 19px;
+  color: #80827e;
+}
+
+.page__text_gilroy_sm {
+  font-family: "Gilroy-SemiBold";
+  font-size: 19px;
+  line-height: 22px;
+  color: #2e2f20;
 }
 
 .page__link {
@@ -1331,6 +1352,361 @@ a {
   position: absolute;
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
+}
+
+.collection-love {
+  background-color: #2f2f2f;
+  height: 520px;
+}
+
+.feedback {
+  padding: 120px 0;
+  position: relative;
+}
+
+.feedback-slider {
+  background: transparent;
+  position: relative;
+}
+
+.feedback-slider-item {
+  width: 1466px;
+  margin: 0 auto;
+}
+
+.feedback-slider-item .bg-grey {
+  background-color: #f8f9f7;
+  padding: 89px 0 105px 0;
+}
+
+.feedback-slider-item .text {
+  width: 760px;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
+  margin: 0 auto;
+}
+
+.feedback-slider-item .text .page__text_solena {
+  color: #93a286;
+}
+
+.feedback-slider-item .text .page__title-h2 {
+  margin: 10px 0 35px 0;
+}
+
+.feedback-slider-item .text .page__text_lightItalic {
+  margin-bottom: 50px;
+}
+
+.feedback-slider .slick-list {
+  overflow: hidden;
+}
+
+.feedback-slider .slick-track {
+  display: -webkit-box;
+  display: flex;
+}
+
+.feedback-slider .slick-arrow {
+  display: -webkit-box;
+  display: flex;
+  z-index: 200;
+}
+
+.feedback-slider .slick-dots li {
+  list-style: none;
+}
+
+.feedback-slider .slick-dots li button {
+  height: 67px;
+  width: 10px;
+  font-size: 0;
+  border-radius: 50%;
+  border: transparent;
+  margin: 0 40px;
+  background-color: #000;
+}
+
+.feedback-slider .page__img img {
+  width: 100%;
+}
+
+.feedback #nextArrow-4 {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 45.5%;
+  right: 52px;
+  z-index: 100;
+}
+
+.feedback #prevArrow-4 {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  left: 52px;
+  top: 50%;
+  z-index: 100;
+}
+
+.instagram {
+  padding-bottom: 120px;
+}
+
+.instagram .text {
+  width: 290px;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-pack: center;
+          justify-content: center;
+  margin: 0 auto;
+  -webkit-box-align: center;
+          align-items: center;
+}
+
+.instagram .text .page__text_solena {
+  color: #93a286;
+  font-size: 32px;
+}
+
+.instagram .text .page__title-h2 {
+  margin: 10px 0 15px 0;
+  position: relative;
+}
+
+.instagram .text .page__title-h2::after {
+  content: '';
+  position: absolute;
+  width: 68px;
+  height: 1px;
+  background-color: #9ca896;
+  bottom: -70px;
+  left: 37%;
+}
+
+.instagram .text .page__link {
+  margin-bottom: 120px;
+}
+
+.instagram .instagram-slider {
+  background: transparent;
+  position: relative;
+}
+
+.instagram .instagram-slider .slick-list {
+  overflow: hidden;
+}
+
+.instagram .instagram-slider .slick-track {
+  display: -webkit-box;
+  display: flex;
+}
+
+.instagram .instagram-slider .slick-arrow {
+  display: -webkit-box;
+  display: flex;
+  z-index: 200;
+}
+
+.instagram .instagram-slider .slick-dots li {
+  list-style: none;
+}
+
+.instagram .instagram-slider .slick-dots li button {
+  height: 67px;
+  width: 10px;
+  font-size: 0;
+  border-radius: 50%;
+  border: transparent;
+  margin: 0 40px;
+  background-color: #000;
+}
+
+.brands .text {
+  width: 430px;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
+  margin: 0 auto;
+}
+
+.brands .text .page__title-h2 {
+  text-align: center;
+  margin: 10px 0 84px 0;
+}
+
+.brands .brands-wrapper {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+          align-items: center;
+}
+
+.subscribe {
+  padding: 120px 0;
+}
+
+.subscribe .bg-grey {
+  background-color: #f8f9f7;
+  padding: 100px 0;
+}
+
+.subscribe .bg-grey .page__text_solena {
+  color: #9ca896;
+  font-size: 44px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.subscribe .bg-grey .page__text_gilroy_sm {
+  text-align: center;
+  max-width: 410px;
+  margin: 0 auto;
+  margin-bottom: 60px;
+}
+
+.subscribe .bg-grey .form {
+  width: 710px;
+  border: transparent;
+  margin: 0 auto;
+  position: relative;
+}
+
+.subscribe .bg-grey .form::after {
+  content: '';
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  background-color: #80827e;
+  bottom: 0;
+  left: 0;
+}
+
+.subscribe .bg-grey .form input {
+  border: transparent;
+  font-family: "Montserrat-Regular";
+  font-size: 16px;
+  line-height: 28px;
+  color: #80827e;
+  width: 710px;
+  background: transparent;
+}
+
+.subscribe .bg-grey .form input::-webkit-input-placeholder {
+  font-family: "Montserrat-Regular";
+  font-size: 16px;
+  line-height: 28px;
+  color: #80827e;
+}
+
+.subscribe .bg-grey .form input::-moz-placeholder {
+  font-family: "Montserrat-Regular";
+  font-size: 16px;
+  line-height: 28px;
+  color: #80827e;
+}
+
+.subscribe .bg-grey .form input:-ms-input-placeholder {
+  font-family: "Montserrat-Regular";
+  font-size: 16px;
+  line-height: 28px;
+  color: #80827e;
+}
+
+.subscribe .bg-grey .form input::-ms-input-placeholder {
+  font-family: "Montserrat-Regular";
+  font-size: 16px;
+  line-height: 28px;
+  color: #80827e;
+}
+
+.subscribe .bg-grey .form input::placeholder {
+  font-family: "Montserrat-Regular";
+  font-size: 16px;
+  line-height: 28px;
+  color: #80827e;
+}
+
+.second-subscribe {
+  background-image: url(../assets/img/bg-second-subscribe.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 153px 0;
+}
+
+.second-subscribe-wrapper {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+}
+
+.second-subscribe-wrapper .left {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+          justify-content: flex-end;
+  width: 50%;
+  position: relative;
+}
+
+.second-subscribe-wrapper .left::after {
+  content: '';
+  position: absolute;
+  height: 280px;
+  width: 1px;
+  background-color: #fff;
+}
+
+.second-subscribe-wrapper .left .second-subscribe-item {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-align: center;
+          align-items: center;
+  margin-right: 82px;
+}
+
+.second-subscribe-wrapper .left .second-subscribe-item .page__img {
+  margin-bottom: 28px;
+  height: 60px;
+}
+
+.second-subscribe-wrapper .left .second-subscribe-item .page__text_gilroy_sm {
+  color: #fff;
+  margin-bottom: 17px;
+}
+
+.second-subscribe-wrapper .left .second-subscribe-item .page__text_19 {
+  font-family: "Montserrat-Regular";
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.second-subscribe-wrapper .left .second-subscribe-item .page__text {
+  color: #fff;
 }
 
 @media screen and (max-width: 1920px) {

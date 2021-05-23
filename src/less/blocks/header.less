@@ -1,4 +1,30 @@
 .header{
+
+
+    .mob {
+        padding: 25px;
+        display: none;
+
+        .sm-block({
+            display: block;
+        });
+        .header-mob-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .right {
+                display: flex;
+                align-items: flex-end;
+
+                .mob-burger {
+                    .page__img {
+                        margin-left: 20px;
+                    }
+                }
+            }
+        }
+    }
     
     .bg-grey {
         background-color: #f6f6f6;
@@ -12,6 +38,10 @@
         align-items: center;
         justify-content: space-between;
         
+
+        .sm-block({
+            display: none;
+        });
 
         .left {
             display: flex;
@@ -59,6 +89,13 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+
+
+        .sm-block({
+            display: none;
+        });
+
+
         .left {
             width: 200px;
 
@@ -108,6 +145,14 @@
         align-items: center;
         justify-content: space-between;
         padding-bottom: 32px;
+
+        
+
+        .sm-block({
+            display: none;
+        });
+
+
         // overflow: hidden;
         .left {
             margin-right: 20px;
@@ -266,6 +311,22 @@
                     left: 0px;
                     z-index: 4300;
                     // background: rgba(39, 39, 39, 0.6);
+
+                    .laptopMd-block({
+                        width: 1260px;
+                    });
+                    .laptopMini-block({
+                        width: 1170px;
+                    });
+                    .ipad-block({
+                        width: 970px;
+                    });
+                    .fabletBig-block({
+                        width: 890px;
+                    });
+                    .fabletMid-block({
+                        width: 800px;
+                    });
                     .inner {
                         opacity: 0;
                         z-index: 4300;
@@ -274,7 +335,7 @@
                         height: 100%;
                         width: 100%;
                         display: flex;
-                        
+                        padding-bottom: 30px;
                         
 
                         .col {
@@ -288,6 +349,19 @@
                                 align-items: center;
                                 justify-content: space-between;
                                 width: 1200px;
+
+
+
+                                .laptopMini-block({
+                                    width: 1000px;
+                                });
+                                .ipad-block({
+                                    width: 840px;
+                                });
+
+                                .fabletBig-block({
+                                    width: 760px;
+                                });
                             }
 
                             .page__title-h2 {
@@ -317,10 +391,15 @@
                             .links-wrapper {
                                 display: flex;
                                 align-items: flex-start;
+
                                 .left {
                                     flex-direction: column;
                                     align-items: flex-start;
                                     margin-right: 150px;
+
+                                    .laptopMini-block({
+                                        margin-right: 50px;
+                                    });
 
                                     .page__text {
                                         margin-bottom: 17px;
@@ -334,6 +413,10 @@
                                     align-items: flex-start;
                                     margin-right: 150px;
 
+                                    .laptopMini-block({
+                                        margin-right: 50px;
+                                    });
+
                                     .page__text {
                                         margin-bottom: 17px;
                                     }
@@ -344,6 +427,10 @@
                                     flex-direction: column;
                                     align-items: flex-start;
                                     margin-right: 90px;
+
+                                    .laptopMini-block({
+                                        margin-right: 50px;
+                                    });
 
                                     .page__text {
                                         margin-bottom: 17px;
@@ -379,6 +466,8 @@
             display: flex;
             align-items: center;
 
+            
+
             .hover-bg-grey {
                 
                 &:hover {
@@ -402,6 +491,8 @@
                 }
 
                 .page__link {
+
+
                     font-family: "@{Montserrat}-Bold";
                     font-size: 14px;
                     line-height: 17px;
@@ -409,10 +500,24 @@
                     position: relative;
                     color:#2f3327;
                     transition: .3s ease-in-out;
-    
+
                     .laptopMiddle-block({
                         margin: 0 10px;
                     });
+
+                    .laptopMd-block({
+                        font-size: 12px;
+                    });
+
+                    .laptopMini-block({
+                        font-size: 10px;
+                    });
+
+                    
+                    .ipad-block({
+                        font-size: 8px;
+                    });
+                    
     
                     &:hover {
                         color: #9ca896;

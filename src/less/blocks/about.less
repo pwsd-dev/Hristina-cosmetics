@@ -1,14 +1,36 @@
 .about {
     padding: 120px 0 170px 0;
+
+    .sm-block({
+                    
+        padding: 60px 0 50px 0;
+    });
+
     &-wrapper {
         display: flex;
         justify-content: space-between;
         // align-items: center;
         // align-items: center;
+        .sm-block({
+            flex-direction: column;
+            padding: 25px
+        });
         .left {
+            .sm-block({
+                order: 4;
+            });
             .page__img {
                 
                 overflow: hidden;
+
+                .laptopMini-block({
+                    margin-right: 30px;
+                });
+
+                .sm-block({
+                    width: 320px;
+                    margin: 0 auto;
+                });
             }
             .page__img:hover img {
                 transform: scale(1.1);
@@ -26,10 +48,32 @@
             flex-direction: column;
             justify-content: center;
 
+            .laptopMd-block({
+                padding-right: 25px;
+            });
+
+            
+
+            .sm-block({
+                    
+                width: 320px;
+            });
+
+            .page__img {
+                .sm-block({
+                    
+                    margin: 0 auto;
+                });
+            }
+
             .page__title-h2 {
                 margin: 15px 0 70px 0;
                 position: relative;
-                
+                .sm-block({
+                    
+                    text-align: center;
+                    font-size: 27px;
+                });
                 &::after {
                     content: '';
                     position: absolute;
@@ -38,21 +82,38 @@
                     background-color: #9ca896;
                     bottom: -30px;
                     left: 0;
+                    .sm-block({
+                        left: 38%;
+                        
+                    });
+
                 }
             }
 
             .page__text {
                 
                 margin: 30px 0 50px 0;
+
+                .sm-block({
+                    
+                    margin: 5px 0 35px 0;
+                });
             }
 
             .item-wrapper-about {
                 display: flex;
                 
-
+                .sm-block({
+                    
+                    flex-direction: column;
+                });
                 .item-about {
                     display: flex;
                     align-items: flex-start;
+                    .sm-block({
+                    
+                        margin-bottom: 50px;
+                    });
                     .page__img {
                         margin-right: 24px;
                     }

@@ -2,7 +2,9 @@
 
     padding: 120px 0;
     position: relative;
-    
+    .sm-block({
+        padding: 60px 0;
+    });
     .bg-grey {
         background-color: #f8f9f7;
         padding: 89px 0 105px 0;
@@ -12,6 +14,10 @@
             width: 756px;
             margin: 0 auto;
             text-align: center;
+
+            .sm-block({
+                width: 320px;
+            });
         }
     }
 
@@ -32,6 +38,10 @@
             width: 1466px;
             margin: 0 auto;
 
+            .sm-block({
+                width: 320px;
+            });
+
             
 
             .text {
@@ -43,7 +53,9 @@
                 margin: 0 auto;
                 
 
-                
+                .sm-block({
+                    width: 320px;
+                });
 
                 .page__text_lightItalic {
                     margin-bottom: 50px;
@@ -122,11 +134,15 @@
     height: 30px;
     position: absolute;
     // background-color: #000;
-    top: 45.5%;
+    top: 50%;
     // left: 20px;
     // transform: rotate(180deg);
     right: 52px;
     z-index: 100;
+
+    // .sm-block({
+    //     top: 70%;
+    // });
     
   }
 
@@ -138,5 +154,9 @@
     left: 52px;
     top: 50%;
     z-index: 100;
+
+    // .sm-block({
+    //     top: 56%;
+    // });
   }   
 }

@@ -3,11 +3,17 @@
     background-size: cover;
     background-repeat: no-repeat;
     padding: 153px 0;
-
+    .sm-block({
+      padding: 75px 0;
+      overflow: hidden;
+    });
    &-wrapper{ 
        display: flex;
        align-items: center;
-       
+       .sm-block({
+        flex-direction: column;
+        overflow: hidden;
+      });
        .left {
            display: flex;
            align-items: center;
@@ -15,12 +21,28 @@
             width: 50%;
             position: relative;
 
+            .sm-block({
+              flex-direction: column;
+              width: 100%;
+              align-items: center;
+              justify-content: center;
+            });
+
             &::after {
                 content: '';
                 position: absolute;
                 height: 280px;
                 width: 1px;
                 background-color: #fff;
+
+                .sm-block({
+                  content: '';
+                  position: absolute;
+                  height: 1px;
+                  width: 280px;
+                  background-color: #fff;
+                  top: 480px;
+              });
             }
 
             .second-subscribe-item {
@@ -28,6 +50,12 @@
                 flex-direction: column;
                 align-items: center;
                 margin-right: 82px;
+
+                .sm-block({
+                  margin-right: 0;
+                  margin-bottom: 70px;
+                  
+                });
 
                 .page__img {
                     margin-bottom: 28px;
@@ -57,7 +85,13 @@
             // align-items: center;
             width: 477px;
             padding-left: 90px;
-
+            .sm-block({
+              flex-direction: column;
+              width: 320px;
+              text-align: center;
+              margin: 0 auto;
+              padding-left: 0;
+            });
             .page__text_gilroy_sm {
                 color: #fff;
                 opacity: .8;
@@ -72,9 +106,21 @@
             .row {
                 display: flex;
                 align-items: center;
+
+                .sm-block({
+                  flex-direction: column;
+                  
+                });
+
                 .form {
 
                     input {
+                      .sm-block({
+                        margin-right: 0;
+                        margin-bottom: 40px;
+                        
+                      });
+
                         width: 251px;
                         height: 55px;
                         margin-right: 20px;

@@ -1,5 +1,7 @@
 .brands {
 
+    
+
     .text {
         width: 430px;
         display: flex;
@@ -8,10 +10,20 @@
         align-items: center;
         margin: 0 auto;
 
+        .sm-block({
+            width: 320px;
+        });
+
         .page__title-h2 {
             text-align: center;
 
             margin: 10px 0 84px 0;
+
+            .sm-block({
+                margin: 10px 0 20px 0;
+                font-size: 25px;
+                line-height: 45px;
+            });
         }
     }
 
@@ -20,7 +32,24 @@
         justify-content: space-evenly;
         align-items: center;
 
+
+
+        .sm-block({
+            padding: 25px;
+            flex-direction: column;
+        });
+
         .page__img {
+            .sm-block({
+                margin-bottom: 30px;
+                height: 100px;
+
+                &:last-child {
+                    height: 30px;
+                    margin-bottom: 0;
+                }
+            });
+            
 
             svg path:hover {
                 color: #000;

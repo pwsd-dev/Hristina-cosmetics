@@ -116,13 +116,34 @@
             .text {
                 max-width: 280px;
                 text-align: center;
-
+                position: relative;
+                
                 .page__text_19 {
                     margin-bottom: 20px;
                 }
 
                 .page__text_sm_bold {
                     margin-bottom: 14px;
+                }
+
+                .hover-price {
+                    height: 20px;
+                    
+                    .page__btn_3 {
+                      position: absolute;
+                      top: 90px;
+                      bottom: 0;
+                      left: 82px;
+                      right: 0;
+                      opacity: 0;
+                      
+                      transition: .3s ease-in-out;
+            
+                      &:hover {
+                        opacity: 1;
+                        transition: .3s ease-in-out;
+                      }
+                    }
                 }
             }
         }

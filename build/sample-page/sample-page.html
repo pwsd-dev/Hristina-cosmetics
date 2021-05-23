@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
+		<link rel="icon" type="image/x-icon" href="assets/img/favicon.ico"><link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 		<base href="../">
 		<title>Sample page</title>
 		<link rel="stylesheet" href="css/styles.css" type="text/css">
@@ -17,7 +17,12 @@
 				<div class="bg-grey">
 					<div class="wrapper">
 						<nav class="nav-top">
-							<div class="left"><a class="page__link" href="#">Акции / Скидки</a><a class="page__link" href="#">О бренде</a><a class="page__link" href="#">Контакты</a><a class="page__link" href="#">Доставка / Оплата</a></div>
+							<div class="left">
+								<div class="bg_white"><a class="page__link" href="#">Акции / Скидки</a></div>
+								<div class="bg_white"><a class="page__link" href="#">О бренде</a></div>
+								<div class="bg_white"><a class="page__link" href="#">Контакты</a></div>
+								<div class="bg_white"><a class="page__link" href="#">Доставка / Оплата</a></div>
+							</div>
 							<div class="right">
 								<div class="page__img"><img src="assets/img/heart-icon.svg" alt=""></div><a class="page__link" href="#">Список желаний </a>
 								<div class="counter">(0)</div>
@@ -42,10 +47,39 @@
 						</nav>
 						<nav class="nav-bottom">
 							<div class="left">
-								<div class="burger"></div>
+								<div class="burger">
+									<button class="icon" type="button" onclick="openBlock()" id="burgerBtn"><span></span><span></span><span></span><span></span></button>
+									<div class="other" id="other">
+										<div class="inner">
+											<div class="wrapper">
+												<div class="col">
+													<div class="page__img"><img src="assets/img/icon-flower.svg"></div>
+													<h2 class="page__title-h2">Каталог</h2>
+													<div class="row">
+														<p class="page__text_sm">Продукция</p>
+														<p class="page__text_sm">брэнды</p>
+													</div>
+													<div class="links-wrapper">
+														<div class="left"><a class="page__text" href="">Скрабы для тела</a><a class="page__text" href="">Маски для тела</a><a class="page__text" href="">Массажные масла</a><a class="page__text" href="">Массажные крема</a><a class="page__text" href="">Соли для ванн</a><a class="page__text" href="">Антицеллюлитные крема</a><a class="page__text" href="">Скраб для маникюра/педикюра</a><a class="page__text" href="">Крем после депиляции</a><a class="page__text" href="">Крем для маникюра/педикюра</a><a class="page__text" href="">Классические крема для лица</a><a class="page__text" href="">Крема ручной работы для лица</a><a class="page__text" href="">Крема вокруг глаз</a><a class="page__text" href="">Ночные крема</a><a class="page__text" href="">Дневные крема</a></div>
+														<div class="left-mid"><a class="page__text" href="">Крема для 24-часового применения</a><a class="page__text" href="">Маски для лица</a><a class="page__text" href="">Сыворотки для лица</a><a class="page__text" href="">Сыворотки вокруг глаз</a><a class="page__text" href="">Очищающее молочко для лица</a><a class="page__text" href="">Скрабы для лиц</a><a class="page__text" href="">Бальзамы для губ</a><a class="page__text" href="">Крема для тела</a><a class="page__text" href="">Антицеллюлитные крема для тела</a><a class="page__text" href="">Крема для рук и ног</a><a class="page__text" href="">Лосьоны для тела</a><a class="page__text" href="">Гели для душа</a><a class="page__text" href="">Скрабы для тела</a><a class="page__text" href="">Масла для рук и ног</a></div>
+														<div class="right-mid"><a class="page__text" href="">Солнцезащитные спреи</a><a class="page__text" href="">Массажные масла</a><a class="page__text" href="">Твердые масла</a><a class="page__text" href="">Жидкое мыло</a><a class="page__text" href="">Массажные свечи</a><a class="page__text" href="">Шампуни</a><a class="page__text" href="">Гели для душа и волос</a><a class="page__text" href="">Маски для волос</a><a class="page__text" href="">Кондиционеры для волос</a><a class="page__text" href="">Массажные свечи</a><a class="page__text" href="">Товары для ухода за лицом</a><a class="page__text" href="">Многоразовые ЭКО-товары</a><a class="page__text" href="">Для мужчин</a><a class="page__text" href="">Подарочные наборы</a></div>
+														<div class="right"><a class="page__text" href="">HRISTINA PROFESSIONAL</a><a class="page__text" href="">SEZMAR PROFESSIONAL</a><a class="page__text" href="">HRISTINA</a><a class="page__text" href="">DR DEREHSAN</a><a class="page__text" href="">SM CRYSTAL</a><a class="page__text" href="">SAYAZ</a><a class="page__text" href="">STANI CHEF'S</a><a class="page__text" href="">SEZMAR LOVE</a><a class="page__text" href="">SEZMAR PURE</a><a class="page__text" href="">NATURALLY</a><a class="page__text" href="">SEZMAR LOVE</a><a class="page__text" href="">NB-ECO</a></div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
 								<p class="page__catalog">Каталог</p>
 							</div>
-							<div class="mid"><a class="page__link" href="#">Уход за телом</a><a class="page__link" href="#">Уход за лицом</a><a class="page__link" href="#">Уход за волосами</a><a class="page__link" href="#">Коллекция “Любовь”</a><a class="page__link" href="#">Профессиональная косметика</a><a class="page__link" href="#">ЭКО-товары</a></div>
+							<div class="mid">
+								<div class="hover-bg-grey"><a class="page__link" href="#">Уход за телом</a></div>
+								<div class="hover-bg-grey"><a class="page__link" href="#">Уход за лицом</a></div>
+								<div class="hover-bg-grey"><a class="page__link" href="#">Уход за волосами</a></div>
+								<div class="hover-bg-grey"><a class="page__link icon-heart" href="#">Коллекция “Любовь”</a></div>
+								<div class="hover-bg-grey"><a class="page__link" href="#">Профессиональная косметика</a></div>
+								<div class="hover-bg-grey"><a class="page__link" href="#">ЭКО-товары</a></div>
+							</div>
 							<div class="right">
 								<form class="form" action="">
 									<input type="search" placeholder="Поиск">
@@ -63,7 +97,8 @@
 					</div>
 				</div>
 			</section>
-		</div><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+		</div><script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 		<script src="js/debug-grid-create.js"></script>
 		<script src="js/main.js"></script>

@@ -1,9 +1,109 @@
 .banner{
   position: relative;
   background-color: #d4ccc6;
+  // z-index: 400;
   .slider-banner {
       background: transparent;
       position: relative;
+      z-index: 100;
+
+
+      .slider-inner {
+        position: absolute;
+        width: 600px;
+        height: 500px;
+        min-width: 0;
+        top: 0;
+        left: 26%;
+        top: 25%;
+        text-align: center;
+        .text {
+          margin: 0 auto;
+
+          .page__title-h1 {
+            margin-bottom: 27px;
+          }
+
+        }
+
+
+        .button {
+          position: relative;
+          width: 200px;
+          height: 60px;
+          margin: 0 auto;
+          &:hover {
+            .bg-button {
+              transform: translate(5%, 5%);
+              transition: .5s ease-in-out;
+            }
+          }
+    
+          .page__btn_1 {
+            position: relative;
+            &::after {
+              content: '';
+              position: absolute;
+              width: 98%;
+              height: 1px;
+              background-color: #fff;
+              left: -5px;
+              top: -6px;
+            }
+    
+            &::before {
+              content: '';
+              position: absolute;
+              width: 98%;
+              height: 1px;
+              background-color: #fff;
+              left: -5px;
+              bottom: 6px;
+            }
+    
+    
+            span {
+              position: relative;
+              &::before {
+                content: '';
+                position: absolute;
+                height: 50px;
+                width: 1px;
+                background-color: #fff;
+                left: -30px;
+                top: -16px;
+              }
+              
+              &::after {
+                content: '';
+                position: absolute;
+                height: 50px;
+                width: 1px;
+                background-color: #fff;
+                right: -17px;
+                top: -16px;
+              }
+    
+            }
+          }
+    
+          .bg-button {
+           
+            background-color: #d4ccc6;
+            width: 200px;
+            height: 53px;
+            margin: 0 auto;
+            position: absolute;
+            transition: .5s ease;
+            &:hover { 
+              // transform: translate(5%,5%);
+              // transition: .5s ease-in-out;
+            }
+      
+            
+          }
+        }
+      }
       // z-index: 100;
       
       .slick-list {

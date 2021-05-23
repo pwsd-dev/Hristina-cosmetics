@@ -3,10 +3,14 @@ header.header
         .wrapper
             nav.nav-top
                 .left
-                    a(href="#").page__link Акции / Скидки
-                    a(href="#").page__link О бренде
-                    a(href="#").page__link Контакты
-                    a(href="#").page__link Доставка / Оплата
+                    .bg_white
+                        a(href="#").page__link Акции / Скидки
+                    .bg_white
+                        a(href="#").page__link О бренде
+                    .bg_white
+                        a(href="#").page__link Контакты
+                    .bg_white
+                        a(href="#").page__link Доставка / Оплата
                 .right
                     .page__img
                         img(src="assets/img/heart-icon.svg", alt="")
@@ -32,14 +36,94 @@ header.header
             nav.nav-bottom
                 .left
                     .burger
+                        button(type="button" onclick="openBlock()")#burgerBtn.icon
+                            span
+                            span
+                            span
+                            span
+                        #other.other
+                            .inner
+                                .wrapper
+                                    .col
+                                        .page__img
+                                            img(src="assets/img/icon-flower.svg")
+                                        h2.page__title-h2 Каталог
+                                        .row
+                                            p.page__text_sm Продукция
+                                            p.page__text_sm брэнды
+                                        .links-wrapper
+                                            .left
+                                                a(href="").page__text Скрабы для тела
+                                                a(href="").page__text Маски для тела
+                                                a(href="").page__text Массажные масла
+                                                a(href="").page__text Массажные крема
+                                                a(href="").page__text Соли для ванн
+                                                a(href="").page__text Антицеллюлитные крема
+                                                a(href="").page__text Скраб для маникюра/педикюра
+                                                a(href="").page__text Крем после депиляции
+                                                a(href="").page__text Крем для маникюра/педикюра
+                                                a(href="").page__text Классические крема для лица
+                                                a(href="").page__text Крема ручной работы для лица
+                                                a(href="").page__text Крема вокруг глаз
+                                                a(href="").page__text Ночные крема
+                                                a(href="").page__text Дневные крема
+                                            .left-mid
+                                                a(href="").page__text Крема для 24-часового применения
+                                                a(href="").page__text Маски для лица
+                                                a(href="").page__text Сыворотки для лица
+                                                a(href="").page__text Сыворотки вокруг глаз
+                                                a(href="").page__text Очищающее молочко для лица
+                                                a(href="").page__text Скрабы для лиц
+                                                a(href="").page__text Бальзамы для губ
+                                                a(href="").page__text Крема для тела
+                                                a(href="").page__text Антицеллюлитные крема для тела
+                                                a(href="").page__text Крема для рук и ног
+                                                a(href="").page__text Лосьоны для тела
+                                                a(href="").page__text Гели для душа
+                                                a(href="").page__text Скрабы для тела
+                                                a(href="").page__text Масла для рук и ног
+                                            .right-mid
+                                                a(href="").page__text Солнцезащитные спреи
+                                                a(href="").page__text Массажные масла
+                                                a(href="").page__text Твердые масла
+                                                a(href="").page__text Жидкое мыло
+                                                a(href="").page__text Массажные свечи
+                                                a(href="").page__text Шампуни
+                                                a(href="").page__text Гели для душа и волос
+                                                a(href="").page__text Маски для волос
+                                                a(href="").page__text Кондиционеры для волос
+                                                a(href="").page__text Массажные свечи
+                                                a(href="").page__text Товары для ухода за лицом
+                                                a(href="").page__text Многоразовые ЭКО-товары
+                                                a(href="").page__text Для мужчин
+                                                a(href="").page__text Подарочные наборы
+                                            .right
+                                                a(href="").page__text HRISTINA PROFESSIONAL
+                                                a(href="").page__text SEZMAR PROFESSIONAL
+                                                a(href="").page__text HRISTINA
+                                                a(href="").page__text DR DEREHSAN
+                                                a(href="").page__text SM CRYSTAL
+                                                a(href="").page__text SAYAZ
+                                                a(href="").page__text STANI CHEF'S
+                                                a(href="").page__text SEZMAR LOVE
+                                                a(href="").page__text SEZMAR PURE
+                                                a(href="").page__text NATURALLY
+                                                a(href="").page__text SEZMAR LOVE
+                                                a(href="").page__text NB-ECO
                     p.page__catalog Каталог
                 .mid
-                    a(href="#").page__link Уход за телом
-                    a(href="#").page__link Уход за лицом
-                    a(href="#").page__link Уход за волосами
-                    a(href="#").page__link Коллекция “Любовь”
-                    a(href="#").page__link Профессиональная косметика
-                    a(href="#").page__link ЭКО-товары
+                    .hover-bg-grey
+                        a(href="#").page__link Уход за телом
+                    .hover-bg-grey
+                        a(href="#").page__link Уход за лицом
+                    .hover-bg-grey
+                        a(href="#").page__link Уход за волосами
+                    .hover-bg-grey
+                        a(href="#").page__link.icon-heart Коллекция “Любовь”
+                    .hover-bg-grey
+                        a(href="#").page__link Профессиональная косметика
+                    .hover-bg-grey
+                        a(href="#").page__link ЭКО-товары
                 .right
                     form.form(action="")
                         input(type="search" placeholder="Поиск")

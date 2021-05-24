@@ -2301,7 +2301,6 @@ a {
 }
 
 .feedback .bg-grey .text {
-  width: 756px;
   margin: 0 auto;
   text-align: center;
 }
@@ -2325,7 +2324,7 @@ a {
 }
 
 .feedback-slider-item .text {
-  width: 760px;
+  max-width: 760px;
   display: -webkit-box;
   display: flex;
   -webkit-box-orient: vertical;
@@ -2336,6 +2335,7 @@ a {
   -webkit-box-align: center;
           align-items: center;
   margin: 0 auto;
+  text-align: center;
 }
 
 .feedback-slider-item .text .page__text_lightItalic {

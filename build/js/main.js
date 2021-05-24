@@ -172,7 +172,7 @@ $(document).ready(function () {
         touchMove: false,
         prevArrow: document.querySelector('#prevArrow-4'),
         nextArrow: document.querySelector('#nextArrow-4'),
-        variableWidth: true,
+        variableWidth: false,
         // mobileFirst: true,
         responsive: [
             {

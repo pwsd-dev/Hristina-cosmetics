@@ -17,7 +17,12 @@
 						<div class="right">
 							<div class="basket"><img src="assets/img/basket-icon.svg" alt=""></div>
 							<div class="mob-burger">
-								<div class="page__img"><img src="assets/img/icon-mob-menu.svg" alt=""></div>
+								<button type="button" onclick="openBlock()" id="burgerMob">
+									<div class="page__img"><img src="assets/img/icon-mob-menu.svg" alt=""></div>
+									<div class="innerMobile" id="innerMobile">
+										<div class="innerMob"></div>
+									</div>
+								</button>
 							</div>
 						</div>
 					</div>
@@ -90,7 +95,9 @@
 							</div>
 							<div class="right">
 								<form class="form" action="">
-									<input type="search" placeholder="Поиск">
+									<p>
+										<input class="search" type="search" placeholder="Поиск" onfocus="this.className='focus'" onblur="this.className='search'" id="searchInput">
+									</p>
 									<button type="submit"></button>
 								</form>
 							</div>
@@ -99,34 +106,46 @@
 				</div>
 			</header>
 			<section class="banner">
-				<div class="banner-description">
-					<div class="wrapper">
-						<div class="button">
-							<div class="bg-button"></div><a href="#">
-								<button class="page__btn_1"><span> Посмотреть каталог</button></a>
-						</div>
-					</div>
-				</div>
 				<div class="slider-banner">
-					<div class="page__img"><img src="assets/img/banner-slider.png">
-						<div class="slider-inner">
+					<div class="slide">
+						<div class="page__img"><img src="assets/img/banner-slider.png">
 							<div class="text">
 								<h1 class="page__title-h1">Легенда<br> болгарской органики</h1>
 								<p class="page__text_montserSemiBold">Натуральная косметика для ухода за лицом, волосами и телом</p>
+								<div class="button">
+									<div class="bg-button"></div><a href="#">
+										<button class="page__btn_1"><span> Посмотреть каталог</button></a>
+								</div>
 							</div>
 						</div>
 					</div>
-					<div class="page__img"><img src="assets/img/banner-slider.png">
-						<div class="slider-inner">
-							<div class="text">
-								<h1 class="page__title-h1">Легенда<br> болгарской органики</h1>
-								<p class="page__text_montserSemiBold">Натуральная косметика для ухода за лицом, волосами и телом </p>
+					<div class="slide">
+						<div class="page__img"><img src="assets/img/slide-2-banner.png">
+							<div class="text-2">
+								<h1 class="page__title-h1">100% натуральная свеча<br> для массажа</h1>
+								<p class="page__text_montserSemiBold">Смотрите продукцию с натуральным составом по уходу за вашим телом</p>
+								<div class="button">
+									<div class="bg-button"></div><a href="#">
+										<button class="page__btn_1"><span> Выбрать свечу</button></a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="slide">
+						<div class="page__img"><img src="assets/img/slide-3-banner.png">
+							<div class="text-3">
+								<h1 class="page__title-h1">Всё для гладкости вашей кожи</h1>
+								<p class="page__text_montserSemiBold">Отличный способ снять усталость, расслабить тело, успокоить ум и настроиться на романтический лад</p>
+								<div class="button">
+									<div class="bg-button"></div><a href="#">
+										<button class="page__btn_1"><span> Смотреть</button></a>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 				<div class="prevArrow" id="prevArrow"><img src="assets/img/arrow-banner.svg"></div>
-				<div class="nextArrow" id="nextArrow"><img src="assets/img/arrow-banner.svg"></div>
+				<div class="nextArrow" id="nextArrow"><img src="assets/img/arrow-white-right.svg"></div>
 			</section>
 			<section class="about">
 				<div class="wrapper-1370">

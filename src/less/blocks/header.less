@@ -18,6 +18,10 @@
                 align-items: flex-end;
 
                 .mob-burger {
+                    button {
+                        background: transparent;
+                        border: transparent;
+                    }
                     .page__img {
                         margin-left: 20px;
                     }
@@ -311,6 +315,7 @@
                     left: 0px;
                     z-index: 4300;
                     // background: rgba(39, 39, 39, 0.6);
+                    visibility: hidden;
 
                     .laptopMd-block({
                         width: 1260px;
@@ -336,7 +341,7 @@
                         width: 100%;
                         display: flex;
                         padding-bottom: 30px;
-                        
+                        visibility: hidden;
 
                         .col {
                             display: flex;
@@ -391,6 +396,7 @@
                             .links-wrapper {
                                 display: flex;
                                 align-items: flex-start;
+                                
 
                                 .left {
                                     flex-direction: column;
@@ -451,8 +457,10 @@
                         transition: all 1s ease;
                         &.active {
                             opacity: 1;
-                            z-index: 4800;
+                            // z-index: 4800;
                             overflow: hidden;
+                            visibility: visible;
+
                             
                         }   
                     }
@@ -531,15 +539,66 @@
             .form {
                 display: flex;
                 align-items: center;
+                // position: relative;
                 input {
                     font-family: "@{Montserrat}-Bold";
                     font-size: 13px;
                     line-height: 15px;
                     color: #2f3327;
                     opacity: .6;
+                    position: relative;
                     border: transparent;
                     width: 130px;
+
+                    &.active {
+                        width: 500px;
+                        
+                    }   
                 }
+
+                // input.search:focus {
+                //     border: 1px solid red;
+                // }
+
+                .focus {
+                   width: 1100px;
+                   z-index: 4900;
+                //    position: fixed;
+                    position: absolute;
+                   left: 0;
+                   left: 344px;
+                   top: 200px;
+                   backdrop-filter: blur(150px);
+                   background-color: #fff;
+                   transition: all .3s ease-in-out;
+                    height: 70px;
+                    opacity: 1;
+
+                    .laptopMiddle-block({
+                        left: 250px;
+                    });
+
+                    .laptopMd-block({
+                        width: 900px;
+                    });
+
+                    .laptopMini-block({
+                        width: 800px;
+                    });
+
+                    .ipad-block({
+                        width: 700px;
+                    });
+
+                    .fabletMid-block({
+                        width: 600px;
+                        left: 158px;
+                    });
+                }
+
+                // input:focus {
+                //     border-color: red;
+                // }
 
                 button {
                     width: 43px;

@@ -9,8 +9,12 @@ header.header
                 .basket
                     img(src="assets/img/basket-icon.svg", alt="")
                 .mob-burger
-                    .page__img
-                        img(src="assets/img/icon-mob-menu.svg", alt="")
+                    button(type="button" onclick="openBlock()")#burgerMob
+                        .page__img
+                            img(src="assets/img/icon-mob-menu.svg", alt="")
+                        #innerMobile.innerMobile
+                            .innerMob
+                                
     .bg-grey
         .wrapper
             nav.nav-top
@@ -138,5 +142,6 @@ header.header
                         a(href="#").page__link ЭКО-товары
                 .right
                     form.form(action="")
-                        input(type="search" placeholder="Поиск")
+                        p
+                            input(type="search" placeholder="Поиск" class="search" onfocus="this.className='focus'" onblur="this.className='search'")#searchInput
                         button(type="submit")

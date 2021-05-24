@@ -98,13 +98,16 @@
                 margin: 0 auto;
             });
             .page__img {
-                .xs-block({
-                    margin: 0 auto;
+                .sm-block({
+                    width: 100%;
                 });
                 width: 280px;
                 // height: 350px;
+                // overflow: hidden;
+                // transition: 1s ease-in-out;
                 overflow: hidden;
                 transition: 1s ease-in-out;
+                text-align: center;
                 img {
                     transition: 1s ease-in-out;
                     // width: 100%;
@@ -121,6 +124,10 @@
                 max-width: 280px;
                 text-align: center;
                 position: relative;
+
+                .sm-block({
+                    max-width: 100%;
+                  });
                 
                 .page__text_19 {
                     margin-bottom: 20px;

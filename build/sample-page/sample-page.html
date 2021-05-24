@@ -18,7 +18,12 @@
 						<div class="right">
 							<div class="basket"><img src="assets/img/basket-icon.svg" alt=""></div>
 							<div class="mob-burger">
-								<div class="page__img"><img src="assets/img/icon-mob-menu.svg" alt=""></div>
+								<button type="button" onclick="openBlock()" id="burgerMob">
+									<div class="page__img"><img src="assets/img/icon-mob-menu.svg" alt=""></div>
+									<div class="innerMobile" id="innerMobile">
+										<div class="innerMob"></div>
+									</div>
+								</button>
 							</div>
 						</div>
 					</div>
@@ -91,7 +96,9 @@
 							</div>
 							<div class="right">
 								<form class="form" action="">
-									<input type="search" placeholder="Поиск">
+									<p>
+										<input class="search" type="search" placeholder="Поиск" onfocus="this.className='focus'" onblur="this.className='search'" id="searchInput">
+									</p>
 									<button type="submit"></button>
 								</form>
 							</div>

@@ -21,6 +21,13 @@
             width: 50%;
             position: relative;
 
+            .fabletMid-block({
+              flex-direction: column;
+              width: 100%;
+              align-items: center;
+              justify-content: center;
+            });
+
             .sm-block({
               flex-direction: column;
               width: 100%;
@@ -34,6 +41,18 @@
                 height: 280px;
                 width: 1px;
                 background-color: #fff;
+
+                .fabletMid-block({
+                  content: '';
+                  position: absolute;
+                  height: 1px;
+                  width: 280px;
+                  background-color: #fff;
+                  top: 480px;
+
+                  display: none;
+                });
+    
 
                 .sm-block({
                   content: '';
@@ -50,6 +69,14 @@
                 flex-direction: column;
                 align-items: center;
                 margin-right: 82px;
+
+                .ipad-block({
+                  margin-right: 32px;
+                });
+
+                .fabletMid-block({
+                  margin-bottom: 30px;
+                });
 
                 .sm-block({
                   margin-right: 0;
@@ -71,6 +98,11 @@
                     font-family: "@{Montserrat}-Regular";
                     color: #fff;
                     margin-bottom: 10px;
+
+                    .ipad-block({
+                      font-size: 14px;
+                      text-align: center;
+                    });
                 }
 
                 .page__text {
@@ -85,13 +117,24 @@
             // align-items: center;
             width: 477px;
             padding-left: 90px;
+
+            .ipad-block({
+              // width: 320px;
+              position: relative;
+              left: -50px;
+            });
+
             .sm-block({
               flex-direction: column;
               width: 320px;
               text-align: center;
               margin: 0 auto;
               padding-left: 0;
+              position: relative;
+              left: 0;
             });
+
+
             .page__text_gilroy_sm {
                 color: #fff;
                 opacity: .8;

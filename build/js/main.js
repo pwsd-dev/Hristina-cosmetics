@@ -1,3 +1,4 @@
+
 AOS.init();
 
 function openBlock() {
@@ -6,22 +7,30 @@ function openBlock() {
     burgerBtn.classList.toggle("active");
 
     otherId.querySelector('.inner').classList.toggle('active');
-    // otherId.classList.toggle("hidden");
-    // otherId.querySelector('.inner').classList.toggle('active');
-    // const basketBtn = document.getElementById("basketBtn")
-    // basketBtn.classList.toggle("active");
+
+
+    const burgerMob = document.getElementById("burgerMob");
+    const innerMob = document.getElementById("innerMobile");
+    innerMob.querySelector(".innerMob").classList.toggle("active");
+    burgerMob.classList.toggle("active");
+
 }
 
+function openSearch() {
+    const searchInput = document.getElementById("searchInput")
+    searchInput.classList.toggle("active");
+
+}
 
 $(document).ready(function () {
     $('.slider-banner').slick({
         arrows: true,
-        dots: false,
+
         slidesToShow: 1,
         autoplay: false,
         infinite: true,
         speed: 1800,
-        adaptiveHeight: false,
+        adaptiveHeight: true,
         pauseOnFocus: true,
         pauseOnHover: true,
         pauseOnDotsHover: true,
@@ -31,7 +40,10 @@ $(document).ready(function () {
         touchTreshold: 20,
         touchMove: false,
         prevArrow: document.querySelector('#prevArrow'),
-        nextArrow: document.querySelector('#nextArrow')
+        nextArrow: document.querySelector('#nextArrow'),
+
+        dots: false,
+        fade: true,
 
     });
 
@@ -84,15 +96,16 @@ $(document).ready(function () {
         prevArrow: document.querySelector('#prevArrow-2'),
         nextArrow: document.querySelector('#nextArrow-2'),
         variableWidth: true,
-        mobileFirst: true,
+        // mobileFirst: true,
         responsive: [
             {
-                breakpoint: 375,
+                breakpoint: 385,
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
-                    centerMode: true,
-                    touchMove: true,
+                    variableWidth: false,
+                    // centerMode: true,
+                    // touchMove: true,
                 }
             }
         ],
@@ -103,36 +116,38 @@ $(document).ready(function () {
 
 $(document).ready(function () {
     $('.products-item-slider').slick({
+        // mobileFirst: true,
+
+        responsive: [
+            {
+                breakpoint: 405,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    variableWidth: false,
+                    // centerMode: true,
+                    // touchMove: true,
+                }
+            }
+        ],
+        variableWidth: true,
         arrows: true,
         dots: false,
         slidesToShow: 5,
         autoplay: false,
         infinite: true,
         speed: 1800,
-        adaptiveHeight: false,
+        adaptiveHeight: true,
         pauseOnFocus: true,
         pauseOnHover: true,
         pauseOnDotsHover: true,
         easing: 'ease',
-        draggale: true,
+        draggable: false,
         swipe: true,
         touchTreshold: 20,
         touchMove: false,
         prevArrow: document.querySelector('#prevArrow-3'),
         nextArrow: document.querySelector('#nextArrow-3'),
-        variableWidth: true,
-        mobileFirst: true,
-        responsive: [
-            {
-                breakpoint: 375,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    centerMode: true,
-                    touchMove: true,
-                }
-            }
-        ],
 
     });
 
@@ -146,27 +161,28 @@ $(document).ready(function () {
         autoplay: false,
         infinite: true,
         speed: 1800,
-        adaptiveHeight: false,
+        adaptiveHeight: true,
         pauseOnFocus: true,
         pauseOnHover: true,
         pauseOnDotsHover: true,
         easing: 'ease',
-        draggale: true,
+        draggable: false,
         swipe: true,
         touchTreshold: 20,
         touchMove: false,
         prevArrow: document.querySelector('#prevArrow-4'),
         nextArrow: document.querySelector('#nextArrow-4'),
         variableWidth: true,
-        mobileFirst: true,
+        // mobileFirst: true,
         responsive: [
             {
-                breakpoint: 375,
+                breakpoint: 385,
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
-                    centerMode: true,
-                    touchMove: true,
+                    variableWidth: false,
+                    // centerMode: true,
+                    // touchMove: true,
                 }
             }
         ],
@@ -199,7 +215,7 @@ $(document).ready(function () {
         mobileFirst: true,
         responsive: [
             {
-                breakpoint: 375,
+                breakpoint: 385,
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,

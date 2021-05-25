@@ -19,8 +19,41 @@ function openBlock() {
 function openSearch() {
     const searchInput = document.getElementById("searchInput")
     searchInput.classList.toggle("active");
+}
+
+
+function openCategory() {
+    const arrowBtn = document.getElementById("arrowBtn");
+    // const otherId = document.getElementById("other");
+    arrowBtn.classList.toggle("active");
+    const innerCheckbox = document.getElementById("innerCheckbox");
+    innerCheckbox.querySelector(".innerCheckbox").classList.toggle("active");
+
+
+
+    const arrowBtnBrand = document.getElementById("arrowBtnBrand");
+    arrowBtnBrand.classList.toggle("active");
+    const innerBrand = document.getElementById("innerBrand");
+    innerBrand.querySelector(".innerBrand").classList.toggle("active");
 
 }
+
+function openCategoryBrand() {
+    // const arrowBtn = document.getElementById("arrowBtn");
+    // // const otherId = document.getElementById("other");
+    // arrowBtn.classList.toggle("active");
+    // const innerCheckbox = document.getElementById("innerCheckbox");
+    // innerCheckbox.querySelector(".innerCheckbox").classList.toggle("active");
+
+
+
+    const arrowBtnBrand = document.getElementById("arrowBtnBrand");
+    arrowBtnBrand.classList.toggle("active");
+    const innerBrand = document.getElementById("innerBrand");
+    innerBrand.querySelector(".innerBrand").classList.toggle("active");
+
+}
+
 
 $(document).ready(function () {
     $('.slider-banner').slick({

@@ -1,0 +1,7 @@
+mixin bannerCatalog(img, title)
+    section.pageCatalog(style="background-image: url("+img+");")
+        .wrapper
+            .banner-catalog-wrapper
+                .page__img(data-aos="fade-down-right" data-aos-duration="3000" data-aos-delay="500")
+                    img(src="assets/img/flower-white.svg")
+                h1.page__title-h1=title

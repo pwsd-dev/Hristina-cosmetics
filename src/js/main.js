@@ -95,11 +95,11 @@ $(document).ready(function () {
         touchMove: false,
         prevArrow: document.querySelector('#prevArrow-2'),
         nextArrow: document.querySelector('#nextArrow-2'),
-        variableWidth: true,
+        variableWidth: false,
         // mobileFirst: true,
         responsive: [
             {
-                breakpoint: 385,
+                breakpoint: 405,
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,

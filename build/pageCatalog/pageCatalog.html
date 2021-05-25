@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ru"> 
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" type="image/x-icon" href="assets/img/favicon.ico"><link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+		<base href="../">
+		<title>Каталог</title>
+		<link rel="stylesheet" href="css/styles.css" type="text/css">
+	</head>
+	<body>
+		<div class="page">
+			<header class="header">
+				<div class="mob">
+					<div class="header-mob-wrapper">
+						<div class="left"><a href="../">
+								<div class="page__img"><img src="assets/img/logo-mob.svg" alt=""></div></a></div>
+						<div class="right">
+							<div class="basket"><img src="assets/img/basket-icon.svg" alt=""></div>
+							<div class="mob-burger">
+								<button type="button" onclick="openBlock()" id="burgerMob">
+									<div class="page__img"><img src="assets/img/icon-mob-menu.svg" alt=""></div>
+									<div class="innerMobile" id="innerMobile">
+										<div class="innerMob"></div>
+									</div>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="bg-grey">
+					<div class="wrapper">
+						<nav class="nav-top">
+							<div class="left">
+								<div class="bg_white"><a class="page__link" href="#">Акции / Скидки</a></div>
+								<div class="bg_white"><a class="page__link" href="#">О бренде</a></div>
+								<div class="bg_white"><a class="page__link" href="#">Контакты</a></div>
+								<div class="bg_white"><a class="page__link" href="#">Доставка / Оплата</a></div>
+							</div>
+							<div class="right">
+								<div class="page__img"><img src="assets/img/heart-icon.svg" alt=""></div><a class="page__link" href="#">Список желаний </a>
+								<div class="counter">(0)</div>
+							</div>
+						</nav>
+					</div>
+				</div>
+				<div class="bg-white">
+					<div class="wrapper">
+						<nav class="nav-mid">
+							<div class="left">
+								<div class="phone-wrapper">
+									<div class="page__img"><img src="assets/img/phone-icon.svg" alt=""></div><a class="page__link" href="">+7 915 358-55-77</a>
+								</div>
+								<p class="page__text_sm">Ежедневно с 10:00 до 18:00</p>
+							</div>
+							<div class="mid"><a href="../">
+									<div class="page__img"><img src="assets/img/logo.svg" alt=""></div></a></div>
+							<div class="right">
+								<div class="basket"><img src="assets/img/basket-icon.svg" alt=""></div><a class="page__link" href="">Корзина</a>
+							</div>
+						</nav>
+						<nav class="nav-bottom">
+							<div class="left">
+								<div class="burger">
+									<button class="icon" type="button" onclick="openBlock()" id="burgerBtn"><span></span><span></span><span></span><span></span></button>
+									<div class="other" id="other">
+										<div class="inner">
+											<div class="wrapper">
+												<div class="col">
+													<div class="page__img"><img src="assets/img/icon-flower.svg"></div>
+													<h2 class="page__title-h2">Каталог</h2>
+													<div class="row">
+														<p class="page__text_sm">Продукция</p>
+														<p class="page__text_sm">брэнды</p>
+													</div>
+													<div class="links-wrapper">
+														<div class="left"><a class="page__text" href="">Скрабы для тела</a><a class="page__text" href="">Маски для тела</a><a class="page__text" href="">Массажные масла</a><a class="page__text" href="">Массажные крема</a><a class="page__text" href="">Соли для ванн</a><a class="page__text" href="">Антицеллюлитные крема</a><a class="page__text" href="">Скраб для маникюра/педикюра</a><a class="page__text" href="">Крем после депиляции</a><a class="page__text" href="">Крем для маникюра/педикюра</a><a class="page__text" href="">Классические крема для лица</a><a class="page__text" href="">Крема ручной работы для лица</a><a class="page__text" href="">Крема вокруг глаз</a><a class="page__text" href="">Ночные крема</a><a class="page__text" href="">Дневные крема</a></div>
+														<div class="left-mid"><a class="page__text" href="">Крема для 24-часового применения</a><a class="page__text" href="">Маски для лица</a><a class="page__text" href="">Сыворотки для лица</a><a class="page__text" href="">Сыворотки вокруг глаз</a><a class="page__text" href="">Очищающее молочко для лица</a><a class="page__text" href="">Скрабы для лиц</a><a class="page__text" href="">Бальзамы для губ</a><a class="page__text" href="">Крема для тела</a><a class="page__text" href="">Антицеллюлитные крема для тела</a><a class="page__text" href="">Крема для рук и ног</a><a class="page__text" href="">Лосьоны для тела</a><a class="page__text" href="">Гели для душа</a><a class="page__text" href="">Скрабы для тела</a><a class="page__text" href="">Масла для рук и ног</a></div>
+														<div class="right-mid"><a class="page__text" href="">Солнцезащитные спреи</a><a class="page__text" href="">Массажные масла</a><a class="page__text" href="">Твердые масла</a><a class="page__text" href="">Жидкое мыло</a><a class="page__text" href="">Массажные свечи</a><a class="page__text" href="">Шампуни</a><a class="page__text" href="">Гели для душа и волос</a><a class="page__text" href="">Маски для волос</a><a class="page__text" href="">Кондиционеры для волос</a><a class="page__text" href="">Массажные свечи</a><a class="page__text" href="">Товары для ухода за лицом</a><a class="page__text" href="">Многоразовые ЭКО-товары</a><a class="page__text" href="">Для мужчин</a><a class="page__text" href="">Подарочные наборы</a></div>
+														<div class="right"><a class="page__text" href="">HRISTINA PROFESSIONAL</a><a class="page__text" href="">SEZMAR PROFESSIONAL</a><a class="page__text" href="">HRISTINA</a><a class="page__text" href="">DR DEREHSAN</a><a class="page__text" href="">SM CRYSTAL</a><a class="page__text" href="">SAYAZ</a><a class="page__text" href="">STANI CHEF'S</a><a class="page__text" href="">SEZMAR LOVE</a><a class="page__text" href="">SEZMAR PURE</a><a class="page__text" href="">NATURALLY</a><a class="page__text" href="">SEZMAR LOVE</a><a class="page__text" href="">NB-ECO</a></div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<p class="page__catalog">Каталог</p>
+							</div>
+							<div class="mid">
+								<div class="hover-bg-grey"><a class="page__link" href="#">Уход за телом</a></div>
+								<div class="hover-bg-grey"><a class="page__link" href="#">Уход за лицом</a></div>
+								<div class="hover-bg-grey"><a class="page__link" href="#">Уход за волосами</a></div>
+								<div class="hover-bg-grey"><a class="page__link icon-heart" href="#">Коллекция “Любовь”</a></div>
+								<div class="hover-bg-grey"><a class="page__link" href="#">Профессиональная косметика</a></div>
+								<div class="hover-bg-grey"><a class="page__link" href="#">ЭКО-товары</a></div>
+							</div>
+							<div class="right">
+								<form class="form" action="">
+									<p>
+										<input class="search" type="search" placeholder="Поиск" onfocus="this.className='focus'" onblur="this.className='search'" id="searchInput">
+									</p>
+									<button type="submit"></button>
+								</form>
+							</div>
+						</nav>
+					</div>
+				</div>
+			</header>
+			<main class="page">
+				<section class="pageCatalog">
+					<div class="wrapper">
+						<div class="banner-catalog-wrapper">
+							<div class="page__img"><img src="assets/img/icon-flower.svg"></div>
+							<h1 class="page__title-h1">Профессиональная косметика</h1>
+						</div>
+						<section class="subscribe">
+							<div class="wrapper">
+								<div class="bg-grey">
+									<p class="page__text_solena">Подпишитесь на рассылку</p>
+									<p class="page__text_gilroy_sm">Узнавайте первыми о новинках, акциях и актуалной информации</p>
+									<form class="form" action="">
+										<input type="text" placeholder="Ваш Email">
+									</form>
+									<div class="button">
+										<div class="bg-button"></div><a href="#">
+											<button class="page__btn_1"><span> Подписаться</button></a>
+									</div>
+								</div>
+							</div>
+						</section>
+						<section class="second-subscribe">
+							<div class="wrapper-1370">
+								<div class="second-subscribe-wrapper">
+									<div class="left">
+										<div class="second-subscribe-item" data-aos="zoom-in" data-aos-duration="400" data-aos-delay="200">
+											<div class="page__img"><img src="assets/img/phone-icon-white.svg"></div>
+											<p class="page__text_gilroy_sm">Контакты</p><a class="page__text_19" href="+7-906-742-88-28">+ 7 906 742 88 28</a><a class="page__text" href="zakaz@hristina.ru">zakaz@hristina.ru</a>
+										</div>
+										<div class="second-subscribe-item" data-aos="zoom-in" data-aos-duration="400" data-aos-delay="200">
+											<div class="page__img"><img src="assets/img/clock-icon-white.svg"></div>
+											<p class="page__text_gilroy_sm">Время работы</p><a class="page__text_19" href="+7-906-742-88-28">Работаем без выходных </a><a class="page__text" href="zakaz@hristina.ru">с 10:00 до 22:00</a>
+										</div>
+									</div>
+									<div class="right" data-aos="zoom-in" data-aos-duration="400" data-aos-delay="200">
+										<p class="page__text_gilroy_sm">Подпишитесь на рассылку</p>
+										<p class="page__text_sm">Чтобы первыми узнавать о новинках, акциях и актуалной информации</p>
+										<div class="row">
+											<form class="form" action="">
+												<input type="text" placeholder="Ваш Email...">
+											</form>
+											<div class="button">
+												<div class="bg-button"></div><a href="#">
+													<button class="page__btn_1"><span> Подписаться</button></a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+					</div>
+				</section>
+			</main>
+			<footer class="footer">
+				<div class="wrapper-1465">
+					<div class="footer-wrapper">
+						<div class="left"><a href="../">
+								<div class="page__img"><img src="assets/img/logo.svg" alt=""></div></a>
+							<p class="page__text_sm">Легенда болгарской органики</p>
+						</div>
+						<div class="left-mid">
+							<p class="page__text_gilroy_sm">Актуальное</p>
+							<div class="hover-bg-grey"><a class="page__text_sm" href="">Главная страница</a></div>
+							<div class="hover-bg-grey"><a class="page__text_sm" href="pageCatalog/pageCatalog.html">Каталог</a></div>
+							<div class="hover-bg-grey"><a class="page__text_sm" href="">О бренде</a></div>
+							<div class="hover-bg-grey"><a class="page__text_sm" href="">Контакты</a></div>
+						</div>
+						<div class="right-mid">
+							<p class="page__text_gilroy_sm">Условия работы</p>
+							<div class="hover-bg-grey"><a class="page__text_sm" href="">Условия работы</a></div>
+							<div class="hover-bg-grey"><a class="page__text_sm" href="">Доставка/Оплата</a></div>
+							<div class="hover-bg-grey"><a class="page__text_sm" href="">Обмен/Возврат</a></div>
+							<div class="hover-bg-grey"><a class="page__text_sm" href="">Для Сертификаты</a></div>
+						</div>
+						<div class="right">
+							<p class="page__text_gilroy_sm">Способы оплаты</p>
+							<p class="page__text_sm">Вы можете оплатить свой заказ через наш сайт с помошью таких сервисов:</p>
+							<div class="row">
+								<div class="page__img"><img src="assets/img/visa-icon.svg"></div>
+								<div class="page__img"><img src="assets/img/master-card-icon.svg"></div>
+							</div>
+						</div>
+					</div>
+					<div class="copyright">
+						<div class="left">
+							<p>Hristina 2020. Все права защищены.</p>
+						</div>
+						<div class="right">
+							<p class="page__text_sm">Подпишитесь на нас:</p><a href="https://www.instagram.com/hristina.cosmetics/">
+								<div class="page__img"><img src="assets/img/instagram-icon.svg"></div></a><a href="">
+								<div class="page__img"><img src="assets/img/vk-icon.svg"></div></a>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div><script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>

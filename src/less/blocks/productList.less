@@ -1,0 +1,318 @@
+.productList {
+
+    .page__title-h2 {
+        margin-bottom: 40px;
+    }
+
+    .row-tabs-filter {
+        width: 1119px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .left {
+            display: flex;
+            align-items: center;
+
+            .page__text_gilroy_16 { 
+                margin-right: 40px;
+                position: relative;
+
+                &.active {
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        bottom: -10px;
+                        width: 100%;
+                        height: 2px;
+                        background-color: #699C3F;
+                        left: 0;
+                    }    
+                }
+            }
+        }
+
+        .right {
+
+            .select-box {
+                position: relative;
+                display: block;
+                width: 100%;
+                margin: 0 auto;
+                font-family: 'Open Sans', 'Helvetica Neue', 'Segoe UI', 'Calibri', 'Arial', sans-serif;
+                font-size: 18px;
+                color: #60666d;
+                
+                @media (min-width: 768px) {
+                  width: 70%;
+                }
+                
+                @media (min-width: 992px) {
+                  width: 50%;
+                }
+                
+                @media (min-width: 1200px) {
+                  width: 30%;
+                }
+                
+                &__current {
+                  position: relative;
+                  box-shadow: 0 15px 30px -10px transparentize(#000, 0.9);
+                  cursor: pointer;
+                  outline: none;
+                  
+                  &:focus {
+                    & + .select-box__list {
+                      opacity: 1;
+              
+                      // We have to set "animation-name: none;" to make the list visible (read below how it works)
+              
+                      animation-name: none;
+                      
+                      .select-box__option {
+                        cursor: pointer;
+                      }
+                    }
+                    
+                    .select-box__icon {
+                      transform: translateY(-50%) rotate(180deg);
+                    }
+                  }
+                }
+                
+                &__icon {
+                  position: absolute;
+                  top: 50%;
+                  right: 15px;
+                  transform: translateY(-50%);
+                  width: 20px;
+                  opacity: 0.3;
+                  transition: 0.2s ease;
+                }
+                
+                &__value {
+                  display: flex;
+                }
+                
+                &__input {
+                  display: none;
+                  
+                  &:checked + .select-box__input-text {
+                    display: block;
+                  }
+                }
+                
+                &__input-text {
+                  display: none;
+                  width: 100%;
+                  margin: 0;
+                  padding: 15px;
+                  background-color: #fff;
+                }
+                
+                &__list {
+                  position: absolute;
+                  width: 100%;
+                  padding: 0;
+                  list-style: none;
+                  opacity: 0;
+                  
+                  // We need to use animation with delay.
+                  // Otherwise the click event will not have time to run on label, because this element disapears immediately when .select-box__current element loses the focus.
+                  // This delay will not be noticed because we set "opacity" to "0".
+                  // We also use "animation-fill-mode: forwards" to make the list stay hidden.
+                  
+                  animation-name: HideList;
+                  animation-duration: 0.5s;
+                  animation-delay: 0.5s;
+                  animation-fill-mode: forwards;
+                  animation-timing-function: step-start;
+                  box-shadow: 0 15px 30px -10px transparentize(#000, 0.9);
+                }
+                
+                &__option {
+                  display: block;
+                  padding: 15px;
+                  background-color: #fff;
+                  
+                  &:hover,
+                  &:focus {
+                    color: #546c84;
+                    background-color: #fbfbfb;
+                  }
+                }
+              }
+              
+              @keyframes HideList {
+                from {
+                  transform: scaleY(1);
+                }
+                to {
+                  transform: scaleY(0);
+                }
+              }
+            .filter {
+                display: flex;
+                align-items: flex-start;
+                position: relative;
+
+                
+
+                .page__img {
+                    margin-left: 50px;
+                }
+
+                button {
+                    border: transparent;
+                    background: transparent;
+                }
+
+                .innerFilter {
+                    // display: none;
+                    position: absolute;
+                    left: 10px;
+                    visibility: hidden;
+                    transition: .3s ease-in-out;
+                    opacity: 0;
+                    top: 45px;
+
+                    &.active {
+                        display: block;
+                        visibility: visible;
+                        transition: .3s ease-in-out;
+                        opacity: 1;
+                    }
+
+                    .wrapper-content-filter {
+
+                        .page__text_gilroy_16 {
+                            margin-bottom: 15px;
+                        }
+
+                        .item-filter {
+                            display: flex;
+                            align-items: flex-start;
+
+                            .checkbox {
+                                // height: 30px;
+                                // width: 30px;
+                                // margin-right: 15px;
+                                border: transparent;
+                                label {
+                                     height: 13px;
+                                    // width: 30px;
+                                }
+                                input[type="checkbox"]:checked, 
+                                input[type="checkbox"]:not(:checked), 
+                                input[type="radio"]:checked, 
+                                input[type="radio"]:not(:checked) 
+                                {
+                                    position: absolute;
+                                    left: -9999px;
+                                }
+                
+                                input[type="checkbox"]:checked + label, 
+                                input[type="checkbox"]:not(:checked) + label, 
+                                input[type="radio"]:checked + label, 
+                                input[type="radio"]:not(:checked) + label {
+                                    display: inline-block;
+                                    position: relative;
+                                    padding-left: 28px;
+                                    line-height: 20px;
+                                    cursor: pointer;
+                                }
+                
+                                input[type="checkbox"]:checked + label:before, 
+                                input[type="checkbox"]:not(:checked) + label:before,
+                                input[type="radio"]:checked + label:before, 
+                                input[type="radio"]:not(:checked) + label:before {
+                                    content: "";
+                                    position: absolute;
+                                    left: 0px;
+                                    top: 0px;
+                                    width: 18px;
+                                    height: 18px;
+                                    border: 1px solid #9CA896;
+                                    background-color: #ffffff;
+                                    
+                                    // z-index: 5000;
+                                }
+                
+                                input[type="checkbox"]:checked + label:before, 
+                                input[type="checkbox"]:not(:checked) + label:before {
+                                    border-radius: 2px;
+                                }
+                
+                                input[type="checkbox"]:checked + label:after, 
+                                input[type="checkbox"]:not(:checked) + label:after, 
+                                input[type="radio"]:checked + label:after, 
+                                input[type="radio"]:not(:checked) + label:after {
+                                    content: "";
+                                    position: absolute;
+                                    -webkit-transition: all 0.2s ease;
+                                    -moz-transition: all 0.2s ease;
+                                    -o-transition: all 0.2s ease;
+                                    transition: all 0.2s ease;
+                                }
+                
+                                input[type="checkbox"]:checked + label:after, 
+                                input[type="checkbox"]:not(:checked) + label:after {
+                                    left: 3px;
+                                    top: 4px;
+                                    width: 10px;
+                                    height: 5px;
+                                    border-radius: 1px;
+                                    border-left: 3px solid #699C3f;
+                                    border-bottom: 3px solid #699C3f;;
+                                    // background: #000;
+                                    -webkit-transform: rotate(-45deg);
+                                    -moz-transform: rotate(-45deg);
+                                    -o-transform: rotate(-45deg);
+                                    -ms-transform: rotate(-45deg);
+                                    transform: rotate(-45deg);
+                                }
+                
+                                input[type="checkbox"]:not(:checked) + label:after, 
+                                input[type="radio"]:not(:checked) + label:after {
+                                    opacity: 0;
+                                }
+                
+                                input[type="checkbox"]:checked + label:after, 
+                                input[type="radio"]:checked + label:after {
+                                    opacity: 1;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+.tabs {
+
+    .tab-nav {
+
+        .tab-link {
+
+            &.is-active {
+                color: #699C3F;
+                
+            }
+        }
+    }
+
+    .tab-content {
+        display: none;
+
+        &.is-active {
+            display: block;
+            
+        }
+
+    }
+}

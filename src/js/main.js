@@ -28,14 +28,14 @@ function openCategory() {
     arrowBtn.classList.toggle("active");
     const innerCheckbox = document.getElementById("innerCheckbox");
     innerCheckbox.querySelector(".innerCheckbox").classList.toggle("active");
+}
 
-
-
-    const arrowBtnBrand = document.getElementById("arrowBtnBrand");
-    arrowBtnBrand.classList.toggle("active");
-    const innerBrand = document.getElementById("innerBrand");
-    innerBrand.querySelector(".innerBrand").classList.toggle("active");
-
+function openFilter() {
+    const arrowBtn = document.getElementById("arrowBtnFilter");
+    // const otherId = document.getElementById("other");
+    arrowBtnFilter.classList.toggle("active");
+    const innerFilter = document.getElementById("innerFilter");
+    innerFilter.querySelector(".innerFilter").classList.toggle("active");
 }
 
 function openCategoryBrand() {

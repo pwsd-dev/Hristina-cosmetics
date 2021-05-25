@@ -1,5 +1,5 @@
 // Start tabs.js
-function tab () {
+function tab() {
 
     'use strict';
 
@@ -12,70 +12,70 @@ function tab () {
     var tabs = function (options) {
 
         var el = document.querySelector(options.el);
-        if(el) {
+        if (el) {
             var tabNavigationLinks = el.querySelectorAll(options.tabNavigationLinks);
             var tabContentContainers = el.querySelectorAll(options.tabContentContainers);
             var activeIndex = 0;
             var initCalled = false;
-       
-        /**
-         * init
-         *
-         * @description Initializes the component by removing the no-js class from
-         *   the component, and attaching event listeners to each of the nav items.
-         *   Returns nothing.
-         */
-        var init = function () {
-            if (!initCalled) {
-                initCalled = true;
-                el.classList.remove('no-js');
 
-                for (var i = 0; i < tabNavigationLinks.length; i++) {
-                    var link = tabNavigationLinks[i];
-                    handleClick(link, i);
+            /**
+             * init
+             *
+             * @description Initializes the component by removing the no-js class from
+             *   the component, and attaching event listeners to each of the nav items.
+             *   Returns nothing.
+             */
+            var init = function () {
+                if (!initCalled) {
+                    initCalled = true;
+                    el.classList.remove('no-js');
+
+                    for (var i = 0; i < tabNavigationLinks.length; i++) {
+                        var link = tabNavigationLinks[i];
+                        handleClick(link, i);
+                    }
                 }
-            }
-        };
+            };
 
-        /**
-         * handleClick
-         *
-         * @description Handles click event listeners on each of the links in the
-         *   tab navigation. Returns nothing.
-         * @param {HTMLElement} link The link to listen for events on
-         * @param {Number} index The index of that link
-         */
-        var handleClick = function (link, index) {
-            link.addEventListener('click', function (e) {
-                e.preventDefault();
-                goToTab(index);
-            });
-        };
+            /**
+             * handleClick
+             *
+             * @description Handles click event listeners on each of the links in the
+             *   tab navigation. Returns nothing.
+             * @param {HTMLElement} link The link to listen for events on
+             * @param {Number} index The index of that link
+             */
+            var handleClick = function (link, index) {
+                link.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    goToTab(index);
+                });
+            };
 
-        /**
-         * goToTab
-         *
-         * @description Goes to a specific tab based on index. Returns nothing.
-         * @param {Number} index The index of the tab to go to
-         */
-        var goToTab = function (index) {
-            if (index !== activeIndex && index >= 0 && index <= tabNavigationLinks.length) {
-                tabNavigationLinks[activeIndex].classList.remove('is-active');
-                tabNavigationLinks[index].classList.add('is-active');
-                tabContentContainers[activeIndex] ? tabContentContainers[activeIndex].classList.remove('is-active') : undefined;
-                tabContentContainers[index] ? tabContentContainers[index].classList.add('is-active') : undefined;
-                activeIndex = index;
-            }
-        };
+            /**
+             * goToTab
+             *
+             * @description Goes to a specific tab based on index. Returns nothing.
+             * @param {Number} index The index of the tab to go to
+             */
+            var goToTab = function (index) {
+                if (index !== activeIndex && index >= 0 && index <= tabNavigationLinks.length) {
+                    tabNavigationLinks[activeIndex].classList.remove('is-active');
+                    tabNavigationLinks[index].classList.add('is-active');
+                    tabContentContainers[activeIndex] ? tabContentContainers[activeIndex].classList.remove('is-active') : undefined;
+                    tabContentContainers[index] ? tabContentContainers[index].classList.add('is-active') : undefined;
+                    activeIndex = index;
+                }
+            };
 
-        /**
-         * Returns init and goToTab
-         */
-        return {
-            init: init,
-            goToTab: goToTab
-        };
-    }
+            /**
+             * Returns init and goToTab
+             */
+            return {
+                init: init,
+                goToTab: goToTab
+            };
+        }
     };
 
     /**
@@ -100,23 +100,23 @@ function tab () {
 // });
 
 // Initialise Set 1
-setTimeout(()=>{
+setTimeout(() => {
     tab();
     var myTabs = tabs({
         el: '#tabs',
         tabNavigationLinks: '.tab-link',
         tabContentContainers: '.tab-content'
     });
-    if(myTabs){
+    if (myTabs) {
         myTabs.init();
         //hotFix
         const tabLinks = document.querySelectorAll('.tab-link');
-        if(tabLinks){
+        if (false) {
             tabLinks[1].click();
         }
-      
+
     }
- },100);
+}, 100);
 
 // // Initialise Set 2 
 // myTabs2.init();

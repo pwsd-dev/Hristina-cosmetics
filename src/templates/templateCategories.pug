@@ -1,13 +1,12 @@
-extends ../templates/template
+extends ./template
 block base
     base(href='../')
-block title
-    title Каталог
+
 block append style
 block content
     include ../blocks/header
     main.page
-        include content
+        block incContent
     include ../blocks/footer
 block append script
     script(src='js/tabs.js')

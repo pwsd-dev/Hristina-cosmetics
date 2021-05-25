@@ -1,0 +1,37 @@
+.row-tabs-filter
+    .left.tab-nav
+        p.page__text_gilroy_16.is-active.tab-link Все товары
+        p.page__text_gilroy_16.tab-link Новинки
+        p.page__text_gilroy_16.tab-link Популярное
+        p.page__text_gilroy_16.tab-link Рекомендуемые
+
+    .right
+        .filter
+            button(type="button" onclick="openFilter()")
+                p.page__text_gilroy_16 Сортировать (По умолчанию)
+            button(type="button" onclick="openFilter()")#arrowBtnFilter
+                .page__img
+                    img(src="assets/img/arrow-small-black.svg")
+            .wrapper-inner-Filter#innerFilter
+                .innerFilter
+                    .wrapper-content-filter
+                        include ./mixin/SelectBox
+                        +SelectBox('Ben', [
+                            {name: 'Cream', value: '1', checked: true}, 
+                            {name: 'Cheese', value: '2'}, 
+                            {name: 'Milk', value: '3'}, 
+                            {name: 'Honey', value: '4'}, 
+                            {name: 'Toast', value: '5'}
+                            ])
+                        .item-filter
+                            
+                            //- .checkbox
+                            //-     input(type="checkbox" id="cb10") 
+                            //-     p.page__text_gilroy_16 По умолчанию
+                            //-     label(for="cb10")
+
+                                    
+                        p.page__text_gilroy_16 По возрастанию цен
+                        p.page__text_gilroy_16 По убыванию цен
+                        p.page__text_gilroy_16 Новинки
+                        p.page__text_gilroy_16 Рекомендуемые

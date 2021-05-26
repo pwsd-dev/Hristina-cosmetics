@@ -1,12 +1,26 @@
 .sidebar-catalog {
     padding-top: 70px;
+    .sm-block({
+        display: none;
+    });
     
-    margin: 0 34px 0 65px;
+    
+    margin: 0 34px 0 30px;
+
+    .ipad-block({
+       margin: 0;
+    });
+
+
     .sidebar-catalog-wrapper {
 
         width: 262px;
         display: flex;
         flex-direction: column;
+
+        .ipad-block({
+            width: 150px;
+        });
         
         .row-name {
             display: flex;
@@ -19,6 +33,10 @@
 
             position: relative;
 
+            .ipad-block({
+                font-size: 15px;
+            });
+
             &::after {
                 content: '';
                 position: absolute;
@@ -27,6 +45,8 @@
                 background-color: #9ca896;
                 left: 0;
                 bottom: -30px;
+
+                
             }
         }
 
@@ -81,10 +101,22 @@
                 // height: 30px;
                 // width: 30px;
                 margin-right: 15px;
+                margin-bottom: 15px;
 
                 label {
                      height: 13px;
                     // width: 30px;
+
+                    .ipad-block({
+                        // height: 5px;
+                    });
+
+                    .page__text_14 {
+                        .ipad-block({
+                            font-size: 12px;
+                            line-height: 15px;
+                        });
+                    }
                 }
                 input[type="checkbox"]:checked, 
                 input[type="checkbox"]:not(:checked), 

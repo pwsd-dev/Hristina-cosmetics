@@ -1,0 +1,840 @@
+mixin SelectBox(name, options)
+  .select-box
+    .select-box__current(tabindex="1")
+      each option, index in options
+        .select-box__value
+          input.select-box__input(type="radio" id=index value=option.value name=name checked=option.checked)
+          p.select-box__input-text #{option.name}
+      img.select-box__icon(src="http://cdn.onlinewebfonts.com/svg/img_295694.svg" alt="Arrow Icon" aria-hidden="true")
+    ul.select-box__list
+      each option, index in options
+        li
+          label.select-box__option(for=index aria-hidden) #{option.name}
+
+include ../blocks/mixin/bannerCatalog
+section.ecoPage
+        .wrapper
+            .banner-catalog-wrapper
+                .page__img(data-aos="fade-down-right" data-aos-duration="3000" data-aos-delay="500")
+                    img(src="assets/img/flower-white.svg")
+                h1.page__title-h1 Эко-товары
+.wrapper-flex
+    section.sidebar-catalog
+        .wrapper
+            .sidebar-catalog-wrapper
+                .row-name
+                    p.page__text_gilroy_sm Категория
+                    .arrowBtn
+                        button(type="button" onclick="openCategory()")#arrowBtn
+                            .page__img
+                                img(src="assets/img/arrow-small-black.svg")
+                .wrapper-inner-checkbox#innerCheckbox
+                    .innerCheckbox
+                        .row-checkbox-name
+                            .checkbox
+                                input(type="checkbox" id="cb1") 
+                                label(for="cb1") 
+                                    p.page__text_14 Скрабы для тела
+                                //- .row-checkbox-name.levelOne
+                                //-     .checkbox
+                                //-         input(type="checkbox" id="cb12") 
+                                //-         label(for="cb12") 
+                                //-             p.page__text_14 Скрабы для тела
+                        .row-checkbox-name
+                            .checkbox
+                                input(type="checkbox" id="cb2") 
+                                label(for="cb2") 
+                                    p.page__text_14 Маски для тела
+                        .row-checkbox-name
+                            .checkbox
+                                input(type="checkbox" id="cb3") 
+                                label(for="cb3") 
+                                    p.page__text_14 Соли для ванн
+                        .row-checkbox-name
+                            .checkbox
+                                input(type="checkbox" id="cb4") 
+                                label(for="cb4") 
+                                    p.page__text_14 Антицеллюлитные крема
+                        .row-checkbox-name
+                            .checkbox
+                                input(type="checkbox" id="cb5") 
+                                label(for="cb5") 
+                                    p.page__text_14 Скраб для маникюра/педикюра
+                        .row-checkbox-name
+                            .checkbox
+                                input(type="checkbox" id="cb6") 
+                                label(for="cb6") 
+                                    p.page__text_14 Крем после депиляции
+                        .row-checkbox-name
+                            .checkbox
+                                input(type="checkbox" id="cb7") 
+                                label(for="cb7") 
+                                    p.page__text_14 Крем для маникюра/педикюра
+                .row-name
+                    p.page__text_gilroy_sm Бренды
+                    .arrowBtnBrand
+                        button(type="button" onclick="openCategoryBrand()")#arrowBtnBrand
+                            .page__img
+                                img(src="assets/img/arrow-small-black.svg")
+                .wrapper-inner-brand#innerBrand
+                    .innerBrand
+                        .row-checkbox-name
+                            .checkbox
+                                input(type="checkbox" id="cb8") 
+                                label(for="cb8") 
+                                    p.page__text_14 HRISTINA PROFESSIONAL
+                        .row-checkbox-name
+                            .checkbox
+                                input(type="checkbox" id="cb9") 
+                                label(for="cb9") 
+                                    p.page__text_14 SEZMAR PROFESSIONAL
+    section.productList
+        .wrapper
+            include ../blocks/breadcrumbs
+            .mob-productList
+                .mob-productList-wrapper
+                    .top-side
+                        .filter-productList-mob
+                            button(type="button" onclick="openFilterMob()")#iconFilterMob
+                                .page__img
+                                    img(src="assets/img/filter-icon-mob.svg")
+                                p.page__text__gilroy_16 Фильтр
+                            .wrapper-inner-filter-mob#innerFilterMob
+                                .innerFilterMob
+                                    .wrapper-content-filter-mob
+                                        .row-filter-basket-mob
+                                            .left-side
+                                                //- .page__img
+                                                //-     img(src="assets/img/arrow-black-left-2.svg")
+                                                p.page__text_gilroy_16 Фильтр
+                                            .right-side
+                                                .page__img
+                                                    img(src="assets/img/basket-icon-green.svg")
+                                                p.page__text_gilroy_16 Сбросить
+                                        .select-type-radio-mob
+                                            <form action="#">
+                                                <p>
+                                                    <input type="radio" id="test1" name="radio-group" checked>
+                                                    <label for="test1">Все товары</label>
+                                                </p>
+                                                <p>
+                                                    <input type="radio" id="test2" name="radio-group">
+                                                    <label for="test2">Новинки</label>
+                                                </p>
+                                                <p>
+                                                    <input type="radio" id="test3" name="radio-group">
+                                                    <label for="test3">Популярное</label>
+                                                </p>
+                                                <p>
+                                                    <input type="radio" id="test4" name="radio-group">
+                                                    <label for="test4">Рекомендуемые</label>
+                                                </p>
+                                                </form>
+                                        .categories-checkbox-mob
+                                            .row-name
+                                                p.page__text_gilroy_sm Категория
+                                                .arrowBtn
+                                                    button(type="button" onclick="openCategoryMob()")#arrowBtnMob
+                                                        .page__img
+                                                            img(src="assets/img/arrow-small-black.svg")
+                                            .wrapper-inner-checkbox#innerCheckboxMob
+                                                .innerCheckboxMob
+                                                    .row-checkbox-name
+                                                        .checkbox
+                                                            input(type="checkbox" id="cb41") 
+                                                            label(for="cb41") 
+                                                                p.page__text_14 Скрабы для тела
+                                                            //- .row-checkbox-name.levelOne
+                                                            //-     .checkbox
+                                                            //-         input(type="checkbox" id="cb12") 
+                                                            //-         label(for="cb12") 
+                                                            //-             p.page__text_14 Скрабы для тела
+                                                    .row-checkbox-name
+                                                        .checkbox
+                                                            input(type="checkbox" id="cb42") 
+                                                            label(for="cb42") 
+                                                                p.page__text_14 Маски для тела
+                                                    .row-checkbox-name
+                                                        .checkbox
+                                                            input(type="checkbox" id="cb43") 
+                                                            label(for="cb43") 
+                                                                p.page__text_14 Соли для ванн
+                                                    .row-checkbox-name
+                                                        .checkbox
+                                                            input(type="checkbox" id="cb44") 
+                                                            label(for="cb44") 
+                                                                p.page__text_14 Антицеллюлитные крема
+                                                    .row-checkbox-name
+                                                        .checkbox
+                                                            input(type="checkbox" id="cb45") 
+                                                            label(for="cb45") 
+                                                                p.page__text_14 Скраб для маникюра/педикюра
+                                                    .row-checkbox-name
+                                                        .checkbox
+                                                            input(type="checkbox" id="cb46") 
+                                                            label(for="cb46") 
+                                                                p.page__text_14 Крем после депиляции
+                                                    .row-checkbox-name
+                                                        .checkbox
+                                                            input(type="checkbox" id="cb47") 
+                                                            label(for="cb47") 
+                                                                p.page__text_14 Крем для маникюра/педикюра
+                                            .row-name
+                                                p.page__text_gilroy_sm Бренды
+                                                .arrowBtnBrand
+                                                    button(type="button" onclick="openCategoryBrandMob()")#arrowBtnBrandMob
+                                                        .page__img
+                                                            img(src="assets/img/arrow-small-black.svg")
+                                            .wrapper-inner-brand#innerBrandMob
+                                                .innerBrandMob
+                                                    .row-checkbox-name
+                                                        .checkbox
+                                                            input(type="checkbox" id="cb48") 
+                                                            label(for="cb48") 
+                                                                p.page__text_14 HRISTINA PROFESSIONAL
+                                                    .row-checkbox-name
+                                                        .checkbox
+                                                            input(type="checkbox" id="cb49") 
+                                                            label(for="cb49") 
+                                                                p.page__text_14 SEZMAR PROFESSIONAL
+                        .select-productList-mob
+                            +SelectBox('сортировать(По умолчанию)', [
+                                            {name: 'Сортировать (По умолчанию)', value: '8', checked: true},
+                                            {name: 'По возрастанию цен', value: '9'}, 
+                                            {name: 'По убыванию цен', value: '10'}, 
+                                            {name: 'Новинки', value: '11'}, 
+                                            {name: 'Рекомендуемые', value: '12'}
+                    
+                                            ])
+                    .middle-side
+                        form.form(action="")
+                            button(type="submit")
+                                .page__img
+                                    img(src="assets/img/search-icon-grey.svg")
+                            input(type="search" placeholder="Поиск по категории..." class="search")
+
+                    .bottom-side
+                        a(href="#")
+                            .leader-item
+                                .page__img
+                                    img(src="assets/img/leaders-item-5.png")
+                                .text
+                                    p.page__text_19 Янтарный ночной крем дальше описание
+                                    p.page__text_sm_bold Крем для лица
+                                    p.page__text_15 1920 ₽
+                                    .hover-price
+                                        .page__btn_3 В корзину
+                        a(href="#")
+                            .leader-item
+                                .page__img
+                                    img(src="assets/img/leaders-item-1.png")
+                                .text
+                                    p.page__text_19 Янтарный ночной крем дальше описание
+                                    p.page__text_sm_bold Крем для лица
+                                    p.page__text_15 1920 ₽
+                                    .hover-price
+                                        .page__btn_3 В корзину
+                        a(href="#")
+                            .leader-item
+                                .page__img
+                                    img(src="assets/img/leaders-item-2.png")
+                                .text
+                                    p.page__text_19 Янтарный ночной крем дальше описание
+                                    p.page__text_sm_bold Крем для лица
+                                    p.page__text_15 1920 ₽
+                                    .hover-price
+                                        .page__btn_3 В корзину
+                        a(href="#")
+                            .leader-item
+                                .page__img
+                                    img(src="assets/img/leaders-item-3.png")
+                                .text
+                                    p.page__text_19 Янтарный ночной крем дальше описание
+                                    p.page__text_sm_bold Крем для лица
+                                    p.page__text_15 1920 ₽
+                                    .hover-price
+                                        .page__btn_3 В корзину
+                        a(href="#")
+                            .leader-item
+                                .page__img
+                                    img(src="assets/img/leaders-item-4.png")
+                                .text
+                                    p.page__text_19 Янтарный ночной крем дальше описание
+                                    p.page__text_sm_bold Крем для лица
+                                    p.page__text_15 1920 ₽
+                                    .hover-price
+                                        .page__btn_3 В корзину
+                        a(href="#")
+                            .leader-item
+                                .page__img
+                                    img(src="assets/img/leaders-item-2.png")
+                                .text
+                                    p.page__text_19 Янтарный ночной крем дальше описание
+                                    p.page__text_sm_bold Крем для лица
+                                    p.page__text_15 1920 ₽
+                                    .hover-price
+                                        .page__btn_3 В корзину
+                        a(href="#")
+                            .leader-item
+                                .page__img
+                                    img(src="assets/img/leaders-item-3.png")
+                                .text
+                                    p.page__text_19 Янтарный ночной крем дальше описание
+                                    p.page__text_sm_bold Крем для лица
+                                    p.page__text_15 1920 ₽
+                                    .hover-price
+                                        .page__btn_3 В корзину
+                        a(href="#")
+                            .leader-item
+                                .page__img
+                                    img(src="assets/img/leaders-item-4.png")
+                                .text
+                                    p.page__text_19 Янтарный ночной крем дальше описание
+                                    p.page__text_sm_bold Крем для лица
+                                    p.page__text_15 1920 ₽
+                                    .hover-price
+                                        .page__btn_3 В корзину
+                        a(href="#")
+                            .leader-item
+                                .page__img
+                                    img(src="assets/img/leaders-item-5.png")
+                                .text
+                                    p.page__text_19 Янтарный ночной крем дальше описание
+                                    p.page__text_sm_bold Крем для лица
+                                    p.page__text_15 1920 ₽
+                                    .hover-price
+                                        .page__btn_3 В корзину
+                        section.pagination
+                            .pagination-wrapper
+                                //- .page__img
+                                //-     img(src="assets/img/icon-arrow.svg")
+                                .numbers-pages
+                                    a(href="#")
+                                        .numbers-page 1
+                                    a(href="#")
+                                        .numbers-page 2
+                                    a(href="#")
+                                        .numbers-page 3
+                                    a(href="#")
+                                        .numbers-page 4
+                                    a(href="#")
+                                        .numbers-page 5
+                                    
+                                    .numbers-page ...
+                                    .numbers-page 10
+                                .page__img
+                                    img(src="assets/img/arrow-small-black.svg")
+            h2.page__title-h2 Профессиональная косметика
+            .tabs#tabs
+                .row-tabs-filter
+                    .left.tab-nav
+                        p.page__text_gilroy_16.is-active.tab-link Все товары
+                        p.page__text_gilroy_16.tab-link Новинки
+                        p.page__text_gilroy_16.tab-link Популярное
+                        p.page__text_gilroy_16.tab-link Рекомендуемые
+
+                    .right
+                        .filter
+                            //- button(type="button" onclick="openFilter()")
+                                //- p.page__text_gilroy_16 Сортировать (По умолчанию)
+                            +SelectBox('сортировать', [
+                                            {name: 'Сортировать (По умолчанию)', value: '1', checked: true},
+                                            {name: 'По возрастанию цен', value: '2'}, 
+                                            {name: 'По убыванию цен', value: '3'}, 
+                                            {name: 'Новинки', value: '4'}, 
+                                            {name: 'Рекомендуемые', value: '5'}
+                    
+                                            ])
+                            button(type="button" onclick="openFilter()")#arrowBtnFilter
+                                //- .page__img
+                                //-     img(src="assets/img/arrow-small-black.svg")
+                            .wrapper-inner-Filter#innerFilter
+                                .innerFilter
+                                    .wrapper-content-filter
+                                        
+                                        //- .item-filter
+                                            
+                                        //-     //- .checkbox
+                                        //-     //-     input(type="checkbox" id="cb10") 
+                                        //-     //-     p.page__text_gilroy_16 По умолчанию
+                                        //-     //-     label(for="cb10")
+
+                                                    
+                                        //- p.page__text_gilroy_16 По возрастанию цен
+                                        //- p.page__text_gilroy_16 По убыванию цен
+                                        //- p.page__text_gilroy_16 Новинки
+                                        //- p.page__text_gilroy_16 Рекомендуемые
+                .tab-content.is-active
+                    //- h2.page__title-h2 tab1
+                    form.form(action="")
+                        button(type="submit")
+                            .page__img
+                                img(src="assets/img/search-icon-grey.svg")
+                        input(type="search" placeholder="Поиск по категории..." class="search")
+                    .wrapper-items-catalog
+                        a(href="#")
+                            .leader-item
+                                .page__img
+                                    img(src="assets/img/leaders-item-1.png")
+                                .text
+                                    p.page__text_19 Янтарный ночной крем дальше описание
+                                    p.page__text_sm_bold Крем для лица
+                                    p.page__text_15 1920 ₽
+                                    .hover-price
+                                        .page__btn_3 В корзину
+                        a(href="#")
+                            .leader-item
+                                .page__img
+                                    img(src="assets/img/leaders-item-2.png")
+                                .text
+                                    p.page__text_19 Янтарный ночной крем дальше описание
+                                    p.page__text_sm_bold Крем для лица
+                                    p.page__text_15 1920 ₽
+                                    .hover-price
+                                        .page__btn_3 В корзину
+                        a(href="#")
+                            .leader-item
+                                .page__img
+                                    img(src="assets/img/leaders-item-3.png")
+                                .text
+                                    p.page__text_19 Янтарный ночной крем дальше описание
+                                    p.page__text_sm_bold Крем для лица
+                                    p.page__text_15 1920 ₽
+                                    .hover-price
+                                        .page__btn_3 В корзину
+                        a(href="#")
+                            .leader-item
+                                .page__img
+                                    img(src="assets/img/leaders-item-4.png")
+                                .text
+                                    p.page__text_19 Янтарный ночной крем дальше описание
+                                    p.page__text_sm_bold Крем для лица
+                                    p.page__text_15 1920 ₽
+                                    .hover-price
+                                        .page__btn_3 В корзину
+                        a(href="#")
+                            .leader-item
+                                .page__img
+                                    img(src="assets/img/leaders-item-5.png")
+                                .text
+                                    p.page__text_19 Янтарный ночной крем дальше описание
+                                    p.page__text_sm_bold Крем для лица
+                                    p.page__text_15 1920 ₽
+                                    .hover-price
+                                        .page__btn_3 В корзину
+                        a(href="#")
+                            .leader-item
+                                .page__img
+                                    img(src="assets/img/leaders-item-2.png")
+                                .text
+                                    p.page__text_19 Янтарный ночной крем дальше описание
+                                    p.page__text_sm_bold Крем для лица
+                                    p.page__text_15 1920 ₽
+                                    .hover-price
+                                        .page__btn_3 В корзину
+                        a(href="#")
+                            .leader-item
+                                .page__img
+                                    img(src="assets/img/leaders-item-3.png")
+                                .text
+                                    p.page__text_19 Янтарный ночной крем дальше описание
+                                    p.page__text_sm_bold Крем для лица
+                                    p.page__text_15 1920 ₽
+                                    .hover-price
+                                        .page__btn_3 В корзину
+                        a(href="#")
+                            .leader-item
+                                .page__img
+                                    img(src="assets/img/leaders-item-4.png")
+                                .text
+                                    p.page__text_19 Янтарный ночной крем дальше описание
+                                    p.page__text_sm_bold Крем для лица
+                                    p.page__text_15 1920 ₽
+                                    .hover-price
+                                        .page__btn_3 В корзину
+                        a(href="#")
+                            .leader-item
+                                .page__img
+                                    img(src="assets/img/leaders-item-5.png")
+                                .text
+                                    p.page__text_19 Янтарный ночной крем дальше описание
+                                    p.page__text_sm_bold Крем для лица
+                                    p.page__text_15 1920 ₽
+                                    .hover-price
+                                        .page__btn_3 В корзину
+                        a(href="#")
+                            .leader-item
+                                .page__img
+                                    img(src="assets/img/leaders-item-1.png")
+                                .text
+                                    p.page__text_19 Янтарный ночной крем дальше описание
+                                    p.page__text_sm_bold Крем для лица
+                                    p.page__text_15 1920 ₽
+                                    .hover-price
+                                        .page__btn_3 В корзину
+                        a(href="#")
+                            .leader-item
+                                .page__img
+                                    img(src="assets/img/leaders-item-2.png")
+                                .text
+                                    p.page__text_19 Янтарный ночной крем дальше описание
+                                    p.page__text_sm_bold Крем для лица
+                                    p.page__text_15 1920 ₽
+                                    .hover-price
+                                        .page__btn_3 В корзину
+                        a(href="#")
+                            .leader-item
+                                .page__img
+                                    img(src="assets/img/leaders-item-3.png")
+                                .text
+                                    p.page__text_19 Янтарный ночной крем дальше описание
+                                    p.page__text_sm_bold Крем для лица
+                                    p.page__text_15 1920 ₽
+                                    .hover-price
+                                        .page__btn_3 В корзину
+                        a(href="#")
+                            .leader-item
+                                .page__img
+                                    img(src="assets/img/leaders-item-4.png")
+                                .text
+                                    p.page__text_19 Янтарный ночной крем дальше описание
+                                    p.page__text_sm_bold Крем для лица
+                                    p.page__text_15 1920 ₽
+                                    .hover-price
+                                        .page__btn_3 В корзину
+                        a(href="#")
+                            .leader-item
+                                .page__img
+                                    img(src="assets/img/leaders-item-5.png")
+                                .text
+                                    p.page__text_19 Янтарный ночной крем дальше описание
+                                    p.page__text_sm_bold Крем для лица
+                                    p.page__text_15 1920 ₽
+                                    .hover-price
+                                        .page__btn_3 В корзину
+                .tab-content
+                    //- h2.page__title-h2 tab1
+                    form.form(action="")
+                        button(type="submit")
+                            .page__img
+                                img(src="assets/img/search-icon-grey.svg")
+                        input(type="search" placeholder="Поиск по категории..." class="search")
+                    .wrapper-items-catalog
+                        a(href="#")
+                            .leader-item
+                                .page__img
+                                    img(src="assets/img/leaders-item-5.png")
+                                .text
+                                    p.page__text_19 Янтарный ночной крем дальше описание
+                                    p.page__text_sm_bold Крем для лица
+                                    p.page__text_15 1920 ₽
+                                    .hover-price
+                                        .page__btn_3 В корзину
+                        a(href="#")
+                            .leader-item
+                                .page__img
+                                    img(src="assets/img/leaders-item-1.png")
+                                .text
+                                    p.page__text_19 Янтарный ночной крем дальше описание
+                                    p.page__text_sm_bold Крем для лица
+                                    p.page__text_15 1920 ₽
+                                    .hover-price
+                                        .page__btn_3 В корзину
+                        a(href="#")
+                            .leader-item
+                                .page__img
+                                    img(src="assets/img/leaders-item-2.png")
+                                .text
+                                    p.page__text_19 Янтарный ночной крем дальше описание
+                                    p.page__text_sm_bold Крем для лица
+                                    p.page__text_15 1920 ₽
+                                    .hover-price
+                                        .page__btn_3 В корзину
+                        a(href="#")
+                            .leader-item
+                                .page__img
+                                    img(src="assets/img/leaders-item-3.png")
+                                .text
+                                    p.page__text_19 Янтарный ночной крем дальше описание
+                                    p.page__text_sm_bold Крем для лица
+                                    p.page__text_15 1920 ₽
+                                    .hover-price
+                                        .page__btn_3 В корзину
+                        a(href="#")
+                            .leader-item
+                                .page__img
+                                    img(src="assets/img/leaders-item-4.png")
+                                .text
+                                    p.page__text_19 Янтарный ночной крем дальше описание
+                                    p.page__text_sm_bold Крем для лица
+                                    p.page__text_15 1920 ₽
+                                    .hover-price
+                                        .page__btn_3 В корзину
+                        a(href="#")
+                            .leader-item
+                                .page__img
+                                    img(src="assets/img/leaders-item-2.png")
+                                .text
+                                    p.page__text_19 Янтарный ночной крем дальше описание
+                                    p.page__text_sm_bold Крем для лица
+                                    p.page__text_15 1920 ₽
+                                    .hover-price
+                                        .page__btn_3 В корзину
+                        a(href="#")
+                            .leader-item
+                                .page__img
+                                    img(src="assets/img/leaders-item-3.png")
+                                .text
+                                    p.page__text_19 Янтарный ночной крем дальше описание
+                                    p.page__text_sm_bold Крем для лица
+                                    p.page__text_15 1920 ₽
+                                    .hover-price
+                                        .page__btn_3 В корзину
+                        a(href="#")
+                            .leader-item
+                                .page__img
+                                    img(src="assets/img/leaders-item-4.png")
+                                .text
+                                    p.page__text_19 Янтарный ночной крем дальше описание
+                                    p.page__text_sm_bold Крем для лица
+                                    p.page__text_15 1920 ₽
+                                    .hover-price
+                                        .page__btn_3 В корзину
+                        a(href="#")
+                            .leader-item
+                                .page__img
+                                    img(src="assets/img/leaders-item-5.png")
+                                .text
+                                    p.page__text_19 Янтарный ночной крем дальше описание
+                                    p.page__text_sm_bold Крем для лица
+                                    p.page__text_15 1920 ₽
+                                    .hover-price
+                                        .page__btn_3 В корзину
+                        a(href="#")
+                            .leader-item
+                                .page__img
+                                    img(src="assets/img/leaders-item-1.png")
+                                .text
+                                    p.page__text_19 Янтарный ночной крем дальше описание
+                                    p.page__text_sm_bold Крем для лица
+                                    p.page__text_15 1920 ₽
+                                    .hover-price
+                                        .page__btn_3 В корзину
+                        a(href="#")
+                            .leader-item
+                                .page__img
+                                    img(src="assets/img/leaders-item-2.png")
+                                .text
+                                    p.page__text_19 Янтарный ночной крем дальше описание
+                                    p.page__text_sm_bold Крем для лица
+                                    p.page__text_15 1920 ₽
+                                    .hover-price
+                                        .page__btn_3 В корзину
+                        a(href="#")
+                            .leader-item
+                                .page__img
+                                    img(src="assets/img/leaders-item-3.png")
+                                .text
+                                    p.page__text_19 Янтарный ночной крем дальше описание
+                                    p.page__text_sm_bold Крем для лица
+                                    p.page__text_15 1920 ₽
+                                    .hover-price
+                                        .page__btn_3 В корзину
+                        a(href="#")
+                            .leader-item
+                                .page__img
+                                    img(src="assets/img/leaders-item-4.png")
+                                .text
+                                    p.page__text_19 Янтарный ночной крем дальше описание
+                                    p.page__text_sm_bold Крем для лица
+                                    p.page__text_15 1920 ₽
+                                    .hover-price
+                                        .page__btn_3 В корзину
+                        a(href="#")
+                            .leader-item
+                                .page__img
+                                    img(src="assets/img/leaders-item-5.png")
+                                .text
+                                    p.page__text_19 Янтарный ночной крем дальше описание
+                                    p.page__text_sm_bold Крем для лица
+                                    p.page__text_15 1920 ₽
+                                    .hover-price
+                                        .page__btn_3 В корзину
+                .tab-content
+                    //- h2.page__title-h2 tab1
+                    form.form(action="")
+                        button(type="submit")
+                            .page__img
+                                img(src="assets/img/search-icon-grey.svg")
+                        input(type="search" placeholder="Поиск по категории..." class="search")
+                    .wrapper-items-catalog
+                        a(href="#")
+                            .leader-item
+                                .page__img
+                                    img(src="assets/img/leaders-item-3.png")
+                                .text
+                                    p.page__text_19 Янтарный ночной крем дальше описание
+                                    p.page__text_sm_bold Крем для лица
+                                    p.page__text_15 1920 ₽
+                                    .hover-price
+                                        .page__btn_3 В корзину
+                        a(href="#")
+                            .leader-item
+                                .page__img
+                                    img(src="assets/img/leaders-item-5.png")
+                                .text
+                                    p.page__text_19 Янтарный ночной крем дальше описание
+                                    p.page__text_sm_bold Крем для лица
+                                    p.page__text_15 1920 ₽
+                                    .hover-price
+                                        .page__btn_3 В корзину
+                        a(href="#")
+                            .leader-item
+                                .page__img
+                                    img(src="assets/img/leaders-item-2.png")
+                                .text
+                                    p.page__text_19 Янтарный ночной крем дальше описание
+                                    p.page__text_sm_bold Крем для лица
+                                    p.page__text_15 1920 ₽
+                                    .hover-price
+                                        .page__btn_3 В корзину
+                        a(href="#")
+                            .leader-item
+                                .page__img
+                                    img(src="assets/img/leaders-item-1.png")
+                                .text
+                                    p.page__text_19 Янтарный ночной крем дальше описание
+                                    p.page__text_sm_bold Крем для лица
+                                    p.page__text_15 1920 ₽
+                                    .hover-price
+                                        .page__btn_3 В корзину
+                        a(href="#")
+                            .leader-item
+                                .page__img
+                                    img(src="assets/img/leaders-item-4.png")
+                                .text
+                                    p.page__text_19 Янтарный ночной крем дальше описание
+                                    p.page__text_sm_bold Крем для лица
+                                    p.page__text_15 1920 ₽
+                                    .hover-price
+                                        .page__btn_3 В корзину
+                        
+                        a(href="#")
+                            .leader-item
+                                .page__img
+                                    img(src="assets/img/leaders-item-2.png")
+                                .text
+                                    p.page__text_19 Янтарный ночной крем дальше описание
+                                    p.page__text_sm_bold Крем для лица
+                                    p.page__text_15 1920 ₽
+                                    .hover-price
+                                        .page__btn_3 В корзину
+                        a(href="#")
+                            .leader-item
+                                .page__img
+                                    img(src="assets/img/leaders-item-3.png")
+                                .text
+                                    p.page__text_19 Янтарный ночной крем дальше описание
+                                    p.page__text_sm_bold Крем для лица
+                                    p.page__text_15 1920 ₽
+                                    .hover-price
+                                        .page__btn_3 В корзину
+                        a(href="#")
+                            .leader-item
+                                .page__img
+                                    img(src="assets/img/leaders-item-4.png")
+                                .text
+                                    p.page__text_19 Янтарный ночной крем дальше описание
+                                    p.page__text_sm_bold Крем для лица
+                                    p.page__text_15 1920 ₽
+                                    .hover-price
+                                        .page__btn_3 В корзину
+                        a(href="#")
+                            .leader-item
+                                .page__img
+                                    img(src="assets/img/leaders-item-5.png")
+                                .text
+                                    p.page__text_19 Янтарный ночной крем дальше описание
+                                    p.page__text_sm_bold Крем для лица
+                                    p.page__text_15 1920 ₽
+                                    .hover-price
+                                        .page__btn_3 В корзину
+                        a(href="#")
+                            .leader-item
+                                .page__img
+                                    img(src="assets/img/leaders-item-1.png")
+                                .text
+                                    p.page__text_19 Янтарный ночной крем дальше описание
+                                    p.page__text_sm_bold Крем для лица
+                                    p.page__text_15 1920 ₽
+                                    .hover-price
+                                        .page__btn_3 В корзину
+                        a(href="#")
+                            .leader-item
+                                .page__img
+                                    img(src="assets/img/leaders-item-2.png")
+                                .text
+                                    p.page__text_19 Янтарный ночной крем дальше описание
+                                    p.page__text_sm_bold Крем для лица
+                                    p.page__text_15 1920 ₽
+                                    .hover-price
+                                        .page__btn_3 В корзину
+                        a(href="#")
+                            .leader-item
+                                .page__img
+                                    img(src="assets/img/leaders-item-3.png")
+                                .text
+                                    p.page__text_19 Янтарный ночной крем дальше описание
+                                    p.page__text_sm_bold Крем для лица
+                                    p.page__text_15 1920 ₽
+                                    .hover-price
+                                        .page__btn_3 В корзину
+                        a(href="#")
+                            .leader-item
+                                .page__img
+                                    img(src="assets/img/leaders-item-4.png")
+                                .text
+                                    p.page__text_19 Янтарный ночной крем дальше описание
+                                    p.page__text_sm_bold Крем для лица
+                                    p.page__text_15 1920 ₽
+                                    .hover-price
+                                        .page__btn_3 В корзину
+                        a(href="#")
+                            .leader-item
+                                .page__img
+                                    img(src="assets/img/leaders-item-5.png")
+                                .text
+                                    p.page__text_19 Янтарный ночной крем дальше описание
+                                    p.page__text_sm_bold Крем для лица
+                                    p.page__text_15 1920 ₽
+                                    .hover-price
+                                        .page__btn_3 В корзину
+                .tab-content
+                    form.form(action="")
+                        button(type="submit")
+                            .page__img
+                                img(src="assets/img/search-icon-grey.svg")
+                        input(type="search" placeholder="Поиск по категории..." class="search")
+                    .wrapper-items-catalog
+                        a(href="#")
+                            .leader-item
+                                .page__img
+                                    img(src="assets/img/leaders-item-1.png")
+                                .text
+                                    p.page__text_19 Янтарный ночной крем дальше описание
+                                    p.page__text_sm_bold Крем для лица
+                                    p.page__text_15 1920 ₽
+                                    .hover-price
+                                        .page__btn_3 В корзину
+                        a(href="#")
+                            .leader-item
+                                .page__img
+                                    img(src="assets/img/leaders-item-3.png")
+                                .text
+                                    p.page__text_19 Янтарный ночной крем дальше описание
+                                    p.page__text_sm_bold Крем для лица
+                                    p.page__text_15 1920 ₽
+                                    .hover-price
+                                        .page__btn_3 В корзину
+include ../blocks/subscribe
+include ../blocks/second-subscribe

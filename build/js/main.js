@@ -57,10 +57,10 @@ function openFilterMob() {
 
 function openCategoryBrand() {
 
-    const arrowBtnBrandMob = document.getElementById("arrowBtnBrandMob");
+    const arrowBtnBrandMob = document.getElementById("arrowBtnBrand");
     arrowBtnBrandMob.classList.toggle("active");
-    const innerBrandMob = document.getElementById("innerBrandMob");
-    innerBrandMob.querySelector(".innerBrandMob").classList.toggle("active");
+    const innerBrandMob = document.getElementById("innerBrand");
+    innerBrandMob.querySelector(".innerBrand").classList.toggle("active");
 
 }
 

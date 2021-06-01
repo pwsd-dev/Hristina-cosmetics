@@ -4439,6 +4439,28 @@ a {
   left: 47%;
 }
 
+.payPage {
+  background-image: url(../assets/img/bg-delivery.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 65px 0 89px 0;
+}
+
+.payPage .banner-catalog-wrapper {
+  text-align: center;
+  position: relative;
+}
+
+.payPage .banner-catalog-wrapper::after {
+  content: '';
+  position: absolute;
+  width: 68px;
+  height: 1px;
+  background-color: #fff;
+  bottom: -30px;
+  left: 47%;
+}
+
 @media (min-width: 768px) {
 
 }
@@ -5242,6 +5264,12 @@ a {
 
   .faceCare {
     background-image: url(../assets/img/FACECAREMOB.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .payPage {
+    background-image: url(../assets/img/bg-delivery-mob.png);
     background-repeat: no-repeat;
     background-size: cover;
   }

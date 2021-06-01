@@ -186,5 +186,35 @@
 
 }
 
+.payPage{
+    background-image: url(../assets/img/bg-delivery.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 65px 0 89px 0;
+    
+
+    .xs-block({
+        background-image: url(../assets/img/bg-delivery-mob.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    });
+
+    .banner-catalog-wrapper {
+        text-align: center;
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 68px;
+            height: 1px;
+            background-color: #fff;
+            bottom: -30px;
+            left: 47%;
+        }
+    }
+
+}
+
 
 

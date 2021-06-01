@@ -107,7 +107,7 @@
 				</div>
 			</header>
 			<main class="page">
-								<section class="pageCatalog" style="background-image: url(../assets/img/pageCatalog-bg.png);">
+								<section class="pageCatalog">
 									<div class="wrapper">
 										<div class="banner-catalog-wrapper">
 											<div class="page__img" data-aos="fade-down-right" data-aos-duration="3000" data-aos-delay="500"><img src="assets/img/flower-white.svg"></div>
@@ -230,6 +230,316 @@
 									</div>
 								</div>
 							</section>
+							<div class="mob-productList">
+								<div class="mob-productList-wrapper">
+									<div class="top-side">
+										<div class="filter-productList-mob">
+											<button type="button" onclick="openFilterMob()" id="iconFilterMob">
+												<div class="page__img"><img src="assets/img/filter-icon-mob.svg"></div>
+												<p class="page__text__gilroy_16">Фильтр</p>
+											</button>
+											<div class="wrapper-inner-filter-mob" id="innerFilterMob">
+												<div class="innerFilterMob">
+													<div class="wrapper-content-filter-mob">
+														<div class="row-filter-basket-mob">
+															<div class="left-side">
+																<p class="page__text_gilroy_16">Фильтр</p>
+															</div>
+															<div class="right-side">
+																<div class="page__img"><img src="assets/img/basket-icon-green.svg"></div>
+																<p class="page__text_gilroy_16">Сбросить</p>
+															</div>
+														</div>
+														<div class="select-type-radio-mob"><form action="#">
+<p>
+<input type="radio" id="test1" name="radio-group" checked>
+<label for="test1">Все товары</label>
+</p>
+<p>
+<input type="radio" id="test2" name="radio-group">
+<label for="test2">Новинки</label>
+</p>
+<p>
+<input type="radio" id="test3" name="radio-group">
+<label for="test3">Популярное</label>
+</p>
+<p>
+<input type="radio" id="test4" name="radio-group">
+<label for="test4">Рекомендуемые</label>
+</p>
+</form>
+														</div>
+														<div class="categories-checkbox-mob">
+															<div class="row-name">
+																<p class="page__text_gilroy_sm">Категория</p>
+																<div class="arrowBtn">
+																	<button type="button" onclick="openCategoryMob()" id="arrowBtnMob">
+																		<div class="page__img"><img src="assets/img/arrow-small-black.svg"></div>
+																	</button>
+																</div>
+															</div>
+															<div class="wrapper-inner-checkbox" id="innerCheckboxMob">
+																<div class="innerCheckboxMob">
+																	<div class="row-checkbox-name">
+																		<div class="checkbox">
+																			<input type="checkbox" id="cb41">
+																			<label for="cb41"> 
+																				<p class="page__text_14">Скрабы для тела</p>
+																			</label>
+																		</div>
+																	</div>
+																	<div class="row-checkbox-name">
+																		<div class="checkbox">
+																			<input type="checkbox" id="cb42">
+																			<label for="cb42"> 
+																				<p class="page__text_14">Маски для тела</p>
+																			</label>
+																		</div>
+																	</div>
+																	<div class="row-checkbox-name">
+																		<div class="checkbox">
+																			<input type="checkbox" id="cb43">
+																			<label for="cb43"> 
+																				<p class="page__text_14">Соли для ванн</p>
+																			</label>
+																		</div>
+																	</div>
+																	<div class="row-checkbox-name">
+																		<div class="checkbox">
+																			<input type="checkbox" id="cb44">
+																			<label for="cb44"> 
+																				<p class="page__text_14">Антицеллюлитные крема</p>
+																			</label>
+																		</div>
+																	</div>
+																	<div class="row-checkbox-name">
+																		<div class="checkbox">
+																			<input type="checkbox" id="cb45">
+																			<label for="cb45"> 
+																				<p class="page__text_14">Скраб для маникюра/педикюра</p>
+																			</label>
+																		</div>
+																	</div>
+																	<div class="row-checkbox-name">
+																		<div class="checkbox">
+																			<input type="checkbox" id="cb46">
+																			<label for="cb46"> 
+																				<p class="page__text_14">Крем после депиляции</p>
+																			</label>
+																		</div>
+																	</div>
+																	<div class="row-checkbox-name">
+																		<div class="checkbox">
+																			<input type="checkbox" id="cb47">
+																			<label for="cb47"> 
+																				<p class="page__text_14">Крем для маникюра/педикюра</p>
+																			</label>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="row-name">
+																<p class="page__text_gilroy_sm">Бренды</p>
+																<div class="arrowBtnBrand">
+																	<button type="button" onclick="openCategoryBrandMob()" id="arrowBtnBrandMob">
+																		<div class="page__img"><img src="assets/img/arrow-small-black.svg"></div>
+																	</button>
+																</div>
+															</div>
+															<div class="wrapper-inner-brand" id="innerBrandMob">
+																<div class="innerBrandMob">
+																	<div class="row-checkbox-name">
+																		<div class="checkbox">
+																			<input type="checkbox" id="cb48">
+																			<label for="cb48"> 
+																				<p class="page__text_14">HRISTINA PROFESSIONAL</p>
+																			</label>
+																		</div>
+																	</div>
+																	<div class="row-checkbox-name">
+																		<div class="checkbox">
+																			<input type="checkbox" id="cb49">
+																			<label for="cb49"> 
+																				<p class="page__text_14">SEZMAR PROFESSIONAL</p>
+																			</label>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="select-productList-mob">
+															<div class="select-box">
+																<div class="select-box__current" tabindex="1">
+																	<div class="select-box__value">
+																		<input class="select-box__input" type="radio" id="0" value="8" name="сортировать(По умолчанию)" checked>
+																		<p class="select-box__input-text">Сортировать (По умолчанию)</p>
+																	</div>
+																	<div class="select-box__value">
+																		<input class="select-box__input" type="radio" id="1" value="9" name="сортировать(По умолчанию)">
+																		<p class="select-box__input-text">По возрастанию цен</p>
+																	</div>
+																	<div class="select-box__value">
+																		<input class="select-box__input" type="radio" id="2" value="10" name="сортировать(По умолчанию)">
+																		<p class="select-box__input-text">По убыванию цен</p>
+																	</div>
+																	<div class="select-box__value">
+																		<input class="select-box__input" type="radio" id="3" value="11" name="сортировать(По умолчанию)">
+																		<p class="select-box__input-text">Новинки</p>
+																	</div>
+																	<div class="select-box__value">
+																		<input class="select-box__input" type="radio" id="4" value="12" name="сортировать(По умолчанию)">
+																		<p class="select-box__input-text">Рекомендуемые</p>
+																	</div><img class="select-box__icon" src="http://cdn.onlinewebfonts.com/svg/img_295694.svg" alt="Arrow Icon" aria-hidden="true">
+																</div>
+																<ul class="select-box__list">
+																	<li>
+																		<label class="select-box__option" for="0" aria-hidden>Сортировать (По умолчанию)</label>
+																	</li>
+																	<li>
+																		<label class="select-box__option" for="1" aria-hidden>По возрастанию цен</label>
+																	</li>
+																	<li>
+																		<label class="select-box__option" for="2" aria-hidden>По убыванию цен</label>
+																	</li>
+																	<li>
+																		<label class="select-box__option" for="3" aria-hidden>Новинки</label>
+																	</li>
+																	<li>
+																		<label class="select-box__option" for="4" aria-hidden>Рекомендуемые</label>
+																	</li>
+																</ul>
+															</div>
+										</div>
+									</div>
+									<div class="middle-side">
+										<form class="form" action="">
+											<button type="submit">
+												<div class="page__img"><img src="assets/img/search-icon-grey.svg"></div>
+											</button>
+											<input class="search" type="search" placeholder="Поиск по категории...">
+										</form>
+									</div>
+									<div class="bottom-side"><a href="#">
+											<div class="leader-item">
+												<div class="page__img"><img src="assets/img/leaders-item-5.png"></div>
+												<div class="text">
+													<p class="page__text_19">Янтарный ночной крем дальше описание</p>
+													<p class="page__text_sm_bold">Крем для лица</p>
+													<p class="page__text_15">1920 ₽</p>
+													<div class="hover-price">
+														<div class="page__btn_3">В корзину</div>
+													</div>
+												</div>
+											</div></a><a href="#">
+											<div class="leader-item">
+												<div class="page__img"><img src="assets/img/leaders-item-1.png"></div>
+												<div class="text">
+													<p class="page__text_19">Янтарный ночной крем дальше описание</p>
+													<p class="page__text_sm_bold">Крем для лица</p>
+													<p class="page__text_15">1920 ₽</p>
+													<div class="hover-price">
+														<div class="page__btn_3">В корзину</div>
+													</div>
+												</div>
+											</div></a><a href="#">
+											<div class="leader-item">
+												<div class="page__img"><img src="assets/img/leaders-item-2.png"></div>
+												<div class="text">
+													<p class="page__text_19">Янтарный ночной крем дальше описание</p>
+													<p class="page__text_sm_bold">Крем для лица</p>
+													<p class="page__text_15">1920 ₽</p>
+													<div class="hover-price">
+														<div class="page__btn_3">В корзину</div>
+													</div>
+												</div>
+											</div></a><a href="#">
+											<div class="leader-item">
+												<div class="page__img"><img src="assets/img/leaders-item-3.png"></div>
+												<div class="text">
+													<p class="page__text_19">Янтарный ночной крем дальше описание</p>
+													<p class="page__text_sm_bold">Крем для лица</p>
+													<p class="page__text_15">1920 ₽</p>
+													<div class="hover-price">
+														<div class="page__btn_3">В корзину</div>
+													</div>
+												</div>
+											</div></a><a href="#">
+											<div class="leader-item">
+												<div class="page__img"><img src="assets/img/leaders-item-4.png"></div>
+												<div class="text">
+													<p class="page__text_19">Янтарный ночной крем дальше описание</p>
+													<p class="page__text_sm_bold">Крем для лица</p>
+													<p class="page__text_15">1920 ₽</p>
+													<div class="hover-price">
+														<div class="page__btn_3">В корзину</div>
+													</div>
+												</div>
+											</div></a><a href="#">
+											<div class="leader-item">
+												<div class="page__img"><img src="assets/img/leaders-item-2.png"></div>
+												<div class="text">
+													<p class="page__text_19">Янтарный ночной крем дальше описание</p>
+													<p class="page__text_sm_bold">Крем для лица</p>
+													<p class="page__text_15">1920 ₽</p>
+													<div class="hover-price">
+														<div class="page__btn_3">В корзину</div>
+													</div>
+												</div>
+											</div></a><a href="#">
+											<div class="leader-item">
+												<div class="page__img"><img src="assets/img/leaders-item-3.png"></div>
+												<div class="text">
+													<p class="page__text_19">Янтарный ночной крем дальше описание</p>
+													<p class="page__text_sm_bold">Крем для лица</p>
+													<p class="page__text_15">1920 ₽</p>
+													<div class="hover-price">
+														<div class="page__btn_3">В корзину</div>
+													</div>
+												</div>
+											</div></a><a href="#">
+											<div class="leader-item">
+												<div class="page__img"><img src="assets/img/leaders-item-4.png"></div>
+												<div class="text">
+													<p class="page__text_19">Янтарный ночной крем дальше описание</p>
+													<p class="page__text_sm_bold">Крем для лица</p>
+													<p class="page__text_15">1920 ₽</p>
+													<div class="hover-price">
+														<div class="page__btn_3">В корзину</div>
+													</div>
+												</div>
+											</div></a><a href="#">
+											<div class="leader-item">
+												<div class="page__img"><img src="assets/img/leaders-item-5.png"></div>
+												<div class="text">
+													<p class="page__text_19">Янтарный ночной крем дальше описание</p>
+													<p class="page__text_sm_bold">Крем для лица</p>
+													<p class="page__text_15">1920 ₽</p>
+													<div class="hover-price">
+														<div class="page__btn_3">В корзину</div>
+													</div>
+												</div>
+											</div></a>
+										<section class="pagination">
+											<div class="pagination-wrapper">
+												<div class="numbers-pages"><a href="#">
+														<div class="numbers-page">1</div></a><a href="#">
+														<div class="numbers-page">2</div></a><a href="#">
+														<div class="numbers-page">3</div></a><a href="#">
+														<div class="numbers-page">4</div></a><a href="#">
+														<div class="numbers-page">5</div></a>
+													<div class="numbers-page">...</div>
+													<div class="numbers-page">10</div>
+												</div>
+												<div class="page__img"><img src="assets/img/arrow-small-black.svg"></div>
+											</div>
+										</section>
+									</div>
+								</div>
+							</div>
 							<h2 class="page__title-h2">Профессиональная косметика</h2>
 							<div class="tabs" id="tabs">
 								<div class="row-tabs-filter">

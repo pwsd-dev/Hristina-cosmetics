@@ -1,0 +1,86 @@
+.pagination {
+    a {
+        text-decoration: none;
+    }
+
+    .page__img{ 
+        transform: rotate(90deg);
+    }
+    &-wrapper {
+        width: 300px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto 0 auto;
+        padding-bottom: 7%;
+        
+        .sm-block({
+            width: 320px;
+        });
+
+
+        .page__img {
+            &:nth-of-type(1) {
+                transform: rotate(180deg);
+                border: transparent
+            }
+            img {
+                padding-top: 50%;
+            }
+
+            
+        }
+        .numbers-pages {
+            display: flex;
+            justify-content: space-between;
+            
+            
+            
+            width: 320px;
+            .sm-block({
+                margin: 0 20px;
+            });
+            .numbers-page {
+                // font-family: "@{PixelForce}-Regular";
+                font-size: 14px;
+                line-height: 24px;
+                letter-spacing: 2.2px;
+                color: #fff;
+                // border: 1px solid #fff;
+                width: 32px;
+                height: 32px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                
+                &:nth-child(1){
+                    color: grey;
+                    border: transparent;
+                }
+                &:nth-child(2){
+                    color: grey;
+                    border: transparent;
+                }
+                &:nth-child(4){
+                    color: grey;
+                    border: transparent;
+                }
+                &:nth-child(5){
+                    color: grey;
+                    border: transparent;
+                }
+                &:nth-child(6){
+                    color: grey;
+                    border: transparent;
+                }
+
+                &:nth-child(7){
+                    color: grey;
+                    border: transparent;
+                }
+
+                
+            }
+        }
+    }
+}

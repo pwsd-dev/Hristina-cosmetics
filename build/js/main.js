@@ -30,27 +30,46 @@ function openCategory() {
     innerCheckbox.querySelector(".innerCheckbox").classList.toggle("active");
 }
 
+function openCategoryMob() {
+    const arrowBtnMob = document.getElementById("arrowBtnMob");
+    // const otherId = document.getElementById("other");
+    arrowBtnMob.classList.toggle("active");
+    const innerCheckboxMob = document.getElementById("innerCheckboxMob");
+    innerCheckboxMob.querySelector(".innerCheckboxMob").classList.toggle("active");
+}
+
 function openFilter() {
-    const arrowBtn = document.getElementById("arrowBtnFilter");
+    const arrowBtnFilter = document.getElementById("arrowBtnFilter");
     // const otherId = document.getElementById("other");
     arrowBtnFilter.classList.toggle("active");
     const innerFilter = document.getElementById("innerFilter");
     innerFilter.querySelector(".innerFilter").classList.toggle("active");
 }
 
+function openFilterMob() {
+    const iconFilterMob = document.getElementById("iconFilterMob");
+    // const otherId = document.getElementById("other");
+    iconFilterMob.classList.toggle("active");
+    const innerFilterMob = document.getElementById("innerFilterMob");
+    innerFilterMob.querySelector(".innerFilterMob").classList.toggle("active");
+}
+
+
 function openCategoryBrand() {
-    // const arrowBtn = document.getElementById("arrowBtn");
-    // // const otherId = document.getElementById("other");
-    // arrowBtn.classList.toggle("active");
-    // const innerCheckbox = document.getElementById("innerCheckbox");
-    // innerCheckbox.querySelector(".innerCheckbox").classList.toggle("active");
 
+    const arrowBtnBrandMob = document.getElementById("arrowBtnBrandMob");
+    arrowBtnBrandMob.classList.toggle("active");
+    const innerBrandMob = document.getElementById("innerBrandMob");
+    innerBrandMob.querySelector(".innerBrandMob").classList.toggle("active");
 
+}
 
-    const arrowBtnBrand = document.getElementById("arrowBtnBrand");
-    arrowBtnBrand.classList.toggle("active");
-    const innerBrand = document.getElementById("innerBrand");
-    innerBrand.querySelector(".innerBrand").classList.toggle("active");
+function openCategoryBrandMob() {
+
+    const arrowBtnBrandMob = document.getElementById("arrowBtnBrandMob");
+    arrowBtnBrandMob.classList.toggle("active");
+    const innerBrand = document.getElementById("innerBrandMob");
+    innerBrand.querySelector(".innerBrandMob").classList.toggle("active");
 
 }
 

@@ -1,9 +1,14 @@
 .pageCatalog {
-    // background-image: url(../assets/img/pageCatalog-bg.png);
+    background-image: url(../assets/img/professional-cosmetic-bg.png);
     background-repeat: no-repeat;
     background-size: cover;
-    // height: 300px;
     padding: 65px 0 89px 0;
+
+    .xs-block({
+        background-image: url(../assets/img/bg-prof-cosmetic-mob.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    });
 
     .banner-catalog-wrapper {
        display: flex;
@@ -13,8 +18,23 @@
     }
 
     .page__title-h1 {
+
+        position: relative;
+
         .xs-block({
             text-align: center;
+            font-size: 35px;
+            line-height: 40px;
         });
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 68px;
+            height: 1px;
+            background-color: #fff;
+            bottom: -30px;
+            left: 45%;
+        }
     }
 }

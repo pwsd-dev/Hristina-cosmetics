@@ -1,0 +1,8 @@
+mixin breadcrumbs-mixin(items)
+    section.breadcrumbs
+        .breadcrumbs-wrapper
+            each item in items
+                .item-breadcrumb
+                    a(href="#").page__text_sm=item   
+                    
+    

@@ -90,7 +90,8 @@ section.bodyHairPage
                                     p.page__text_14 SEZMAR PROFESSIONAL
     section.productList
         .wrapper
-            include ../blocks/breadcrumbs
+            include ../blocks/mixin/breadcrumbs-mixin.pug
+            +breadcrumbs-mixin(['Главная', 'Уход за волосами'])
             .mob-productList
                 .mob-productList-wrapper
                     .top-side

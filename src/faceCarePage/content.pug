@@ -90,7 +90,9 @@ section.faceCare
                                     p.page__text_14 SEZMAR PROFESSIONAL
     section.productList
         .wrapper
-            include ../blocks/breadcrumbs
+            //- include ../blocks/breadcrumbs
+            include ../blocks/mixin/breadcrumbs-mixin.pug
+            +breadcrumbs-mixin(['Главная', 'Уход за лицом'])
             .mob-productList
                 .mob-productList-wrapper
                     .top-side
@@ -372,7 +374,7 @@ section.faceCare
                                 img(src="assets/img/search-icon-grey.svg")
                         input(type="search" placeholder="Поиск по категории..." class="search")
                     .wrapper-items-catalog
-                        a(href="#")
+                        a(href="productPage/productPage.html")
                             .leader-item
                                 .page__img
                                     img(src="assets/img/leaders-item-1.png")

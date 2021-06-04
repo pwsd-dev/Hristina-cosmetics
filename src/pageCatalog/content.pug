@@ -86,7 +86,8 @@ include ../blocks/mixin/bannerCatalog
                                     p.page__text_14 SEZMAR PROFESSIONAL
     section.productList
         .wrapper
-            include ../blocks/breadcrumbs
+            include ../blocks/mixin/breadcrumbs-mixin.pug
+            +breadcrumbs-mixin(['Главная', 'Профессиональная косметика'])
             .mob-productList
                 .mob-productList-wrapper
                     .top-side

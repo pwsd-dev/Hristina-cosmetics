@@ -1,0 +1,90 @@
+section.productPage
+    .wrapper
+        include ../blocks/mixin/breadcrumbs-mixin.pug
+        +breadcrumbs-mixin(['Главная', 'Уход за лицом', 'Увлажняющий крем для лица Moisturizing cream'])
+        .productPage-wrapper
+            .productPage-left
+                .presence
+                    .page__img
+                        img(src="assets/img/icon-have.svg")
+                    p.page__text_sm Есть в наличии
+                .text
+                    h2.page__text_gilroy_24 Увлажняющий крем для лица Moisturizing cream
+                    p.page__text Успокаивает, смягчает и разглаживает сухую, уставшую и раздраженную кожу. Успокаивает, смягчает и разглаживает.
+                .row-feedback
+                    .evaluation
+                        p.page__text_31 0
+                    .description-evaluation
+                        p.page__text_11 Средняя оценка
+                        .row
+                            .stars
+                                .page__img
+                                    img(src="assets/img/star.svg")
+                                .page__img
+                                    img(src="assets/img/star.svg")
+                                .page__img
+                                    img(src="assets/img/star.svg")
+                                .page__img
+                                    img(src="assets/img/star.svg")
+                                .page__img
+                                    img(src="assets/img/star.svg")
+                            .counter
+                                p.page__text_11 (0)
+                    .button
+                        .bg-button
+                        a(href="pageCatalog/pageCatalog.html")
+                            button.page__btn_1 <span> Оставить отзыв
+            .productPage-middle
+                .sliderProductPage
+                    .page__img
+                        img(src="assets/img/slideProductPage.png")
+                    .page__img
+                        img(src="assets/img/slideProductPage.png")
+                    .page__img
+                        img(src="assets/img/slideProductPage.png")
+                    .page__img
+                        img(src="assets/img/slideProductPage.png")
+                .sliderProductPageNav
+                    .page__img
+                        img(src="assets/img/slideProductPage.png")
+                    .page__img
+                        img(src="assets/img/slideProductPage.png")
+                    .page__img
+                        img(src="assets/img/slideProductPage.png")
+                    .page__img
+                        img(src="assets/img/slideProductPage.png")
+            .prevArrow#prevArrow-6
+                img(src="assets/img/arrow-black-left.svg")
+            .nextArrow#nextArrow-6
+                img(src="assets/img/arrow-black-right.svg")
+                
+                
+            .productPage-right
+                .price
+                    p.page__text_14 5 456, 00 ₽
+                    p.page__text_gilroy_32 3 456, 00 ₽
+                .row-size-number
+                    .left-size
+                        p.page__text Выбранный объём: <span> 50 мл
+                        .row-size
+                            .background-size.active
+                                p.page__text_sm 50 мл
+                            .background-size
+                                p.page__text_sm 200 мл
+                    .right-number
+                        p.page__text_14 Кол-во:
+                        .row
+                            <div class="quantity_inner">        
+                                <input type="text" class="quantity" value="1" data-max-count="20">
+                                .column__plus-minus
+                                    <button class="bt_plus">+</button>
+                                    <button class="bt_minus">-</button>
+                            </div>
+                .row-button-heart
+                    .button
+                        .bg-button
+                        a(href="pageCatalog/pageCatalog.html")
+                            button.page__btn_1 <span> Добавить в каталог
+                    p.page__text_lightItalic Добавить в список желаний
+                a.page__text_sm Купить в один клик
+

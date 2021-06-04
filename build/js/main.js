@@ -166,6 +166,55 @@ $(document).ready(function () {
 
 });
 
+
+$(document).ready(function () {
+    $('.sliderProductPage').slick({
+        arrows: true,
+        dots: false,
+        slidesToShow: 1,
+        autoplay: false,
+        infinite: true,
+        speed: 1800,
+        adaptiveHeight: true,
+        pauseOnFocus: true,
+        pauseOnHover: true,
+        pauseOnDotsHover: true,
+        easing: 'ease',
+        draggale: true,
+        swipe: true,
+        touchTreshold: 20,
+        touchMove: false,
+        prevArrow: document.querySelector('#prevArrow-6'),
+        nextArrow: document.querySelector('#nextArrow-6'),
+        variableWidth: false,
+        // mobileFirst: true,
+        asNavFor: '.sliderProductPageNav',
+        responsive: [
+            {
+                breakpoint: 405,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    variableWidth: false,
+                    // centerMode: true,
+                    // touchMove: true,
+                }
+            }
+        ],
+
+    });
+
+});
+
+$('.sliderProductPageNav').slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    asNavFor: '.sliderProductPage',
+    dots: false,
+    centerMode: true,
+    focusOnSelect: true
+});
+
 $(document).ready(function () {
     $('.products-item-slider').slick({
         // mobileFirst: true,
@@ -280,5 +329,33 @@ $(document).ready(function () {
     });
 
 });
+
+// Убавляем кол-во по клику
+$('.quantity_inner .bt_minus').click(function () {
+    let $input = $(this).parent().parent().find('.quantity');
+    let count = parseInt($input.val()) - 1;
+    count = count < 1 ? 1 : count;
+    $input.val(count);
+});
+// Прибавляем кол-во по клику
+$('.quantity_inner .bt_plus').click(function () {
+    let $input = $(this).parent().parent().find('.quantity');
+    let count = parseInt($input.val()) + 1;
+    count = count > parseInt($input.data('max-count')) ? parseInt($input.data('max-count')) : count;
+    $input.val(parseInt(count));
+});
+// Убираем все лишнее и невозможное при изменении поля
+$('.quantity_inner .quantity').bind("change keyup input click", function () {
+    if (this.value.match(/[^0-9]/g)) {
+        this.value = this.value.replace(/[^0-9]/g, '');
+    }
+    if (this.value == "") {
+        this.value = 1;
+    }
+    if (this.value > parseInt($(this).data('max-count'))) {
+        this.value = parseInt($(this).data('max-count'));
+    }
+});
+
 
 

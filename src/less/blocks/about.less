@@ -13,11 +13,16 @@
         // align-items: center;
         .sm-block({
             flex-direction: column;
-            padding: 25px
+            // padding: 25px;
+            box-sizing: border-box;
+
         });
         .left {
             .sm-block({
                 order: 4;
+
+                
+                padding-left: 0;
             });
             .page__img {
                 
@@ -50,6 +55,7 @@
 
             .laptopMd-block({
                 padding-right: 25px;
+                
             });
 
             
@@ -57,6 +63,9 @@
             .sm-block({
                     
                 width: 320px;
+                box-sizing: border-box;
+
+                padding: 0;
             });
 
             .page__img {
@@ -133,4 +142,8 @@
 
 .pdtop {
     padding-top: 120px;
+
+    .sm-block({
+        padding-top: 0;
+    });
 }

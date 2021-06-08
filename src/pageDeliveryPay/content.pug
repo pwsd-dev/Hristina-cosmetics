@@ -8,13 +8,15 @@ section.payPage
 section.pageDeliveryPay
     .wrapper-1370
         section.breadcrumbs
-            .breadcrumbs-wrapper
-                .item-breadcrumb
-                    a(href="").page__text_sm Главная 
-                    .page__img
-                        img(src="assets/img/arrow-small-black.svg", alt="")
-                .item-breadcrumb
-                    a(href="").page__text_sm Доставка и оплата
+            include ../blocks/mixin/breadcrumbs-mixin.pug
+            +breadcrumbs-mixin(['Главная', 'Доставка и оплата'])
+            //- .breadcrumbs-wrapper
+                //- .item-breadcrumb
+                //-     a(href="").page__text_sm Главная 
+                //-     .page__img
+                //-         img(src="assets/img/arrow-small-black.svg", alt="")
+                //- .item-breadcrumb
+                //-     a(href="").page__text_sm Доставка и оплата
                     //- .page__img
                     //-     img(src="assets/img/arrow-small-black.svg", alt="")
             .deliveryPay-wrapper

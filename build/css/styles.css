@@ -4489,6 +4489,28 @@ a {
   left: 47%;
 }
 
+.aboutBrandBanner {
+  background-image: url(../assets/img/brand-bg-2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 85px 0 109px 0;
+}
+
+.aboutBrandBanner .banner-catalog-wrapper {
+  text-align: center;
+  position: relative;
+}
+
+.aboutBrandBanner .banner-catalog-wrapper::after {
+  content: '';
+  position: absolute;
+  width: 68px;
+  height: 1px;
+  background-color: #fff;
+  bottom: -30px;
+  left: 47%;
+}
+
 .productPage-wrapper {
   display: -webkit-box;
   display: flex;
@@ -6189,6 +6211,12 @@ a {
 
   .payPage {
     background-image: url(../assets/img/bg-delivery-mob.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .aboutBrandBanner {
+    background-image: url(../assets/img/brand-bg-mob.png);
     background-repeat: no-repeat;
     background-size: cover;
   }

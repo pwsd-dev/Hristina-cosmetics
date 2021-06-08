@@ -216,5 +216,36 @@
 
 }
 
+.aboutBrandBanner{
+    background-image: url(../assets/img/brand-bg-2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 85px 0 109px 0;
+    
+    
+
+    .xs-block({
+        background-image: url(../assets/img/brand-bg-mob.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    });
+
+    .banner-catalog-wrapper {
+        text-align: center;
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 68px;
+            height: 1px;
+            background-color: #fff;
+            bottom: -30px;
+            left: 47%;
+        }
+    }
+
+}
+
 
 

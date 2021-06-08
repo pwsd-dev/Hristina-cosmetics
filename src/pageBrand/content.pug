@@ -8,7 +8,7 @@ section.pageBrand
     .wrapper
         include ../blocks/mixin/breadcrumbs-mixin.pug
         +breadcrumbs-mixin(['Главная', 'О бренде'])
-        section.about
+        section.about.pd0
             .about-wrapper
                 .left
                     .page__img
@@ -18,4 +18,57 @@ section.pageBrand
                         img(src="assets/img/icon-flower.svg")
                     h2.page__title-h2 Здесь написан заголовок
                     p.page__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        section.about-second.pdtop
+            .about-second-wrapper
+                .left
+                    .page__img(data-aos="fade-down-right" data-aos-duration="3000" data-aos-delay="500")
+                        img(src="assets/img/icon-flower.svg")
+                    h2.page__title-h2 Здесь написан заголовок
+                    p.page__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    //- .button
+                    //-     .bg-button
+                    //-     a(href="#")
+                    //-         button.page__btn_1 <span> Подробнее
+                .right
+                    .page__img
+                        img(src="assets/img/brand-2.png")
+    include ../blocks/advantages
+    section.about
+        .wrapper
+            .about-wrapper
+                .left
+                    .page__img
+                        img(src="assets/img/brand-3.png")
+                .right
+                    .page__img(data-aos="fade-down-right" data-aos-duration="3000" data-aos-delay="500")
+                        img(src="assets/img/icon-flower.svg")
+                    h2.page__title-h2 Здесь написан заголовок
+                    p.page__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    section.about-second
+        .wrapper
+            .about-second-wrapper
+                .left
+                    .page__img(data-aos="fade-down-right" data-aos-duration="3000" data-aos-delay="500")
+                        img(src="assets/img/icon-flower.svg")
+                    h2.page__title-h2 Здесь написан заголовок
+                    p.page__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    //- .button
+                    //-     .bg-button
+                    //-     a(href="#")
+                    //-         button.page__btn_1 <span> Подробнее
+                .right
+                    .page__img
+                        img(src="assets/img/brand-4.png")
+    section.about
+        .wrapper
+            .about-wrapper
+                .left
+                    .page__img
+                        img(src="assets/img/brand-5.png")
+                .right
+                    .page__img(data-aos="fade-down-right" data-aos-duration="3000" data-aos-delay="500")
+                        img(src="assets/img/icon-flower.svg")
+                    h2.page__title-h2 Здесь написан заголовок
+                    p.page__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    include ../blocks/second-subscribe
 

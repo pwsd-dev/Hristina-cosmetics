@@ -1709,6 +1709,14 @@ a {
   margin: 0;
 }
 
+.pd0 {
+  padding: 0;
+}
+
+.pdtop {
+  padding-top: 120px;
+}
+
 .advantages {
   background-image: url(../assets/img/bg-advantages.png);
   background-size: cover;

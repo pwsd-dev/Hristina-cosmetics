@@ -1,765 +1,1083 @@
 <!DOCTYPE html>
-<html lang="ru"> 
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="icon" type="image/x-icon" href="assets/img/favicon.ico"><link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-		<title>Заголовок страницы</title>
-		<link rel="stylesheet" href="css/styles.css" type="text/css">
-	</head>
-	<body>
-		<div class="page">
-			<header class="header">
-				<div class="mob">
-					<div class="header-mob-wrapper">
-						<div class="left"><a href="../">
-								<div class="page__img"><img src="assets/img/logo-mob.svg" alt=""></div></a></div>
-						<div class="right">
-							<div class="basket"><img src="assets/img/basket-icon.svg" alt=""></div>
-							<div class="mob-burger">
-								<button type="button" onclick="openBlock()" id="burgerMob">
-									<div class="page__img"><img src="assets/img/icon-mob-menu.svg" alt=""></div>
-									<div class="innerMobile" id="innerMobile">
-										<div class="innerMob"></div>
-									</div>
-								</button>
-							</div>
+<html lang="ru">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<base href="build/">
+	<link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<title>Заголовок страницы</title>
+	<link rel="stylesheet" href="css/styles.css" type="text/css">
+</head>
+
+<body>
+	<div class="page">
+		<header class="header">
+			<div class="mob">
+				<div class="header-mob-wrapper">
+					<div class="left"><a href="../">
+							<div class="page__img"><img src="assets/img/logo-mob.svg" alt=""></div>
+						</a></div>
+					<div class="right">
+						<div class="basket"><img src="assets/img/basket-icon.svg" alt=""></div>
+						<div class="mob-burger">
+							<button type="button" onclick="openBlock()" id="burgerMob">
+								<div class="page__img"><img src="assets/img/icon-mob-menu.svg" alt=""></div>
+								<div class="innerMobile" id="innerMobile">
+									<div class="innerMob"></div>
+								</div>
+							</button>
 						</div>
 					</div>
 				</div>
-				<div class="bg-grey">
-					<div class="wrapper">
-						<nav class="nav-top">
-							<div class="left">
-								<div class="bg_white"><a class="page__link" href="#">Акции / Скидки</a></div>
-								<div class="bg_white"><a class="page__link" href="pageBrand/pageBrand.html">О бренде</a></div>
-								<div class="bg_white"><a class="page__link" href="pageContacts/pageContacts.html">Контакты</a></div>
-								<div class="bg_white"><a class="page__link" href="pageDeliveryPay/pageDeliveryPay.html">Доставка / Оплата</a></div>
+			</div>
+			<div class="bg-grey">
+				<div class="wrapper">
+					<nav class="nav-top">
+						<div class="left">
+							<div class="bg_white"><a class="page__link" href="#">Акции / Скидки</a></div>
+							<div class="bg_white"><a class="page__link" href="pageBrand/pageBrand.html">О бренде</a>
 							</div>
-							<div class="right">
-								<div class="page__img"><img src="assets/img/heart-icon.svg" alt=""></div><a class="page__link" href="#">Список желаний </a>
-								<div class="counter">(0)</div>
-							</div>
-						</nav>
-					</div>
+							<div class="bg_white"><a class="page__link"
+									href="pageContacts/pageContacts.html">Контакты</a></div>
+							<div class="bg_white"><a class="page__link"
+									href="pageDeliveryPay/pageDeliveryPay.html">Доставка / Оплата</a></div>
+						</div>
+						<div class="right">
+							<div class="page__img"><img src="assets/img/heart-icon.svg" alt=""></div><a
+								class="page__link" href="#">Список желаний </a>
+							<div class="counter">(0)</div>
+						</div>
+					</nav>
 				</div>
-				<div class="bg-white">
-					<div class="wrapper">
-						<nav class="nav-mid">
-							<div class="left">
-								<div class="phone-wrapper">
-									<div class="page__img"><img src="assets/img/phone-icon.svg" alt=""></div><a class="page__link" href="">+7 915 358-55-77</a>
-								</div>
-								<p class="page__text_sm">Ежедневно с 10:00 до 18:00</p>
+			</div>
+			<div class="bg-white">
+				<div class="wrapper">
+					<nav class="nav-mid">
+						<div class="left">
+							<div class="phone-wrapper">
+								<div class="page__img"><img src="assets/img/phone-icon.svg" alt=""></div><a
+									class="page__link" href="">+7 915 358-55-77</a>
 							</div>
-							<div class="mid"><a href="../">
-									<div class="page__img"><img src="assets/img/logo.svg" alt=""></div></a></div>
-							<div class="right">
-								<div class="basket"><img src="assets/img/basket-icon.svg" alt=""></div><a class="page__link" href="">Корзина</a>
-							</div>
-						</nav>
-						<nav class="nav-bottom">
-							<div class="left">
-								<div class="burger">
-									<button class="icon" type="button" onclick="openBlock()" id="burgerBtn"><span></span><span></span><span></span><span></span></button>
-									<div class="other" id="other">
-										<div class="inner">
-											<div class="wrapper">
-												<div class="col">
-													<div class="page__img"><img src="assets/img/icon-flower.svg"></div>
-													<h2 class="page__title-h2">Каталог</h2>
-													<div class="row">
-														<p class="page__text_sm">Продукция</p>
-														<p class="page__text_sm">брэнды</p>
-													</div>
-													<div class="links-wrapper">
-														<div class="left"><a class="page__text" href="">Скрабы для тела</a><a class="page__text" href="">Маски для тела</a><a class="page__text" href="">Массажные масла</a><a class="page__text" href="">Массажные крема</a><a class="page__text" href="">Соли для ванн</a><a class="page__text" href="">Антицеллюлитные крема</a><a class="page__text" href="">Скраб для маникюра/педикюра</a><a class="page__text" href="">Крем после депиляции</a><a class="page__text" href="">Крем для маникюра/педикюра</a><a class="page__text" href="">Классические крема для лица</a><a class="page__text" href="">Крема ручной работы для лица</a><a class="page__text" href="">Крема вокруг глаз</a><a class="page__text" href="">Ночные крема</a><a class="page__text" href="">Дневные крема</a></div>
-														<div class="left-mid"><a class="page__text" href="">Крема для 24-часового применения</a><a class="page__text" href="">Маски для лица</a><a class="page__text" href="">Сыворотки для лица</a><a class="page__text" href="">Сыворотки вокруг глаз</a><a class="page__text" href="">Очищающее молочко для лица</a><a class="page__text" href="">Скрабы для лиц</a><a class="page__text" href="">Бальзамы для губ</a><a class="page__text" href="">Крема для тела</a><a class="page__text" href="">Антицеллюлитные крема для тела</a><a class="page__text" href="">Крема для рук и ног</a><a class="page__text" href="">Лосьоны для тела</a><a class="page__text" href="">Гели для душа</a><a class="page__text" href="">Скрабы для тела</a><a class="page__text" href="">Масла для рук и ног</a></div>
-														<div class="right-mid"><a class="page__text" href="">Солнцезащитные спреи</a><a class="page__text" href="">Массажные масла</a><a class="page__text" href="">Твердые масла</a><a class="page__text" href="">Жидкое мыло</a><a class="page__text" href="">Массажные свечи</a><a class="page__text" href="">Шампуни</a><a class="page__text" href="">Гели для душа и волос</a><a class="page__text" href="">Маски для волос</a><a class="page__text" href="">Кондиционеры для волос</a><a class="page__text" href="">Массажные свечи</a><a class="page__text" href="">Товары для ухода за лицом</a><a class="page__text" href="">Многоразовые ЭКО-товары</a><a class="page__text" href="">Для мужчин</a><a class="page__text" href="">Подарочные наборы</a></div>
-														<div class="right"><a class="page__text" href="">HRISTINA PROFESSIONAL</a><a class="page__text" href="">SEZMAR PROFESSIONAL</a><a class="page__text" href="">HRISTINA</a><a class="page__text" href="">DR DEREHSAN</a><a class="page__text" href="">SM CRYSTAL</a><a class="page__text" href="">SAYAZ</a><a class="page__text" href="">STANI CHEF'S</a><a class="page__text" href="">SEZMAR LOVE</a><a class="page__text" href="">SEZMAR PURE</a><a class="page__text" href="">NATURALLY</a><a class="page__text" href="">SEZMAR LOVE</a><a class="page__text" href="">NB-ECO</a></div>
-													</div>
+							<p class="page__text_sm">Ежедневно с 10:00 до 18:00</p>
+						</div>
+						<div class="mid"><a href="../">
+								<div class="page__img"><img src="assets/img/logo.svg" alt=""></div>
+							</a></div>
+						<div class="right">
+							<div class="basket"><img src="assets/img/basket-icon.svg" alt=""></div><a class="page__link"
+								href="">Корзина</a>
+						</div>
+					</nav>
+					<nav class="nav-bottom">
+						<div class="left">
+							<div class="burger">
+								<button class="icon" type="button" onclick="openBlock()"
+									id="burgerBtn"><span></span><span></span><span></span><span></span></button>
+								<div class="other" id="other">
+									<div class="inner">
+										<div class="wrapper">
+											<div class="col">
+												<div class="page__img"><img src="assets/img/icon-flower.svg"></div>
+												<h2 class="page__title-h2">Каталог</h2>
+												<div class="row">
+													<p class="page__text_sm">Продукция</p>
+													<p class="page__text_sm">брэнды</p>
+												</div>
+												<div class="links-wrapper">
+													<div class="left"><a class="page__text" href="">Скрабы для
+															тела</a><a class="page__text" href="">Маски для тела</a><a
+															class="page__text" href="">Массажные масла</a><a
+															class="page__text" href="">Массажные крема</a><a
+															class="page__text" href="">Соли для ванн</a><a
+															class="page__text" href="">Антицеллюлитные крема</a><a
+															class="page__text" href="">Скраб для маникюра/педикюра</a><a
+															class="page__text" href="">Крем после депиляции</a><a
+															class="page__text" href="">Крем для маникюра/педикюра</a><a
+															class="page__text" href="">Классические крема для лица</a><a
+															class="page__text" href="">Крема ручной работы для
+															лица</a><a class="page__text" href="">Крема вокруг
+															глаз</a><a class="page__text" href="">Ночные крема</a><a
+															class="page__text" href="">Дневные крема</a></div>
+													<div class="left-mid"><a class="page__text" href="">Крема для
+															24-часового применения</a><a class="page__text"
+															href="">Маски для лица</a><a class="page__text"
+															href="">Сыворотки для лица</a><a class="page__text"
+															href="">Сыворотки вокруг глаз</a><a class="page__text"
+															href="">Очищающее молочко для лица</a><a class="page__text"
+															href="">Скрабы для лиц</a><a class="page__text"
+															href="">Бальзамы для губ</a><a class="page__text"
+															href="">Крема для тела</a><a class="page__text"
+															href="">Антицеллюлитные крема для тела</a><a
+															class="page__text" href="">Крема для рук и ног</a><a
+															class="page__text" href="">Лосьоны для тела</a><a
+															class="page__text" href="">Гели для душа</a><a
+															class="page__text" href="">Скрабы для тела</a><a
+															class="page__text" href="">Масла для рук и ног</a></div>
+													<div class="right-mid"><a class="page__text" href="">Солнцезащитные
+															спреи</a><a class="page__text" href="">Массажные масла</a><a
+															class="page__text" href="">Твердые масла</a><a
+															class="page__text" href="">Жидкое мыло</a><a
+															class="page__text" href="">Массажные свечи</a><a
+															class="page__text" href="">Шампуни</a><a class="page__text"
+															href="">Гели для душа и волос</a><a class="page__text"
+															href="">Маски для волос</a><a class="page__text"
+															href="">Кондиционеры для волос</a><a class="page__text"
+															href="">Массажные свечи</a><a class="page__text"
+															href="">Товары для ухода за лицом</a><a class="page__text"
+															href="">Многоразовые ЭКО-товары</a><a class="page__text"
+															href="">Для мужчин</a><a class="page__text"
+															href="">Подарочные наборы</a></div>
+													<div class="right"><a class="page__text" href="">HRISTINA
+															PROFESSIONAL</a><a class="page__text" href="">SEZMAR
+															PROFESSIONAL</a><a class="page__text" href="">HRISTINA</a><a
+															class="page__text" href="">DR DEREHSAN</a><a
+															class="page__text" href="">SM CRYSTAL</a><a
+															class="page__text" href="">SAYAZ</a><a class="page__text"
+															href="">STANI CHEF'S</a><a class="page__text" href="">SEZMAR
+															LOVE</a><a class="page__text" href="">SEZMAR PURE</a><a
+															class="page__text" href="">NATURALLY</a><a
+															class="page__text" href="">SEZMAR LOVE</a><a
+															class="page__text" href="">NB-ECO</a></div>
 												</div>
 											</div>
 										</div>
 									</div>
 								</div>
-								<p class="page__catalog">Каталог</p>
 							</div>
-							<div class="mid">
-								<div class="hover-bg-grey"><a class="page__link" href="bodyCarePage/bodyCarePage.html">Уход за телом</a></div>
-								<div class="hover-bg-grey"><a class="page__link" href="faceCarePage/faceCarePage.html">Уход за лицом</a></div>
-								<div class="hover-bg-grey"><a class="page__link" href="hairCarePage/hairCarePage.html">Уход за волосами</a></div>
-								<div class="hover-bg-grey"><a class="page__link icon-heart" href="collectionLovePage/collectionLovePage.html">Коллекция “Любовь”</a></div>
-								<div class="hover-bg-grey"><a class="page__link" href="pageCatalog/pageCatalog.html">Профессиональная косметика</a></div>
-								<div class="hover-bg-grey"><a class="page__link" href="eco-products-page/eco-products-page.html">ЭКО-товары</a></div>
-							</div>
-							<div class="right">
-								<form class="form" action="">
-									<p>
-										<input class="search" type="search" placeholder="Поиск" onfocus="this.className='focus'" onblur="this.className='search'" id="searchInput">
-									</p>
-									<button type="submit"></button>
-								</form>
-							</div>
-						</nav>
-					</div>
-				</div>
-			</header>
-			<section class="banner">
-				<div class="slider-banner">
-					<div class="slide">
-						<div class="page__img"><img src="assets/img/banner-slider.png">
-							<div class="text">
-								<h1 class="page__text_solena">Легенда<br> болгарской органики</h1>
-								<p class="page__text_montserSemiBold">Натуральная косметика для ухода за лицом, волосами и телом</p>
-								<div class="button">
-									<div class="bg-button"></div><a href="pageCatalog/pageCatalog.html">
-										<button class="page__btn_1"><span> Посмотреть каталог</button></a>
-								</div>
-							</div>
+							<p class="page__catalog">Каталог</p>
 						</div>
-					</div>
-					<div class="slide">
-						<div class="page__img"><img src="assets/img/slide-2-banner.png">
-							<div class="text-2">
-								<h1 class="page__title-h1">100% натуральная свеча<br> для массажа</h1>
-								<p class="page__text_montserSemiBold">Смотрите продукцию с натуральным составом по уходу за вашим телом</p>
-								<div class="button">
-									<div class="bg-button"></div><a href="collectionLovePage/collectionLovePage.html">
-										<button class="page__btn_1"><span> Выбрать свечу</button></a>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="slide">
-						<div class="page__img"><img src="assets/img/slide-3-banner.png">
-							<div class="text-3">
-								<h1 class="page__title-h1">Всё для гладкости вашей кожи</h1>
-								<p class="page__text_montserSemiBold">Отличный способ снять усталость, расслабить тело, успокоить ум и настроиться на романтический лад</p>
-								<div class="button">
-									<div class="bg-button"></div><a href="bodyCarePage/bodyCarePage.html">
-										<button class="page__btn_1"><span> Смотреть</button></a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="prevArrow" id="prevArrow"><img src="assets/img/arrow-banner.svg"></div>
-				<div class="nextArrow" id="nextArrow"><img src="assets/img/arrow-white-right.svg"></div>
-			</section>
-			<section class="about">
-				<div class="wrapper">
-					<div class="about-wrapper">
-						<div class="left">
-							<div class="page__img"><img src="assets/img/about.png"></div>
+						<div class="mid">
+							<div class="hover-bg-grey"><a class="page__link" href="bodyCarePage/bodyCarePage.html">Уход
+									за телом</a></div>
+							<div class="hover-bg-grey"><a class="page__link" href="faceCarePage/faceCarePage.html">Уход
+									за лицом</a></div>
+							<div class="hover-bg-grey"><a class="page__link" href="hairCarePage/hairCarePage.html">Уход
+									за волосами</a></div>
+							<div class="hover-bg-grey"><a class="page__link icon-heart"
+									href="collectionLovePage/collectionLovePage.html">Коллекция “Любовь”</a></div>
+							<div class="hover-bg-grey"><a class="page__link"
+									href="pageCatalog/pageCatalog.html">Профессиональная косметика</a></div>
+							<div class="hover-bg-grey"><a class="page__link"
+									href="eco-products-page/eco-products-page.html">ЭКО-товары</a></div>
 						</div>
 						<div class="right">
-							<div class="page__img" data-aos="fade-down-right" data-aos-duration="3000" data-aos-delay="500"><img src="assets/img/icon-flower.svg"></div>
-							<h2 class="page__title-h2">Hristina cosmetics - это</h2>
-							<p class="page__text">Hristina Cosmetics (Христина Косметикс) - это европейская косметическая компания с более чем 20-летней историей успеха, производство которой основано исключительно на натуральных компонентах.</p>
-							<div class="item-wrapper-about">
-								<div class="item-about">
-									<div class="page__img" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="500"><img src="assets/img/item-about-1.svg"></div>
-									<p class="page__text">Наивысший эффект от использования косметических средств достигается благодаря 100% натуральным экстрактам</p>
-								</div>
-								<div class="item-about">
-									<div class="page__img" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="500"><img src="assets/img/item-about-2.svg"></div>
-									<p class="page__text">Косметика абсолютно безопасна для здоровья, не тестируется на животных и не вызывает привыкания</p>
-								</div>
-							</div>
+							<form class="form" action="">
+								<p>
+									<input class="search" type="search" placeholder="Поиск"
+										onfocus="this.className='focus'" onblur="this.className='search'"
+										id="searchInput">
+								</p>
+								<button type="submit"></button>
+							</form>
 						</div>
-					</div>
+					</nav>
 				</div>
-			</section>
-			<section class="advantages">
-				<div class="wrapper-1370">
-					<div class="advantages-wrapper">
-						<div class="item-advantages" data-aos="zoom-in" data-aos-duration="400" data-aos-delay="200">
-							<div class="page__img"><img src="assets/img/safety-icon.svg"></div>
-							<p class="page__text_solena">Забота о здоровье</p>
-							<p class="page__text_w">Только натуральные, безопасные компоненты в составе всех продуктов.</p>
-						</div>
-						<div class="item-advantages" data-aos="zoom-in" data-aos-duration="400" data-aos-delay="200">
-							<div class="page__img"><img src="assets/img/advantage-item-2.svg"></div>
-							<p class="page__text_solena">Высокое качество </p>
-							<p class="page__text_w">20 лет на рынке Европы. 100% натуральный состав продукции.</p>
-						</div>
-						<div class="item-advantages" data-aos="zoom-in" data-aos-duration="400" data-aos-delay="200">
-							<div class="page__img"><img src="assets/img/advantage-item-3.svg"></div>
-							<p class="page__text_solena">Финансовая доступность</p>
-							<p class="page__text_w">Уникальная авторская рецептура и высокое качество по отличным ценам.</p>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section class="leaders">
-				<div class="wrapper-1465">
-					<div class="leaders-top-wrapper">
-						<div class="page__img"><img src="assets/img/icon-flower.svg"></div>
-						<h2 class="page__title-h2">Лидеры продаж</h2>
-					</div>
-					<div class="leaders-item-slider"><a href="#">
-							<div class="leader-item">
-								<div class="page__img"><img src="assets/img/leaders-item-1.png"></div>
-								<div class="text">
-									<p class="page__text_19">Янтарный ночной крем дальше описание</p>
-									<p class="page__text_sm_bold">Крем для лица</p>
-									<p class="page__text_15">1920 ₽</p>
-									<div class="hover-price">
-										<div class="page__btn_3">В корзину</div>
-									</div>
-								</div>
-							</div></a><a href="#">
-							<div class="leader-item">
-								<div class="page__img"><img src="assets/img/leaders-item-2.png"></div>
-								<div class="text">
-									<p class="page__text_19">Янтарный ночной крем дальше описание</p>
-									<p class="page__text_sm_bold">Крем для лица</p>
-									<p class="page__text_15">1920 ₽</p>
-									<div class="hover-price">
-										<div class="page__btn_3">В корзину</div>
-									</div>
-								</div>
-							</div></a><a href="#">
-							<div class="leader-item">
-								<div class="page__img"><img src="assets/img/leaders-item-3.png"></div>
-								<div class="text">
-									<p class="page__text_19">Янтарный ночной крем дальше описание</p>
-									<p class="page__text_sm_bold">Крем для лица</p>
-									<p class="page__text_15">1920 ₽</p>
-									<div class="hover-price">
-										<div class="page__btn_3">В корзину</div>
-									</div>
-								</div>
-							</div></a><a href="#">
-							<div class="leader-item">
-								<div class="page__img"><img src="assets/img/leaders-item-4.png"></div>
-								<div class="text">
-									<p class="page__text_19">Янтарный ночной крем дальше описание</p>
-									<p class="page__text_sm_bold">Крем для лица</p>
-									<p class="page__text_15">1920 ₽</p>
-									<div class="hover-price">
-										<div class="page__btn_3">В корзину</div>
-									</div>
-								</div>
-							</div></a><a href="#">
-							<div class="leader-item">
-								<div class="page__img"><img src="assets/img/leaders-item-5.png"></div>
-								<div class="text">
-									<p class="page__text_19">Янтарный ночной крем дальше описание</p>
-									<p class="page__text_sm_bold">Крем для лица</p>
-									<p class="page__text_15">1920 ₽</p>
-									<div class="hover-price">
-										<div class="page__btn_3">В корзину</div>
-									</div>
-								</div>
-							</div></a><a href="#">
-							<div class="leader-item">
-								<div class="page__img"><img src="assets/img/leaders-item-1.png"></div>
-								<div class="text">
-									<p class="page__text_19">Янтарный ночной крем дальше описание</p>
-									<p class="page__text_sm_bold">Крем для лица</p>
-									<p class="page__text_15">1920 ₽</p>
-									<div class="hover-price">
-										<div class="page__btn_3">В корзину</div>
-									</div>
-								</div>
-							</div></a><a href="#">
-							<div class="leader-item">
-								<div class="page__img"><img src="assets/img/leaders-item-2.png"></div>
-								<div class="text">
-									<p class="page__text_19">Янтарный ночной крем дальше описание</p>
-									<p class="page__text_sm_bold">Крем для лица</p>
-									<p class="page__text_15">1920 ₽</p>
-									<div class="hover-price">
-										<div class="page__btn_3">В корзину</div>
-									</div>
-								</div>
-							</div></a><a href="#">
-							<div class="leader-item">
-								<div class="page__img"><img src="assets/img/leaders-item-3.png"></div>
-								<div class="text">
-									<p class="page__text_19">Янтарный ночной крем дальше описание</p>
-									<p class="page__text_sm_bold">Крем для лица</p>
-									<p class="page__text_15">1920 ₽</p>
-									<div class="hover-price">
-										<div class="page__btn_3">В корзину</div>
-									</div>
-								</div>
-							</div></a><a href="#">
-							<div class="leader-item">
-								<div class="page__img"><img src="assets/img/leaders-item-4.png"></div>
-								<div class="text">
-									<p class="page__text_19">Янтарный ночной крем дальше описание</p>
-									<p class="page__text_sm_bold">Крем для лица</p>
-									<p class="page__text_15">1920 ₽</p>
-									<div class="hover-price">
-										<div class="page__btn_3">В корзину</div>
-									</div>
-								</div>
-							</div></a><a href="#">
-							<div class="leader-item">
-								<div class="page__img"><img src="assets/img/leaders-item-5.png"></div>
-								<div class="text">
-									<p class="page__text_19">Янтарный ночной крем дальше описание</p>
-									<p class="page__text_sm_bold">Крем для лица</p>
-									<p class="page__text_15">1920 ₽</p>
-									<div class="hover-price">
-										<div class="page__btn_3">В корзину</div>
-									</div>
-								</div>
-							</div></a></div>
-					<div class="prevArrow" id="prevArrow-2"><img src="assets/img/arrow-black-left.svg"></div>
-					<div class="nextArrow" id="nextArrow-2"><img src="assets/img/arrow-black-right.svg"></div>
-				</div>
-			</section>
-			<section class="about-second">
-				<div class="wrapper-1370">
-					<div class="about-second-wrapper">
-						<div class="left">
-							<div class="page__img" data-aos="fade-down-right" data-aos-duration="3000" data-aos-delay="500"><img src="assets/img/icon-flower.svg"></div>
-							<h2 class="page__title-h2">Что такое косметика Hristina</h2>
-							<p class="page__text">Hristina Cosmetics (Христина Косметикс) - это европейская косметическая компания с более чем 20-летней историей успеха, производство которой основано исключительно на натуральных компонентах.</p>
+			</div>
+		</header>
+		<section class="banner">
+			<div class="slider-banner">
+				<div class="slide">
+					<div class="page__img"><img src="assets/img/banner-slider.png">
+						<div class="text">
+							<h1 class="page__text_solena">Легенда<br> болгарской органики</h1>
+							<p class="page__text_montserSemiBold">Натуральная косметика для ухода за лицом, волосами и
+								телом</p>
 							<div class="button">
-								<div class="bg-button"></div><a href="#">
-									<button class="page__btn_1"><span> Подробнее</button></a>
+								<div class="bg-button"></div><a href="pageCatalog/pageCatalog.html">
+									<button class="page__btn_1"><span> Посмотреть каталог</button></a>
 							</div>
-						</div>
-						<div class="right">
-							<div class="page__img"><img src="assets/img/about-second.png"></div>
 						</div>
 					</div>
 				</div>
-			</section>
-			<section class="products">
-				<div class="wrapper-1465">
-					<div class="products-top-wrapper">
-						<div class="page__img"><img src="assets/img/icon-flower.svg"></div>
-						<h2 class="page__title-h2">Продукция</h2>
+				<div class="slide">
+					<div class="page__img"><img src="assets/img/slide-2-banner.png">
+						<div class="text-2">
+							<h1 class="page__title-h1">100% натуральная свеча<br> для массажа</h1>
+							<p class="page__text_montserSemiBold">Смотрите продукцию с натуральным составом по уходу за
+								вашим телом</p>
+							<div class="button">
+								<div class="bg-button"></div><a href="collectionLovePage/collectionLovePage.html">
+									<button class="page__btn_1"><span> Выбрать свечу</button></a>
+							</div>
+						</div>
 					</div>
-					<div class="products-item-slider"><a href="#">
-							<div class="leader-item">
-								<div class="page__img"><img src="assets/img/leaders-item-1.png"></div>
-								<div class="text">
-									<p class="page__text_19">Янтарный ночной крем дальше описание</p>
-									<p class="page__text_sm_bold">Крем для лица</p>
-									<p class="page__text_15">1920 ₽</p>
-									<div class="hover-price">
-										<div class="page__btn_3">В корзину</div>
-									</div>
+				</div>
+				<div class="slide">
+					<div class="page__img"><img src="assets/img/slide-3-banner.png">
+						<div class="text-3">
+							<h1 class="page__title-h1">Всё для гладкости вашей кожи</h1>
+							<p class="page__text_montserSemiBold">Отличный способ снять усталость, расслабить тело,
+								успокоить ум и настроиться на романтический лад</p>
+							<div class="button">
+								<div class="bg-button"></div><a href="bodyCarePage/bodyCarePage.html">
+									<button class="page__btn_1"><span> Смотреть</button></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="prevArrow" id="prevArrow"><img src="assets/img/arrow-banner.svg"></div>
+			<div class="nextArrow" id="nextArrow"><img src="assets/img/arrow-white-right.svg"></div>
+		</section>
+		<section class="about">
+			<div class="wrapper">
+				<div class="about-wrapper">
+					<div class="left">
+						<div class="page__img"><img src="assets/img/about.png"></div>
+					</div>
+					<div class="right">
+						<div class="page__img" data-aos="fade-down-right" data-aos-duration="3000" data-aos-delay="500">
+							<img src="assets/img/icon-flower.svg"></div>
+						<h2 class="page__title-h2">Hristina cosmetics - это</h2>
+						<p class="page__text">Hristina Cosmetics (Христина Косметикс) - это европейская косметическая
+							компания с более чем 20-летней историей успеха, производство которой основано исключительно
+							на натуральных компонентах.</p>
+						<div class="item-wrapper-about">
+							<div class="item-about">
+								<div class="page__img" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="500">
+									<img src="assets/img/item-about-1.svg"></div>
+								<p class="page__text">Наивысший эффект от использования косметических средств
+									достигается благодаря 100% натуральным экстрактам</p>
+							</div>
+							<div class="item-about">
+								<div class="page__img" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="500">
+									<img src="assets/img/item-about-2.svg"></div>
+								<p class="page__text">Косметика абсолютно безопасна для здоровья, не тестируется на
+									животных и не вызывает привыкания</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="advantages">
+			<div class="wrapper-1370">
+				<div class="advantages-wrapper">
+					<div class="item-advantages" data-aos="zoom-in" data-aos-duration="400" data-aos-delay="200">
+						<div class="page__img"><img src="assets/img/safety-icon.svg"></div>
+						<p class="page__text_solena">Забота о здоровье</p>
+						<p class="page__text_w">Только натуральные, безопасные компоненты в составе всех продуктов.</p>
+					</div>
+					<div class="item-advantages" data-aos="zoom-in" data-aos-duration="400" data-aos-delay="200">
+						<div class="page__img"><img src="assets/img/advantage-item-2.svg"></div>
+						<p class="page__text_solena">Высокое качество </p>
+						<p class="page__text_w">20 лет на рынке Европы. 100% натуральный состав продукции.</p>
+					</div>
+					<div class="item-advantages" data-aos="zoom-in" data-aos-duration="400" data-aos-delay="200">
+						<div class="page__img"><img src="assets/img/advantage-item-3.svg"></div>
+						<p class="page__text_solena">Финансовая доступность</p>
+						<p class="page__text_w">Уникальная авторская рецептура и высокое качество по отличным ценам.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="leaders">
+			<div class="wrapper-1465">
+				<div class="leaders-top-wrapper">
+					<div class="page__img"><img src="assets/img/icon-flower.svg"></div>
+					<h2 class="page__title-h2">Лидеры продаж</h2>
+				</div>
+				<div class="leaders-item-slider"><a href="#">
+						<div class="leader-item">
+							<div class="page__img"><img src="assets/img/leaders-item-1.png"></div>
+							<div class="text">
+								<p class="page__text_19">Янтарный ночной крем дальше описание</p>
+								<p class="page__text_sm_bold">Крем для лица</p>
+								<p class="page__text_15">1920 ₽</p>
+								<div class="hover-price">
+									<div class="page__btn_3">В корзину</div>
 								</div>
-							</div></a><a href="#">
-							<div class="leader-item">
-								<div class="page__img"><img src="assets/img/leaders-item-2.png"></div>
-								<div class="text">
-									<p class="page__text_19">Янтарный ночной крем дальше описание</p>
-									<p class="page__text_sm_bold">Крем для лица</p>
-									<p class="page__text_15">1920 ₽</p>
-									<div class="hover-price">
-										<div class="page__btn_3">В корзину</div>
-									</div>
+							</div>
+						</div>
+					</a><a href="#">
+						<div class="leader-item">
+							<div class="page__img"><img src="assets/img/leaders-item-2.png"></div>
+							<div class="text">
+								<p class="page__text_19">Янтарный ночной крем дальше описание</p>
+								<p class="page__text_sm_bold">Крем для лица</p>
+								<p class="page__text_15">1920 ₽</p>
+								<div class="hover-price">
+									<div class="page__btn_3">В корзину</div>
 								</div>
-							</div></a><a href="#">
-							<div class="leader-item">
-								<div class="page__img"><img src="assets/img/leaders-item-3.png"></div>
-								<div class="text">
-									<p class="page__text_19">Янтарный ночной крем дальше описание</p>
-									<p class="page__text_sm_bold">Крем для лица</p>
-									<p class="page__text_15">1920 ₽</p>
-									<div class="hover-price">
-										<div class="page__btn_3">В корзину</div>
-									</div>
+							</div>
+						</div>
+					</a><a href="#">
+						<div class="leader-item">
+							<div class="page__img"><img src="assets/img/leaders-item-3.png"></div>
+							<div class="text">
+								<p class="page__text_19">Янтарный ночной крем дальше описание</p>
+								<p class="page__text_sm_bold">Крем для лица</p>
+								<p class="page__text_15">1920 ₽</p>
+								<div class="hover-price">
+									<div class="page__btn_3">В корзину</div>
 								</div>
-							</div></a><a href="#">
-							<div class="leader-item">
-								<div class="page__img"><img src="assets/img/leaders-item-4.png"></div>
-								<div class="text">
-									<p class="page__text_19">Янтарный ночной крем дальше описание</p>
-									<p class="page__text_sm_bold">Крем для лица</p>
-									<p class="page__text_15">1920 ₽</p>
-									<div class="hover-price">
-										<div class="page__btn_3">В корзину</div>
-									</div>
+							</div>
+						</div>
+					</a><a href="#">
+						<div class="leader-item">
+							<div class="page__img"><img src="assets/img/leaders-item-4.png"></div>
+							<div class="text">
+								<p class="page__text_19">Янтарный ночной крем дальше описание</p>
+								<p class="page__text_sm_bold">Крем для лица</p>
+								<p class="page__text_15">1920 ₽</p>
+								<div class="hover-price">
+									<div class="page__btn_3">В корзину</div>
 								</div>
-							</div></a><a href="#">
-							<div class="leader-item">
-								<div class="page__img"><img src="assets/img/leaders-item-5.png"></div>
-								<div class="text">
-									<p class="page__text_19">Янтарный ночной крем дальше описание</p>
-									<p class="page__text_sm_bold">Крем для лица</p>
-									<p class="page__text_15">1920 ₽</p>
-									<div class="hover-price">
-										<div class="page__btn_3">В корзину</div>
-									</div>
+							</div>
+						</div>
+					</a><a href="#">
+						<div class="leader-item">
+							<div class="page__img"><img src="assets/img/leaders-item-5.png"></div>
+							<div class="text">
+								<p class="page__text_19">Янтарный ночной крем дальше описание</p>
+								<p class="page__text_sm_bold">Крем для лица</p>
+								<p class="page__text_15">1920 ₽</p>
+								<div class="hover-price">
+									<div class="page__btn_3">В корзину</div>
 								</div>
-							</div></a><a href="#">
-							<div class="leader-item">
-								<div class="page__img"><img src="assets/img/leaders-item-1.png"></div>
-								<div class="text">
-									<p class="page__text_19">Янтарный ночной крем дальше описание</p>
-									<p class="page__text_sm_bold">Крем для лица</p>
-									<p class="page__text_15">1920 ₽</p>
-									<div class="hover-price">
-										<div class="page__btn_3">В корзину</div>
-									</div>
+							</div>
+						</div>
+					</a><a href="#">
+						<div class="leader-item">
+							<div class="page__img"><img src="assets/img/leaders-item-1.png"></div>
+							<div class="text">
+								<p class="page__text_19">Янтарный ночной крем дальше описание</p>
+								<p class="page__text_sm_bold">Крем для лица</p>
+								<p class="page__text_15">1920 ₽</p>
+								<div class="hover-price">
+									<div class="page__btn_3">В корзину</div>
 								</div>
-							</div></a><a href="#">
-							<div class="leader-item">
-								<div class="page__img"><img src="assets/img/leaders-item-2.png"></div>
-								<div class="text">
-									<p class="page__text_19">Янтарный ночной крем дальше описание</p>
-									<p class="page__text_sm_bold">Крем для лица</p>
-									<p class="page__text_15">1920 ₽</p>
-									<div class="hover-price">
-										<div class="page__btn_3">В корзину</div>
-									</div>
+							</div>
+						</div>
+					</a><a href="#">
+						<div class="leader-item">
+							<div class="page__img"><img src="assets/img/leaders-item-2.png"></div>
+							<div class="text">
+								<p class="page__text_19">Янтарный ночной крем дальше описание</p>
+								<p class="page__text_sm_bold">Крем для лица</p>
+								<p class="page__text_15">1920 ₽</p>
+								<div class="hover-price">
+									<div class="page__btn_3">В корзину</div>
 								</div>
-							</div></a><a href="#">
-							<div class="leader-item">
-								<div class="page__img"><img src="assets/img/leaders-item-3.png"></div>
-								<div class="text">
-									<p class="page__text_19">Янтарный ночной крем дальше описание</p>
-									<p class="page__text_sm_bold">Крем для лица</p>
-									<p class="page__text_15">1920 ₽</p>
-									<div class="hover-price">
-										<div class="page__btn_3">В корзину</div>
-									</div>
+							</div>
+						</div>
+					</a><a href="#">
+						<div class="leader-item">
+							<div class="page__img"><img src="assets/img/leaders-item-3.png"></div>
+							<div class="text">
+								<p class="page__text_19">Янтарный ночной крем дальше описание</p>
+								<p class="page__text_sm_bold">Крем для лица</p>
+								<p class="page__text_15">1920 ₽</p>
+								<div class="hover-price">
+									<div class="page__btn_3">В корзину</div>
 								</div>
-							</div></a><a href="#">
-							<div class="leader-item">
-								<div class="page__img"><img src="assets/img/leaders-item-4.png"></div>
-								<div class="text">
-									<p class="page__text_19">Янтарный ночной крем дальше описание</p>
-									<p class="page__text_sm_bold">Крем для лица</p>
-									<p class="page__text_15">1920 ₽</p>
-									<div class="hover-price">
-										<div class="page__btn_3">В корзину</div>
-									</div>
+							</div>
+						</div>
+					</a><a href="#">
+						<div class="leader-item">
+							<div class="page__img"><img src="assets/img/leaders-item-4.png"></div>
+							<div class="text">
+								<p class="page__text_19">Янтарный ночной крем дальше описание</p>
+								<p class="page__text_sm_bold">Крем для лица</p>
+								<p class="page__text_15">1920 ₽</p>
+								<div class="hover-price">
+									<div class="page__btn_3">В корзину</div>
 								</div>
-							</div></a><a href="#">
-							<div class="leader-item">
-								<div class="page__img"><img src="assets/img/leaders-item-5.png"></div>
-								<div class="text">
-									<p class="page__text_19">Янтарный ночной крем дальше описание</p>
-									<p class="page__text_sm_bold">Крем для лица</p>
-									<p class="page__text_15">1920 ₽</p>
-									<div class="hover-price">
-										<div class="page__btn_3">В корзину</div>
-									</div>
+							</div>
+						</div>
+					</a><a href="#">
+						<div class="leader-item">
+							<div class="page__img"><img src="assets/img/leaders-item-5.png"></div>
+							<div class="text">
+								<p class="page__text_19">Янтарный ночной крем дальше описание</p>
+								<p class="page__text_sm_bold">Крем для лица</p>
+								<p class="page__text_15">1920 ₽</p>
+								<div class="hover-price">
+									<div class="page__btn_3">В корзину</div>
 								</div>
-							</div></a></div>
-					<div class="prevArrow" id="prevArrow-3"><img src="assets/img/arrow-black-left.svg"></div>
-					<div class="nextArrow" id="nextArrow-3"><img src="assets/img/arrow-black-right.svg"></div>
+							</div>
+						</div>
+					</a></div>
+				<div class="prevArrow" id="prevArrow-2"><img src="assets/img/arrow-black-left.svg"></div>
+				<div class="nextArrow" id="nextArrow-2"><img src="assets/img/arrow-black-right.svg"></div>
+			</div>
+		</section>
+		<section class="about-second">
+			<div class="wrapper-1370">
+				<div class="about-second-wrapper">
+					<div class="left">
+						<div class="page__img" data-aos="fade-down-right" data-aos-duration="3000" data-aos-delay="500">
+							<img src="assets/img/icon-flower.svg"></div>
+						<h2 class="page__title-h2">Что такое косметика Hristina</h2>
+						<p class="page__text">Hristina Cosmetics (Христина Косметикс) - это европейская косметическая
+							компания с более чем 20-летней историей успеха, производство которой основано исключительно
+							на натуральных компонентах.</p>
+						<div class="button">
+							<div class="bg-button"></div><a href="#">
+								<button class="page__btn_1"><span> Подробнее</button></a>
+						</div>
+					</div>
+					<div class="right">
+						<div class="page__img"><img src="assets/img/about-second.png"></div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="products">
+			<div class="wrapper-1465">
+				<div class="products-top-wrapper">
+					<div class="page__img"><img src="assets/img/icon-flower.svg"></div>
+					<h2 class="page__title-h2">Продукция</h2>
+				</div>
+				<div class="products-item-slider"><a href="#">
+						<div class="leader-item">
+							<div class="page__img"><img src="assets/img/leaders-item-1.png"></div>
+							<div class="text">
+								<p class="page__text_19">Янтарный ночной крем дальше описание</p>
+								<p class="page__text_sm_bold">Крем для лица</p>
+								<p class="page__text_15">1920 ₽</p>
+								<div class="hover-price">
+									<div class="page__btn_3">В корзину</div>
+								</div>
+							</div>
+						</div>
+					</a><a href="#">
+						<div class="leader-item">
+							<div class="page__img"><img src="assets/img/leaders-item-2.png"></div>
+							<div class="text">
+								<p class="page__text_19">Янтарный ночной крем дальше описание</p>
+								<p class="page__text_sm_bold">Крем для лица</p>
+								<p class="page__text_15">1920 ₽</p>
+								<div class="hover-price">
+									<div class="page__btn_3">В корзину</div>
+								</div>
+							</div>
+						</div>
+					</a><a href="#">
+						<div class="leader-item">
+							<div class="page__img"><img src="assets/img/leaders-item-3.png"></div>
+							<div class="text">
+								<p class="page__text_19">Янтарный ночной крем дальше описание</p>
+								<p class="page__text_sm_bold">Крем для лица</p>
+								<p class="page__text_15">1920 ₽</p>
+								<div class="hover-price">
+									<div class="page__btn_3">В корзину</div>
+								</div>
+							</div>
+						</div>
+					</a><a href="#">
+						<div class="leader-item">
+							<div class="page__img"><img src="assets/img/leaders-item-4.png"></div>
+							<div class="text">
+								<p class="page__text_19">Янтарный ночной крем дальше описание</p>
+								<p class="page__text_sm_bold">Крем для лица</p>
+								<p class="page__text_15">1920 ₽</p>
+								<div class="hover-price">
+									<div class="page__btn_3">В корзину</div>
+								</div>
+							</div>
+						</div>
+					</a><a href="#">
+						<div class="leader-item">
+							<div class="page__img"><img src="assets/img/leaders-item-5.png"></div>
+							<div class="text">
+								<p class="page__text_19">Янтарный ночной крем дальше описание</p>
+								<p class="page__text_sm_bold">Крем для лица</p>
+								<p class="page__text_15">1920 ₽</p>
+								<div class="hover-price">
+									<div class="page__btn_3">В корзину</div>
+								</div>
+							</div>
+						</div>
+					</a><a href="#">
+						<div class="leader-item">
+							<div class="page__img"><img src="assets/img/leaders-item-1.png"></div>
+							<div class="text">
+								<p class="page__text_19">Янтарный ночной крем дальше описание</p>
+								<p class="page__text_sm_bold">Крем для лица</p>
+								<p class="page__text_15">1920 ₽</p>
+								<div class="hover-price">
+									<div class="page__btn_3">В корзину</div>
+								</div>
+							</div>
+						</div>
+					</a><a href="#">
+						<div class="leader-item">
+							<div class="page__img"><img src="assets/img/leaders-item-2.png"></div>
+							<div class="text">
+								<p class="page__text_19">Янтарный ночной крем дальше описание</p>
+								<p class="page__text_sm_bold">Крем для лица</p>
+								<p class="page__text_15">1920 ₽</p>
+								<div class="hover-price">
+									<div class="page__btn_3">В корзину</div>
+								</div>
+							</div>
+						</div>
+					</a><a href="#">
+						<div class="leader-item">
+							<div class="page__img"><img src="assets/img/leaders-item-3.png"></div>
+							<div class="text">
+								<p class="page__text_19">Янтарный ночной крем дальше описание</p>
+								<p class="page__text_sm_bold">Крем для лица</p>
+								<p class="page__text_15">1920 ₽</p>
+								<div class="hover-price">
+									<div class="page__btn_3">В корзину</div>
+								</div>
+							</div>
+						</div>
+					</a><a href="#">
+						<div class="leader-item">
+							<div class="page__img"><img src="assets/img/leaders-item-4.png"></div>
+							<div class="text">
+								<p class="page__text_19">Янтарный ночной крем дальше описание</p>
+								<p class="page__text_sm_bold">Крем для лица</p>
+								<p class="page__text_15">1920 ₽</p>
+								<div class="hover-price">
+									<div class="page__btn_3">В корзину</div>
+								</div>
+							</div>
+						</div>
+					</a><a href="#">
+						<div class="leader-item">
+							<div class="page__img"><img src="assets/img/leaders-item-5.png"></div>
+							<div class="text">
+								<p class="page__text_19">Янтарный ночной крем дальше описание</p>
+								<p class="page__text_sm_bold">Крем для лица</p>
+								<p class="page__text_15">1920 ₽</p>
+								<div class="hover-price">
+									<div class="page__btn_3">В корзину</div>
+								</div>
+							</div>
+						</div>
+					</a></div>
+				<div class="prevArrow" id="prevArrow-3"><img src="assets/img/arrow-black-left.svg"></div>
+				<div class="nextArrow" id="nextArrow-3"><img src="assets/img/arrow-black-right.svg"></div>
+				<div class="button">
+					<div class="bg-button"></div><a href="#">
+						<button class="page__btn_1"><span> Cмотреть каталог</button></a>
+				</div>
+			</div>
+		</section>
+		<section class="collection-love">
+			<div class="wrapper">
+				<div class="text">
+					<p class="page__text_solena">Коллекция “Love”</p>
+					<p class="page__text_15">Новая коллекция по уходу за телом</p>
 					<div class="button">
 						<div class="bg-button"></div><a href="#">
-							<button class="page__btn_1"><span> Cмотреть каталог</button></a>
+							<button class="page__btn_1"><span> Смотреть коллекцию</button></a>
 					</div>
 				</div>
-			</section>
-			<section class="collection-love">
+			</div>
+		</section>
+		<section class="feedback">
+			<div class="bg-grey">
 				<div class="wrapper">
 					<div class="text">
-						<p class="page__text_solena">Коллекция “Love”</p>
-						<p class="page__text_15">Новая коллекция по уходу за телом</p>
-						<div class="button">
-							<div class="bg-button"></div><a href="#">
-								<button class="page__btn_1"><span> Смотреть коллекцию</button></a>
-						</div>
+						<p class="page__text_solena">Отзывы</p>
+						<h2 class="page__title-h2">Наши счастливые клиенты</h2>
 					</div>
 				</div>
-			</section>
-			<section class="feedback">
-				<div class="bg-grey">
-					<div class="wrapper">
+				<div class="feedback-slider">
+					<div class="feedback-slider-item">
 						<div class="text">
-							<p class="page__text_solena">Отзывы</p>
-							<h2 class="page__title-h2">Наши счастливые клиенты</h2>
+							<p class="page__text_lightItalic">“Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+								sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+								veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+								consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua.”</p>
+							<p class="page__text_15">Имя Фамилия</p>
 						</div>
 					</div>
-					<div class="feedback-slider">
-						<div class="feedback-slider-item">
-							<div class="text">
-								<p class="page__text_lightItalic">“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.”</p>
-								<p class="page__text_15">Имя Фамилия</p>
-							</div>
+					<div class="feedback-slider-item">
+						<div class="text">
+							<p class="page__text_lightItalic">“Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+								sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+								veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+								consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua.”</p>
+							<p class="page__text_15">Имя Фамилия</p>
 						</div>
-						<div class="feedback-slider-item">
-							<div class="text">
-								<p class="page__text_lightItalic">“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.”</p>
-								<p class="page__text_15">Имя Фамилия</p>
-							</div>
+					</div>
+					<div class="feedback-slider-item">
+						<div class="text">
+							<p class="page__text_lightItalic">“Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+								sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+								veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+								consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua.”</p>
+							<p class="page__text_15">Имя Фамилия</p>
 						</div>
-						<div class="feedback-slider-item">
-							<div class="text">
-								<p class="page__text_lightItalic">“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.”</p>
-								<p class="page__text_15">Имя Фамилия</p>
+					</div>
+				</div>
+			</div>
+			<div class="prevArrow" id="prevArrow-4"><img src="assets/img/arrow-black-left.svg"></div>
+			<div class="nextArrow" id="nextArrow-4"><img src="assets/img/arrow-black-right.svg"></div>
+		</section>
+		<section class="instagram">
+			<div class="wrapper">
+				<div class="text">
+					<p class="page__text_solena">Подписывайтесь</p>
+					<h2 class="page__title-h2">Мы в инстаграм</h2><a class="page__link"
+						href="https://www.instagram.com/hristina.cosmetics/">@hristina.cosmetics</a>
+				</div>
+			</div>
+			<div class="instagram-slider">
+				<div class="instagram-item"><a href="https://www.instagram.com/hristina.cosmetics/">
+						<div class="page__img"><img src="assets/img/instagram-item-1.png"></div>
+					</a></div>
+				<div class="instagram-item"><a href="https://www.instagram.com/hristina.cosmetics/">
+						<div class="page__img"><img src="assets/img/instagram-item-2.png"></div>
+					</a></div>
+				<div class="instagram-item"><a href="https://www.instagram.com/hristina.cosmetics/">
+						<div class="page__img"><img src="assets/img/instagram-item-3.png"></div>
+					</a></div>
+				<div class="instagram-item"><a href="https://www.instagram.com/hristina.cosmetics/">
+						<div class="page__img"><img src="assets/img/instagram-item-4.png"></div>
+					</a></div>
+				<div class="instagram-item"><a href="https://www.instagram.com/hristina.cosmetics/">
+						<div class="page__img"><img src="assets/img/instagram-item-5.png"></div>
+					</a></div>
+				<div class="instagram-item"><a href="https://www.instagram.com/hristina.cosmetics/">
+						<div class="page__img"><img src="assets/img/instagram-item-1.png"></div>
+					</a></div>
+				<div class="instagram-item"><a href="https://www.instagram.com/hristina.cosmetics/">
+						<div class="page__img"><img src="assets/img/instagram-item-2.png"></div>
+					</a></div>
+				<div class="instagram-item"><a href="https://www.instagram.com/hristina.cosmetics/">
+						<div class="page__img"><img src="assets/img/instagram-item-3.png"></div>
+					</a></div>
+				<div class="instagram-item"><a href="https://www.instagram.com/hristina.cosmetics/">
+						<div class="page__img"><img src="assets/img/instagram-item-4.png"></div>
+					</a></div>
+				<div class="instagram-item"><a href="https://www.instagram.com/hristina.cosmetics/">
+						<div class="page__img"><img src="assets/img/instagram-item-5.png"></div>
+					</a></div>
+			</div>
+		</section>
+		<section class="brands">
+			<div class="wrapper-1370">
+				<div class="text">
+					<div class="page__img"><img src="assets/img/icon-flower.svg"></div>
+					<h2 class="page__title-h2">Сертифицированные бренды производителя</h2>
+				</div>
+				<div class="brands-wrapper">
+					<div class="page__img"><svg width="140" height="59" viewBox="0 0 140 59" fill="none"
+							xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M52.7877 22.0394C52.7877 22.0394 51.7783 21.865 51.7783 20.4195C51.7783 18.974 52.8624 18.164 54.6444 17.8027C56.4138 17.4538 63.0432 15.9584 63.0805 11.5721C63.1055 7.1858 56.7129 6.76212 55.0057 10.4132C53.635 13.3416 53.5104 17.1298 54.7814 19.0737C56.0525 21.0176 58.0462 22.5753 62.2332 22.4507C66.4201 22.326 69.9965 18.1142 69.9965 18.1142V4.2699C69.9965 4.2699 67.9778 0.843096 64.065 0.182657C58.8936 -0.677159 56.2269 1.77768 56.2269 1.77768C56.2269 1.77768 61.3983 0.980168 63.5416 2.61257C66.3578 4.74342 67.9653 7.06119 67.9653 12.0581C67.9653 17.055 64.4886 21.8151 59.9653 21.5535C55.2923 21.2793 53.9465 16.3073 55.5789 12.8182C57.2114 9.32911 60.6132 8.64375 60.6257 11.7092C60.6382 14.3136 57.6973 15.8961 53.635 17.1796C49.8842 18.3634 49.8095 20.6563 50.3079 21.3665C50.8063 22.0768 52.0275 22.0145 52.7877 22.0394Z"
+								fill="#80827E" />
+							<path
+								d="M87.169 0.419672C87.169 0.419672 88.1783 0.594127 88.1783 2.03962C88.1783 3.48511 87.0942 4.29508 85.3123 4.65645C83.5303 5.01782 76.9135 6.50069 76.8761 10.887C76.8512 15.2733 83.2437 15.697 84.9509 12.0459C86.3216 9.11753 86.4462 5.32935 85.1752 3.38542C83.9042 1.44148 81.9104 -0.116156 77.7359 0.00845498C73.549 0.133066 69.9727 4.34492 69.9727 4.34492V18.1892C69.9727 18.1892 71.9914 21.616 75.9041 22.2765C81.0755 23.1363 83.7422 20.6814 83.7422 20.6814C83.7422 20.6814 78.5708 21.479 76.4275 19.8465C73.6113 17.7157 72.0038 15.3979 72.0038 10.401C72.0038 5.40412 75.4805 0.643972 80.0039 0.905655C84.6768 1.1798 86.0226 6.15178 84.3902 9.64089C82.7702 13.1425 79.3559 13.8154 79.3434 10.7499C79.331 8.14556 82.2718 6.563 86.3341 5.27951C90.0849 4.0957 90.1597 1.80286 89.6612 1.09257C89.1378 0.394749 87.9291 0.444594 87.169 0.419672Z"
+								fill="#80827E" />
+							<path d="M2.39253 33.2295H0V46.0894H2.39253V33.2295Z" fill="#80827E" />
+							<path d="M10.1816 33.2295H7.78906V46.0894H10.1816V33.2295Z" fill="#80827E" />
+							<path d="M44.2285 33.2295H41.8359V46.0894H44.2285V33.2295Z" fill="#80827E" />
+							<path d="M78.9668 33.2295H76.5742V46.0894H78.9668V33.2295Z" fill="#80827E" />
+							<path d="M95.416 33.2295H93.0234V46.0894H95.416V33.2295Z" fill="#80827E" />
+							<path d="M109.283 33.2295H106.891V46.0894H109.283V33.2295Z" fill="#80827E" />
+							<path d="M117.607 33.2295H115.215V46.0894H117.607V33.2295Z" fill="#80827E" />
+							<path d="M132.695 34.2514L134.913 33.3667L139.998 46.0895H137.418L132.695 34.2514Z"
+								fill="#80827E" />
+							<path d="M134.83 34.2514L132.611 33.3667L127.527 46.0895H130.107L134.83 34.2514Z"
+								fill="#80827E" />
+							<path d="M23.9785 33.2295H21.5859V46.0894H23.9785V33.2295Z" fill="#80827E" />
+							<path d="M2.15234 38.4039V40.46H8.12122V38.4039H2.15234Z" fill="#80827E" />
+							<path d="M72.7461 33.2213V35.2773H82.7898V33.2213H72.7461Z" fill="#80827E" />
+							<path d="M130.438 41.1109V43.167H137.092V41.1109H130.438Z" fill="#80827E" />
+							<path d="M109.195 33.1375L107.516 34.3232L115.399 45.4915L117.079 44.3058L109.195 33.1375Z"
+								fill="#80827E" />
+							<path
+								d="M30.8395 37.0428C30.8395 41.5787 25.7055 41.1799 23.9609 41.1799V39.4104H26.3535C26.9391 39.4104 27.4625 39.1737 27.8488 38.7874C28.2351 38.4011 28.4719 37.8777 28.4719 37.292C28.4719 36.1331 27.5248 35.1861 26.3659 35.1861H23.9734V33.2297C23.9734 33.2297 30.8395 32.507 30.8395 37.0428Z"
+								fill="#80827E" />
+							<path
+								d="M24.1602 41.18C24.1602 41.18 25.7676 45.7408 30.7022 46.0897L31.0262 44.0959C31.0262 44.0959 27.9733 43.9214 26.5153 41.1177L24.1602 41.18Z"
+								fill="#80827E" />
+							<path d="M132.613 33.3667H134.919L133.76 33.8278L132.613 33.3667Z" fill="#80827E" />
+							<path
+								d="M62.3178 35.7839C62.3801 35.8088 63.0156 33.9272 63.0156 33.9272C63.0156 33.9272 61.8692 33.0923 59.2648 33.0923C56.7975 33.0923 55.0156 34.1639 55.0156 36.6312C55.0156 39.0985 56.2742 39.5098 58.9159 40.5814C60.8599 41.3665 61.1714 41.9771 61.134 42.787C61.1091 43.3852 60.9222 44.245 58.6542 44.245C56.3863 44.245 55.514 43.3478 55.514 43.3478L54.7539 45.3665C54.7539 45.3665 55.6636 46.2512 58.9408 46.2512C62.3801 46.2512 63.5639 44.731 63.5639 42.5627C63.5639 40.3945 62.4175 39.7091 60.7975 38.949C59.4393 38.301 57.4954 38.1141 57.4954 36.3446C57.4954 34.7621 60.324 34.7995 62.3178 35.7839Z"
+								fill="#80827E" />
+							<path
+								d="M17.0469 52.906L17.2338 52.3079C17.2338 52.3079 16.7478 51.9839 15.5764 51.9839C14.4051 51.9839 12.7852 52.4574 12.7852 55.3235C12.7852 58.1895 14.8537 58.3764 15.8381 58.3764C16.8226 58.3764 17.2338 58.0151 17.2338 58.0151V57.2549C17.2338 57.2549 16.9846 57.7409 15.8132 57.7409C14.6419 57.7409 13.5702 57.1179 13.5702 55.2861C13.5702 53.4543 14.5422 52.6319 15.5764 52.6319C16.6107 52.6194 17.0469 52.906 17.0469 52.906Z"
+								fill="#80827E" />
+							<path
+								d="M28.971 51.9712C27.4258 51.9712 26.1797 53.4042 26.1797 55.1737C26.1797 56.9432 27.4258 58.3762 28.971 58.3762C30.5162 58.3762 31.7623 56.9432 31.7623 55.1737C31.7623 53.4042 30.5162 51.9712 28.971 51.9712ZM28.971 57.8279C27.8246 57.8279 26.89 56.6441 26.89 55.1737C26.89 53.7157 27.8246 52.5195 28.971 52.5195C30.1174 52.5195 31.052 53.7033 31.052 55.1737C31.052 56.6316 30.1174 57.8279 28.971 57.8279Z"
+								fill="#80827E" />
+							<path
+								d="M44.4958 52.9185L44.7076 52.3577C44.7076 52.3577 44.3338 51.9839 43.0628 51.9839C41.7917 51.9839 40.9319 52.4699 40.9319 53.6786C40.9319 54.8873 42.2029 55.1365 43.0129 55.5353C43.8603 55.959 44.2216 56.1085 44.2216 56.8437C44.2216 57.5789 43.4864 57.7658 42.6142 57.7658C41.7419 57.7658 41.0067 57.3546 41.0067 57.3546L40.8945 58.0524C40.8945 58.0524 41.1811 58.4387 42.6765 58.4387C44.1593 58.4387 45.0067 57.8032 45.0067 56.7191C45.0067 55.635 44.3089 55.4107 43.312 54.9746C42.3151 54.5384 41.692 54.2269 41.692 53.5914C41.692 52.9559 42.2777 52.6194 43.1126 52.6194C43.9475 52.6194 44.4958 52.9185 44.4958 52.9185Z"
+								fill="#80827E" />
+							<path
+								d="M114.066 52.906L114.253 52.3079C114.253 52.3079 113.767 51.9839 112.596 51.9839C111.425 51.9839 109.805 52.4574 109.805 55.3235C109.805 58.1895 111.873 58.3764 112.858 58.3764C113.842 58.3764 114.253 58.0151 114.253 58.0151V57.2549C114.253 57.2549 114.004 57.7409 112.833 57.7409C111.661 57.7409 110.59 57.1179 110.59 55.2861C110.59 53.4543 111.562 52.6319 112.596 52.6319C113.63 52.6319 114.066 52.906 114.066 52.906Z"
+								fill="#80827E" />
+							<path
+								d="M126.742 52.9185L126.954 52.3577C126.954 52.3577 126.58 51.9839 125.309 51.9839C124.038 51.9839 123.178 52.4699 123.178 53.6786C123.178 54.8873 124.449 55.1365 125.259 55.5353C126.106 55.959 126.468 56.1085 126.468 56.8437C126.468 57.5789 125.733 57.7658 124.86 57.7658C123.988 57.7658 123.253 57.3546 123.253 57.3546L123.141 58.0524C123.141 58.0524 123.427 58.4387 124.923 58.4387C126.405 58.4387 127.253 57.8032 127.253 56.7191C127.253 55.635 126.555 55.4107 125.558 54.9746C124.561 54.5384 123.938 54.2269 123.938 53.5914C123.938 52.9559 124.524 52.6194 125.359 52.6194C126.194 52.6194 126.742 52.9185 126.742 52.9185Z"
+								fill="#80827E" />
+							<path d="M55.1422 52.3574H54.3945V58.4135H55.1422V52.3574Z" fill="#80827E" />
+							<path d="M58.9195 52.8931H58.1719V58.4258H58.9195V52.8931Z" fill="#80827E" />
+							<path d="M62.7047 53.4536H61.957V58.4131H62.7047V53.4536Z" fill="#80827E" />
+							<path d="M100.275 52.1704H99.5273V58.4134H100.275V52.1704Z" fill="#80827E" />
+							<path
+								d="M54.3945 52.3577C54.3945 52.3577 55.1796 51.9839 56.6126 51.9839C58.0456 51.9839 58.4818 52.6194 58.4818 52.6194C58.4818 52.6194 58.8182 51.9839 60.6126 51.9839C62.407 51.9839 62.7186 53.4543 62.7186 53.4543H61.9709C61.9709 53.4543 61.46 52.6568 60.6002 52.6568C59.7403 52.6568 58.9428 53.23 58.9428 53.23L58.1952 53.5291C58.1952 53.5291 57.7466 52.6443 56.488 52.6443C55.2294 52.6443 55.1671 52.906 55.1671 52.906L54.3945 52.3577Z"
+								fill="#80827E" />
+							<path
+								d="M76.5749 52.7191C76.1263 52.2705 75.4908 51.9839 74.8055 51.9839C73.4223 51.9839 72.3008 53.1054 72.3008 54.4886V55.959C72.3008 57.3422 73.4223 58.4637 74.8055 58.4637H75.4908C75.8522 58.4637 76.3506 58.3515 76.8366 58.1646V57.5291C76.4628 57.7285 76.0142 57.8531 75.7151 57.8531H75.1045C74.1575 57.8531 73.0983 57.0805 73.0983 56.1334V55.4107H77.3226V54.4886C77.3101 53.7907 77.0235 53.1677 76.5749 52.7191ZM73.0858 54.663V54.364C73.0858 53.4169 73.8584 52.6443 74.8055 52.6443C75.279 52.6443 75.7151 52.8312 76.0142 53.1428C76.3257 53.4543 76.5126 53.878 76.5126 54.3515V54.6506H73.0858V54.663Z"
+								fill="#80827E" />
+							<path d="M87.7031 52.7434V52.4568V52.1577H90.1704V52.7434H87.7031Z" fill="#80827E" />
+							<path
+								d="M90.4811 58.027C90.045 58.2887 89.5465 58.4632 89.0232 58.4632C87.1041 58.4632 86.9297 56.7186 86.9297 56.7186V50.2264L87.7023 50.1392L87.7147 52.4445V52.7311L87.7272 56.6812C87.7272 56.6812 87.964 57.7529 89.0232 57.7778C89.4593 57.7778 89.883 57.6158 90.2693 57.3666L90.4811 58.027Z"
+								fill="#80827E" />
+							<path
+								d="M99.9121 50.812C100.256 50.812 100.535 50.5331 100.535 50.189C100.535 49.8449 100.256 49.5659 99.9121 49.5659C99.568 49.5659 99.2891 49.8449 99.2891 50.189C99.2891 50.5331 99.568 50.812 99.9121 50.812Z"
+								fill="#80827E" />
+						</svg>
+					</div>
+					<div class="page__img"><svg width="120" height="70" viewBox="0 0 120 70" fill="none"
+							xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M49.0028 30.125C49.5544 30.125 50.0016 29.6775 50.0016 29.1255C50.0016 28.5735 49.5544 28.126 49.0028 28.126C48.4511 28.126 48.0039 28.5735 48.0039 29.1255C48.0039 29.6775 48.4511 30.125 49.0028 30.125Z"
+								fill="#80827E" />
+							<path
+								d="M64.0418 8.29297C64.5935 8.29297 65.0407 7.84548 65.0407 7.29346C65.0407 6.74144 64.5935 6.29395 64.0418 6.29395C63.4902 6.29395 63.043 6.74144 63.043 7.29346C63.043 7.84548 63.4902 8.29297 64.0418 8.29297Z"
+								fill="#80827E" />
+							<path
+								d="M49.005 28.1255C49.005 28.1255 47.2175 28.6516 46.6918 29.6511C46.1661 30.598 46.7444 33.9648 50.7398 33.0178C54.7878 32.0709 66.3535 28.7042 67.8255 28.4937C69.2975 28.2833 71.6632 28.1255 72.1889 28.8094C72.662 29.4932 72.7146 30.3875 71.5055 30.5454C70.2963 30.6506 69.5078 31.2818 69.8758 32.3866C70.2438 33.4913 73.0826 32.7548 73.03 30.1771C72.9775 27.652 70.0335 26.1791 65.5123 27.2312C60.9912 28.2833 50.3192 31.6501 48.5318 31.6501C46.7444 31.6501 46.8495 30.4928 47.3227 30.0193C47.7432 29.5459 49.005 30.1245 49.005 30.1245V28.1255Z"
+								fill="#80827E" />
+							<path d="M54.4704 30.2299V16.605L52.4727 18.7618V30.756L54.4704 30.2299Z" fill="#80827E" />
+							<path d="M68.1401 15.7627H66.0898V27.1782H68.1401V15.7627Z" fill="#80827E" />
+							<path
+								d="M68.1369 15.7638C68.1369 15.7638 72.4477 15.0273 72.2374 8.39894C72.0271 1.77059 68.4523 1.56016 65.4557 2.71749L65.0352 2.19143C65.0352 2.19143 66.6649 1.40234 68.6626 1.40234C70.6077 1.40234 74.5506 3.40137 74.5506 8.39894C74.5506 13.3965 69.8717 16.3424 68.1894 16.3424C66.4546 16.3424 68.1369 15.7638 68.1369 15.7638Z"
+								fill="#80827E" />
+							<path
+								d="M63.4034 8.08293C63.4034 8.08293 65.0857 8.92463 66.0846 8.08293C67.0834 7.24123 67.6092 3.76924 64.7703 1.92803C61.9315 0.139427 59.8286 -0.860087 55.7806 0.981122C51.7326 2.82233 51.7852 6.13651 51.7852 6.13651L53.0995 7.50426C53.0995 7.50426 53.4675 1.665 59.8286 1.40197C66.1897 1.13894 66.4 5.03178 66.2423 6.29433C66.0846 7.55687 65.7692 7.45166 65.0857 7.29384C64.3497 7.13602 63.4034 8.08293 63.4034 8.08293Z"
+								fill="#80827E" />
+							<path
+								d="M54.4703 8.03002C54.4703 8.03002 51.9995 4.82105 47.1629 6.55705C42.3264 8.29305 42.3789 13.6589 42.3789 15.1844C42.3789 16.71 44.4292 21.1815 48.4246 21.1815C52.42 21.1815 53.6818 18.0778 53.6818 18.0778L52.4726 18.8142C52.4726 18.8142 51.4212 20.4976 48.6875 20.4976C46.0063 20.4976 44.6921 16.9204 44.6921 13.8167C44.6921 10.7129 46.6898 6.9779 48.8452 6.82008C50.948 6.55705 52.7355 6.71487 54.4703 8.03002Z"
+								fill="#80827E" />
+							<path d="M65.9525 25.4834L54.3242 28.6011L54.5963 29.6173L66.2246 26.4996L65.9525 25.4834Z"
+								fill="#80827E" />
+							<path d="M118.028 55.7969H1.79297V56.849H118.028V55.7969Z" fill="#80827E" />
+							<path
+								d="M14.6208 42.0669C16.8814 42.0669 17.0391 38.9632 15.7774 37.648C14.4631 36.3329 12.9385 36.2803 10.5202 36.2803C8.10195 36.2803 4.42196 37.7532 4.42196 40.4361C4.42196 43.1191 7.57624 45.3811 10.6254 47.3801C13.6745 49.3792 12.7282 53.9559 7.68138 53.535C2.63454 53.1142 3.10768 51.5886 3.00254 51.0099C2.8974 50.4313 5.31568 48.9057 3.31797 47.6432C1.32026 46.2754 0.479118 49.9052 1.32026 51.0099C2.10883 52.1147 3.31797 54.2715 7.8391 54.2715C12.3602 54.2715 14.8311 51.6938 14.8311 49.0635C14.8311 46.4858 7.8391 41.4883 7.36596 41.2252C6.89282 40.9096 6.52482 37.2798 10.7305 36.9642C14.9362 36.6485 15.4619 38.5949 14.8837 39.0684C14.3054 39.5418 13.4117 39.8049 13.4117 40.8044C13.4117 41.8039 13.9374 42.0669 14.6208 42.0669Z"
+								fill="#80827E" />
+							<path
+								d="M21.4014 35.8062C21.4014 35.8062 18.7728 37.4369 18.2997 39.5412C17.8265 41.6454 15.8288 50.5884 15.7763 51.5879C15.7237 52.5875 16.4071 54.0604 17.5637 54.0604C18.7203 54.0604 19.8768 53.3765 20.4025 51.5879C20.4025 51.5879 19.6665 53.3765 17.8265 53.3765C17.8265 53.3765 17.9317 50.1676 18.878 46.8534C19.8243 43.5918 21.2437 37.8052 21.4014 35.8062Z"
+								fill="#80827E" />
+							<path d="M23.4033 41.9609H16.1484V42.487H23.4033V41.9609Z" fill="#80827E" />
+							<path
+								d="M32.5442 44.0653C32.5442 44.0653 31.3351 41.8032 27.5499 41.8032C23.7648 41.8032 20.3477 44.9596 20.3477 48.3264C20.3477 51.6932 22.0299 54.0604 26.2356 54.0604C30.4413 54.0604 31.1773 51.3775 31.1773 51.3775C31.1773 51.3775 31.3351 50.9041 31.0196 51.2723C29.7053 52.9031 28.6539 53.6396 26.2356 53.6396C22.5031 53.6396 22.5557 49.0102 22.9237 47.6425C23.2391 46.2747 24.8162 42.3819 28.0231 42.3819C29.9156 42.3819 31.5979 43.0658 32.4916 44.2231C32.8071 44.8018 32.5442 44.0653 32.5442 44.0653Z"
+								fill="#80827E" />
+							<path
+								d="M99.4685 45.8544C99.4685 43.6975 98.4697 41.8037 94.632 41.8037C90.7943 41.8037 87.4297 44.9601 87.4297 48.3269C87.4297 51.6936 89.112 54.1661 93.3177 54.1661C97.4708 54.1661 99.048 52.1671 99.048 52.1671C99.048 52.1671 99.4159 51.0624 99.1531 51.4306C97.8388 53.0614 95.736 53.6927 93.2651 53.6927C89.5325 53.6927 89.5851 49.0633 89.9531 47.6956C90.2685 46.3278 91.9508 42.5928 95.1577 42.5928C96.1565 42.5928 97.3131 43.5397 97.3131 45.2757C97.3131 47.906 95.7885 48.5373 89.848 48.4321C89.3223 48.4321 89.848 48.8529 89.848 48.8529C89.848 48.8529 92.6343 49.0633 93.528 49.0107C96.6297 48.8003 99.4685 48.2742 99.4685 45.8544Z"
+								fill="#80827E" />
+							<path
+								d="M35.2825 42.2241C35.2825 42.2241 33.0745 42.2767 32.3911 44.4862C31.7077 46.6956 30.6563 51.2723 31.0768 52.5875C31.4974 53.9026 32.4963 54.2183 33.39 54.2183C34.2837 54.2183 36.9123 51.0619 36.9123 51.0619C36.9123 51.0619 34.3363 53.6396 33.3374 53.6396C32.3385 53.6396 35.2825 42.2241 35.2825 42.2241Z"
+								fill="#80827E" />
+							<path
+								d="M40.9105 42.2246C40.8053 42.2772 38.2293 42.2246 38.2293 42.2246L35.9688 54.061H38.4396L40.9105 42.2246Z"
+								fill="#80827E" />
+							<path d="M38.222 42.2769H36.75V42.8029H38.222V42.2769Z" fill="#80827E" />
+							<path d="M77.757 35.8589H75.6016V36.385H77.757V35.8589Z" fill="#80827E" />
+							<path d="M78.2325 53.5869H71.9766V54.113H78.2325V53.5869Z" fill="#80827E" />
+							<path d="M52.4709 42.2769H50V42.8029H52.4709V42.2769Z" fill="#80827E" />
+							<path d="M39.7518 53.5342H34.6523V54.0602H39.7518V53.5342Z" fill="#80827E" />
+							<path
+								d="M40.4351 44.4868C40.4351 44.4868 43.0636 42.0669 45.7448 42.0669C48.3733 42.0669 49.8453 43.2768 49.4247 45.6441C49.0042 48.0114 46.6385 53.798 47.8476 53.798C49.0568 53.798 50.4762 51.1677 50.4762 51.1677V51.6938C50.4762 51.6938 49.1619 54.4819 47.6899 54.4819C46.2179 54.4819 45.0613 53.1141 45.7973 50.1682C46.4808 47.2223 48.163 44.1185 46.7436 43.2242C45.3242 42.3299 41.7493 43.5925 40.2773 45.0654L40.4351 44.4868Z"
+								fill="#80827E" />
+							<path
+								d="M78.2866 44.4863C78.2866 44.4863 80.9152 42.0664 83.5963 42.0664C86.2249 42.0664 87.6969 43.2763 87.2763 45.6436C86.8557 48.0109 84.49 53.7975 85.6992 53.7975C86.9083 53.8501 88.3277 51.1672 88.3277 51.1672V51.6933C88.3277 51.6933 87.0135 54.4814 85.5415 54.4814C84.0695 54.4814 82.9129 53.1137 83.6489 50.1677C84.3323 47.2218 86.0146 44.118 84.5952 43.2237C83.1758 42.3294 79.6009 43.592 78.1289 45.0649L78.2866 44.4863Z"
+								fill="#80827E" />
+							<path
+								d="M52.264 42.2246H54.7874C54.7874 42.2246 52.264 51.378 52.4743 52.9036C52.6845 54.4292 53.8411 53.4297 55.0503 51.5885V52.325C55.0503 52.325 53.7885 54.1662 52.5268 54.1662C51.2651 54.1662 49.7931 53.5349 50.5291 50.3785C51.2651 47.2748 52.264 42.2246 52.264 42.2246Z"
+								fill="#80827E" />
+							<path
+								d="M54.4692 40.4876C55.4274 40.4876 56.2041 39.7104 56.2041 38.7516C56.2041 37.7929 55.4274 37.0156 54.4692 37.0156C53.5111 37.0156 52.7344 37.7929 52.7344 38.7516C52.7344 39.7104 53.5111 40.4876 54.4692 40.4876Z"
+								fill="#80827E" />
+							<path
+								d="M74.2322 42.7514C74.9581 42.7514 75.5465 42.1626 75.5465 41.4362C75.5465 40.7099 74.9581 40.1211 74.2322 40.1211C73.5064 40.1211 72.918 40.7099 72.918 41.4362C72.918 42.1626 73.5064 42.7514 74.2322 42.7514Z"
+								fill="#80827E" />
+							<path
+								d="M74.4988 51.7464V50.7995C74.4988 50.7995 72.5536 53.5876 68.4531 53.5876C64.3525 53.5876 63.8794 50.3261 63.8794 45.6967C63.8794 41.0674 67.0862 36.8063 70.7136 36.8063C74.3411 36.8063 75.6553 39.1736 75.6553 39.9101C75.6553 40.6466 74.1833 40.1205 74.1833 40.1205V42.8034C74.1833 42.8034 76.1811 43.4347 76.1811 40.0153C76.1811 36.5959 71.9228 36.2803 70.6085 36.2803C68.1902 36.2803 60.8828 37.1746 60.8828 46.7489C60.9354 55.4288 71.3971 55.6393 74.4988 51.7464Z"
+								fill="#80827E" />
+							<path
+								d="M63.4635 20.7606C63.6958 20.7606 63.8841 20.5722 63.8841 20.3398C63.8841 20.1074 63.6958 19.9189 63.4635 19.9189C63.2313 19.9189 63.043 20.1074 63.043 20.3398C63.043 20.5722 63.2313 20.7606 63.4635 20.7606Z"
+								fill="#80827E" />
+							<path
+								d="M63.5665 23.6011V23.2854C63.5665 23.2854 62.9357 24.1798 61.6214 24.1798C60.3071 24.1798 60.1494 23.1276 60.1494 21.6547C60.1494 20.1817 61.1483 18.8139 62.3574 18.8139C63.514 18.8139 63.9345 19.5504 63.9345 19.8135C63.9345 20.0765 63.4614 19.8661 63.4614 19.8661V20.7078C63.4614 20.7078 64.0923 20.9182 64.0923 19.8135C64.0923 18.7087 62.7254 18.6035 62.3048 18.6035C61.5163 18.6035 59.2031 18.8665 59.2031 21.9703C59.2031 24.811 62.5677 24.8636 63.5665 23.6011Z"
+								fill="#80827E" />
+							<path
+								d="M60.5714 15.5003C61.36 15.3425 61.2023 14.1852 60.6766 13.8169C60.0983 13.4487 59.5726 13.5013 58.6788 13.7117C57.7851 13.9221 56.576 14.7112 56.7863 15.6581C56.9966 16.605 58.3108 17.2363 59.5726 17.7098C60.8343 18.1832 60.8343 19.9192 58.9417 20.1823C57.1017 20.3927 57.1543 19.814 57.0491 19.6036C56.8914 19.1301 57.7326 18.6567 56.8914 18.341C56.0503 18.0254 56.0503 19.3932 56.4183 19.7614C56.7863 20.077 57.3646 20.8135 59.0468 20.4453C60.7291 20.077 61.4126 18.9723 61.2023 18.0254C60.992 17.0785 58.1006 15.816 57.8903 15.7107C57.68 15.6581 57.2594 14.343 58.784 13.9221C60.3086 13.5013 60.624 14.1326 60.4663 14.3956C60.3086 14.606 59.9931 14.7638 60.0457 15.1321C60.0983 15.5003 60.3086 15.5529 60.5714 15.5003Z"
+								fill="#80827E" />
+							<path d="M80.2325 35.8584H77.6565L73.9766 53.8496H76.5526L80.2325 35.8584Z"
+								fill="#80827E" />
+							<path d="M100.365 56.0072L104.518 38.9629H102.1L97.7891 56.0072H100.365Z" fill="#80827E" />
+							<path
+								d="M104.52 38.9628C104.52 38.9628 104.73 36.8585 106.097 36.5429C107.464 36.2273 109.094 37.0163 108.095 38.4893C107.096 39.9623 107.516 40.9092 109.251 40.9092C110.986 40.9092 110.934 35.9116 106.728 35.9116C102.522 35.9116 102.102 39.0154 102.102 39.0154H104.52V38.9628Z"
+								fill="#80827E" />
+							<path
+								d="M112.983 40.3302C113.854 40.3302 114.561 39.6236 114.561 38.752C114.561 37.8804 113.854 37.1738 112.983 37.1738C112.112 37.1738 111.406 37.8804 111.406 38.752C111.406 39.6236 112.112 40.3302 112.983 40.3302Z"
+								fill="#80827E" />
+							<path
+								d="M117.555 46.5378C118.252 46.5378 118.816 45.9725 118.816 45.2752C118.816 44.578 118.252 44.0127 117.555 44.0127C116.858 44.0127 116.293 44.578 116.293 45.2752C116.293 45.9725 116.858 46.5378 117.555 46.5378Z"
+								fill="#80827E" />
+							<path
+								d="M114.51 38.2788C114.51 38.2788 114.878 40.4357 113.984 41.5404C113.09 42.6451 113.038 42.4873 113.038 42.4873C113.038 42.4873 113.406 40.9617 113.038 40.4357C112.617 39.857 114.51 38.2788 114.51 38.2788Z"
+								fill="#80827E" />
+							<path
+								d="M117.558 46.5384C117.558 46.5384 120.659 45.9071 119.187 43.2242C117.715 40.5413 109.094 41.3304 109.094 44.855C109.094 48.4322 115.613 48.6426 115.613 51.6938C115.613 54.7449 109.251 53.6402 108.673 52.8511C108.095 52.062 108.726 51.1677 109.462 51.0099C110.145 50.8521 110.355 49.1161 108.883 49.2739C107.464 49.4317 106.15 50.9047 107.306 52.5355C108.463 54.1663 110.881 54.1663 112.248 54.1663C113.615 54.1663 118.189 54.061 118.189 51.0099C118.189 47.9588 113.299 46.591 111.985 45.2758C110.671 43.9607 113.299 41.9091 115.35 41.9091C117.4 41.9091 119.03 43.6451 117.558 44.0133C116.138 44.3815 117.558 46.5384 117.558 46.5384Z"
+								fill="#80827E" />
+							<path
+								d="M10.681 62.2663V62.6346C10.681 63.6341 10.3655 64.318 9.68211 64.6336C10.5232 64.9492 10.8387 65.6857 10.8387 66.7378V67.5269C10.8387 69.0525 10.0501 69.8416 8.47297 69.8416H6.05469V59.9517H8.36782C9.99753 60.0043 10.681 60.7407 10.681 62.2663ZM7.63183 61.372V64.0023H8.26268C8.84097 64.0023 9.20897 63.7393 9.20897 62.9502V62.4241C9.20897 61.7403 8.94611 61.4246 8.4204 61.4246H7.63183V61.372ZM7.63183 65.4227V68.4738H8.52554C9.05125 68.4738 9.31411 68.2108 9.31411 67.5269V66.6852C9.31411 65.7909 8.99868 65.4753 8.31525 65.4753H7.63183V65.4227Z"
+								fill="#80827E" />
+							<path
+								d="M12.4141 62.3729C12.4141 60.7947 13.2552 59.9004 14.7798 59.9004C16.3043 59.9004 17.1455 60.7947 17.1455 62.3729V67.5283C17.1455 69.1064 16.3043 70.0007 14.7798 70.0007C13.2552 70.0007 12.4141 69.1064 12.4141 67.5283V62.3729ZM13.9386 67.5809C13.9386 68.2647 14.2541 68.5278 14.7272 68.5278C15.2003 68.5278 15.5158 68.2647 15.5158 67.5809V62.2677C15.5158 61.5838 15.2003 61.3208 14.7272 61.3208C14.2541 61.3208 13.9386 61.5838 13.9386 62.2677V67.5809Z"
+								fill="#80827E" />
+							<path
+								d="M18.8281 60.0059H21.299C22.8235 60.0059 23.6121 60.8476 23.6121 62.4257V67.4233C23.6121 69.0015 22.8761 69.8432 21.299 69.8432H18.8281V60.0059ZM20.4053 61.3736V68.4228H21.299C21.7721 68.4228 22.0875 68.1598 22.0875 67.4759V62.3205C22.0875 61.6366 21.7721 61.3736 21.299 61.3736H20.4053Z"
+								fill="#80827E" />
+							<path
+								d="M26.6131 66.5816L24.668 60.0059H26.2451L27.4542 64.4774L28.6634 60.0059H30.1354L28.1902 66.5816V69.8432H26.6657V66.5816H26.6131Z"
+								fill="#80827E" />
+							<path
+								d="M35.9699 64.372H37.9676V65.7924H35.9699V69.843H34.4453V59.9531H38.5459V61.3735H35.9699V64.372Z"
+								fill="#80827E" />
+							<path
+								d="M39.8555 62.3729C39.8555 60.7947 40.6966 59.9004 42.2212 59.9004C43.7457 59.9004 44.5869 60.7947 44.5869 62.3729V67.5283C44.5869 69.1064 43.7457 70.0007 42.2212 70.0007C40.6966 70.0007 39.8555 69.1064 39.8555 67.5283V62.3729ZM41.38 67.5809C41.38 68.2647 41.6955 68.5278 42.1686 68.5278C42.6417 68.5278 42.9572 68.2647 42.9572 67.5809V62.2677C42.9572 61.5838 42.6417 61.3208 42.1686 61.3208C41.6955 61.3208 41.38 61.5838 41.38 62.2677V67.5809Z"
+								fill="#80827E" />
+							<path
+								d="M46.168 62.3729C46.168 60.7947 47.0091 59.9004 48.5337 59.9004C50.0582 59.9004 50.8994 60.7947 50.8994 62.3729V67.5283C50.8994 69.1064 50.0582 70.0007 48.5337 70.0007C47.0091 70.0007 46.168 69.1064 46.168 67.5283V62.3729ZM47.7451 67.5809C47.7451 68.2647 48.0605 68.5278 48.5337 68.5278C49.0068 68.5278 49.3222 68.2647 49.3222 67.5809V62.2677C49.3222 61.5838 49.0068 61.3208 48.5337 61.3208C48.0605 61.3208 47.7451 61.5838 47.7451 62.2677V67.5809Z"
+								fill="#80827E" />
+							<path
+								d="M52.6367 60.0059H55.1076C56.6321 60.0059 57.4207 60.8476 57.4207 62.4257V67.4233C57.4207 69.0015 56.6847 69.8432 55.1076 69.8432H52.6367V60.0059ZM54.2139 61.3736V68.4228H55.1076C55.5807 68.4228 55.8961 68.1598 55.8961 67.4759V62.3205C55.8961 61.6366 55.5807 61.3736 55.1076 61.3736H54.2139Z"
+								fill="#80827E" />
+							<path
+								d="M68.7239 66.1604V67.4755C68.7239 69.0537 67.9354 69.948 66.4108 69.948C64.8862 69.948 64.0977 69.0537 64.0977 67.4755V62.3201C64.0977 60.742 64.8862 59.8477 66.4108 59.8477C67.9354 59.8477 68.7239 60.742 68.7239 62.3201V63.267H67.2519V62.2149C67.2519 61.531 66.9365 61.268 66.4634 61.268C65.9902 61.268 65.6748 61.531 65.6748 62.2149V67.5281C65.6748 68.212 65.9902 68.475 66.4634 68.475C66.9365 68.475 67.2519 68.212 67.2519 67.5281V66.1078H68.7239V66.1604Z"
+								fill="#80827E" />
+							<path
+								d="M70.2969 62.3729C70.2969 60.7947 71.138 59.9004 72.6626 59.9004C74.1871 59.9004 75.0283 60.7947 75.0283 62.3729V67.5283C75.0283 69.1064 74.1871 70.0007 72.6626 70.0007C71.138 70.0007 70.2969 69.1064 70.2969 67.5283V62.3729ZM71.874 67.5809C71.874 68.2647 72.1894 68.5278 72.6626 68.5278C73.1357 68.5278 73.4512 68.2647 73.4512 67.5809V62.2677C73.4512 61.5838 73.1357 61.3208 72.6626 61.3208C72.1894 61.3208 71.874 61.5838 71.874 62.2677V67.5809Z"
+								fill="#80827E" />
+							<path
+								d="M78.8149 59.8477C80.3395 59.8477 81.0755 60.742 81.0755 62.3201V62.6358H79.6035V62.2149C79.6035 61.531 79.3406 61.268 78.8149 61.268C78.3418 61.268 78.0264 61.531 78.0264 62.2149C78.0264 64.2666 81.0755 64.6348 81.0755 67.4229C81.0755 69.0011 80.2869 69.8954 78.7624 69.8954C77.2378 69.8954 76.4492 69.0011 76.4492 67.4229V66.7916H77.9212V67.4755C77.9212 68.1594 78.2366 68.4224 78.7098 68.4224C79.1829 68.4224 79.4984 68.1594 79.4984 67.4755C79.4984 65.4239 76.4492 65.0556 76.4492 62.2675C76.5544 60.7946 77.3429 59.8477 78.8149 59.8477Z"
+								fill="#80827E" />
+							<path
+								d="M86.0698 67.0025L87.1212 60.0059H89.2766V69.8958H87.8046V62.794L86.7532 69.8958H85.2812L84.1247 62.8992V69.8958H82.7578V60.0059H84.9132L86.0698 67.0025Z"
+								fill="#80827E" />
+							<path
+								d="M92.6925 64.1617H94.7954V65.5821H92.6925V68.4754H95.3737V69.8958H91.168V60.0059H95.3737V61.4262H92.6925V64.1617Z"
+								fill="#80827E" />
+							<path d="M96.6328 60.0059H101.417V61.4262H99.7871V69.8958H98.2625V61.4262H96.6328V60.0059Z"
+								fill="#80827E" />
+							<path d="M102.84 60.0059H104.364V69.8958H102.84V60.0059Z" fill="#80827E" />
+							<path
+								d="M110.724 66.1604V67.4755C110.724 69.0537 109.935 69.948 108.411 69.948C106.886 69.948 106.098 69.0537 106.098 67.4755V62.3201C106.098 60.742 106.886 59.8477 108.411 59.8477C109.935 59.8477 110.724 60.742 110.724 62.3201V63.267H109.305V62.2149C109.305 61.531 108.989 61.268 108.516 61.268C108.043 61.268 107.727 61.531 107.727 62.2149V67.5281C107.727 68.212 108.043 68.475 108.516 68.475C108.989 68.475 109.305 68.212 109.305 67.5281V66.1078H110.724V66.1604Z"
+								fill="#80827E" />
+							<path
+								d="M114.512 59.8477C116.037 59.8477 116.773 60.742 116.773 62.3201V62.6358H115.301V62.2149C115.301 61.531 115.038 61.268 114.512 61.268C114.039 61.268 113.724 61.531 113.724 62.2149C113.724 64.2666 116.773 64.6348 116.773 67.4229C116.773 69.0011 115.984 69.8954 114.46 69.8954C112.935 69.8954 112.146 69.0011 112.146 67.4229V66.7916H113.618V67.4755C113.618 68.1594 113.934 68.4224 114.407 68.4224C114.88 68.4224 115.196 68.1594 115.196 67.4755C115.196 65.4239 112.146 65.0556 112.146 62.2675C112.252 60.7946 113.04 59.8477 114.512 59.8477Z"
+								fill="#80827E" />
+						</svg>
+					</div>
+					<div class="page__img"><svg width="141" height="46" viewBox="0 0 141 46" fill="none"
+							xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M15.1202 8.61544C15.1202 8.41236 15.1202 0.811702 15.1202 0.811702H14.1629V2.46528C14.1629 2.46528 10.2755 0.43457 7.89671 0.43457C5.51788 0.43457 1.39844 2.84241 1.39844 6.61373C1.39844 10.3851 7.02641 13.3151 10.3916 15.1137C13.7568 16.9123 13.8148 17.8407 13.8148 19.6973C13.8148 21.525 12.4803 23.5847 8.85405 23.5847C5.22778 23.5847 3.42915 21.728 2.58785 19.8424V17.3185H1.68854V24.8321H2.47181V23.4396C2.47181 23.4396 6.24314 24.8321 8.73801 24.8321C11.2329 24.8321 16.1936 24.2809 16.1936 18.711C16.1936 13.141 9.40524 10.9072 6.01105 9.05059C2.61686 7.19394 2.64587 2.75538 7.75166 2.55231C12.8865 2.34924 14.0759 5.13422 14.0759 8.55742L15.1202 8.61544Z"
+								fill="black" />
+							<path
+								d="M36.3213 6.70087H37.4527V1.59508L36.0892 0.84082H19.0892V1.9142C19.0892 1.9142 22.4834 2.00123 22.4834 3.79986C22.4834 5.59849 22.4834 22.4824 22.4834 22.4824C22.4834 22.4824 19.9885 23.7879 18.8281 23.7879V24.6292H36.0892L38.8161 19.0012H37.3366C37.3366 19.0012 36.3213 22.7435 33.9134 22.7435C31.5056 22.7435 25.4715 22.7435 25.4715 22.7435V13.2572H32.666C32.666 13.2572 34.2035 14.7947 34.2035 16.1292H35.0158V8.41247H34.0875C34.0875 8.41247 33.9714 11.1394 32.5209 11.1394C31.0704 11.1394 25.3554 11.1394 25.3554 11.1394V2.72648H33.7974C33.7684 2.72648 36.3213 2.92955 36.3213 6.70087Z"
+								fill="black" />
+							<path
+								d="M41.7829 6.87465V2.81322C41.7829 2.81322 42.2471 0.811523 43.6976 0.811523C45.1481 0.811523 59.2181 0.811523 59.2181 0.811523V2.34906L44.887 22.3371H55.5918C55.5918 22.3371 58.1737 21.3797 58.1737 19.349H59.2181V22.8012C59.2181 22.8012 58.4348 24.6289 57.3904 24.6289C56.3461 24.6289 39.7812 24.6289 39.7812 24.6289V22.4531L54.2863 2.98729H44.771C44.771 2.98729 43.1174 3.5965 43.1174 6.70059L41.7829 6.87465Z"
+								fill="black" />
+							<path
+								d="M86.2155 4.20571C86.2155 4.20571 86.2155 20.6835 86.2155 21.9889C86.2155 23.2654 89.2906 23.5555 89.2906 23.5555V24.6289H81.3998V23.7876C84.5619 23.7876 84.5329 22.134 84.5329 22.134V5.39513L75.8009 24.5999H74.9016L66.1405 5.39513V22.105C66.1405 22.105 66.0825 23.7586 69.2736 23.7586V24.5999H61.3828V23.5265C61.3828 23.5265 64.4579 23.2654 64.4579 21.9599C64.4579 20.6835 64.4579 4.1767 64.4579 4.1767C64.4579 4.1767 64.1968 2.26203 61.3828 2.26203V0.811523H67.591L75.3367 19.291L83.1114 0.811523H89.3196V2.29104C86.4766 2.29104 86.2155 4.20571 86.2155 4.20571Z"
+								fill="black" />
+							<path
+								d="M91.3906 24.6006V23.6143C91.3906 23.6143 92.9282 23.8464 94.0886 22.2218C95.278 20.5972 103.488 0 103.488 0V5.1348L96.5834 21.2354C96.5834 21.2354 96.5254 23.7593 98.7882 23.7593V24.6296H91.3906V24.6006Z"
+								fill="black" />
+							<path
+								d="M107.314 24.6006H115.843V23.6143C115.843 23.6143 114.218 23.8464 112.71 21.9027C111.23 19.959 103.484 0 103.484 0V5.1348L109.664 21.2645C109.664 21.2645 109.693 23.7013 107.343 23.7013L107.314 24.6006Z"
+								fill="black" />
+							<path d="M108.271 15.375H98.3203V16.5934H108.271V15.375Z" fill="black" />
+							<path
+								d="M117.352 24.6008H126.026V23.6435C126.026 23.6435 123.125 23.7885 123.125 22.193C123.125 20.5974 123.125 0.8125 123.125 0.8125H117.555V1.9439C117.555 1.9439 120.688 2.26301 120.688 3.68451C120.688 5.106 120.688 21.5548 120.688 21.5548C120.688 21.5548 120.311 23.5275 117.381 23.5275V24.6008H117.352Z"
+								fill="black" />
+							<path
+								d="M123.125 0.8125H129.652C129.652 0.8125 134.816 1.47973 134.816 7.13672C134.816 12.7937 127.157 14.0121 127.157 14.0121H123.125V12.0684H127.738C127.738 12.0684 131.48 10.2698 131.48 7.25276C131.48 4.2357 130.087 2.75618 128.956 2.75618C127.825 2.75618 123.125 2.75618 123.125 2.75618V0.8125Z"
+								fill="black" />
+							<path
+								d="M140.585 24.6011H133.768L125.906 13.9834H129.445L136.118 22.7155C136.118 22.7155 137.771 23.4697 140.585 23.4697V24.6011Z"
+								fill="black" />
+							<path d="M87.3522 2.34961V23.6431H85.6406V2.9008L87.3522 2.34961Z" fill="black" />
+							<path
+								d="M11.6678 40.8751H12.103V44.9945H11.6098L10.8845 44.2983C10.4204 44.6754 9.86919 44.9365 9.25998 45.1105C8.62175 45.2846 7.92551 45.3716 7.17125 45.3716C5.25657 45.3716 3.66102 44.6464 2.44259 43.1669C1.19515 41.7454 0.585938 39.8597 0.585938 37.5389C0.585938 36.4365 0.730988 35.3921 1.0501 34.4058C1.36921 33.4485 1.83337 32.5491 2.44259 31.7949C3.0518 31.0116 3.80607 30.4024 4.70538 29.9382C5.6047 29.5031 6.50401 29.271 7.43234 29.271C8.07056 29.271 8.65076 29.358 9.20196 29.5611C9.75315 29.7642 10.3043 30.0833 10.8265 30.5184L11.6098 29.7352H11.9579V33.6515H11.4647C11.1456 32.4041 10.6235 31.4758 9.92721 30.8375C9.23097 30.1993 8.36066 29.8802 7.34531 29.8802C5.92381 29.8802 4.87944 30.5184 4.24122 31.7949C3.60299 33.0713 3.28388 35.1601 3.28388 38.0611C3.28388 39.4246 3.3419 40.4979 3.48695 41.2522C3.60299 42.0065 3.83508 42.6157 4.12518 43.1088C4.44429 43.631 4.87944 44.0662 5.40163 44.3563C5.95282 44.6754 6.53302 44.8204 7.17125 44.8204C8.30264 44.8204 9.23097 44.5013 10.0142 43.8341C10.7105 43.1379 11.2907 42.1805 11.6678 40.8751Z"
+								fill="black" />
+							<path
+								d="M21.9614 45.4007C20.917 45.4007 20.0177 45.1977 19.2344 44.8205C18.4512 44.4434 17.7259 43.8052 17.0877 42.9929C16.5075 42.2386 16.0723 41.3683 15.7532 40.382C15.4341 39.3956 15.2891 38.3513 15.2891 37.2489C15.2891 36.2045 15.4341 35.2182 15.7532 34.2898C16.0723 33.3615 16.5075 32.5492 17.1167 31.824C17.8129 30.9827 18.5672 30.3445 19.3505 29.9383C20.1628 29.5322 21.0331 29.3291 21.9904 29.3291C22.9187 29.3291 23.76 29.5032 24.5143 29.8803C25.2686 30.2574 25.9648 30.8086 26.632 31.5629C27.2993 32.3462 27.7924 33.2165 28.1696 34.2318C28.5177 35.2182 28.6918 36.2915 28.6918 37.3939C28.6918 38.4963 28.5177 39.5407 28.1986 40.527C27.8795 41.5134 27.3863 42.4127 26.7771 43.167C26.1389 43.9502 25.4426 44.5304 24.6884 44.9076C23.8471 45.2267 22.9477 45.4007 21.9614 45.4007ZM21.9614 29.8803C20.4819 29.8803 19.4375 30.4895 18.8283 31.7079C18.2191 32.9264 17.929 35.1311 17.929 38.3223C17.929 40.498 18.2481 42.1226 18.9153 43.196C19.5826 44.2693 20.5979 44.8205 21.9614 44.8205C23.3249 44.8205 24.3112 44.2693 24.9785 43.196C25.6457 42.1226 25.9648 40.469 25.9648 38.2642C25.9648 35.0441 25.6747 32.8393 25.0655 31.6499C24.4563 30.4605 23.4409 29.8803 21.9614 29.8803Z"
+								fill="black" />
+							<path
+								d="M30.9297 45.0242V44.444H32.8444V30.171H30.9877V29.5908H37.3119V30.171H35.1942V44.444H38.3853C39.5457 44.444 40.416 44.1829 40.9672 43.6317C41.5184 43.1096 41.9826 42.1232 42.3307 40.6727H42.7658L42.5047 45.0242H30.9297Z"
+								fill="black" />
+							<path
+								d="M44.3594 45.0237V44.4435H46.274V30.1705H44.4174V29.5903H50.7706V30.1705H48.6529V44.4435H51.844C53.0044 44.4435 53.8747 44.1824 54.4259 43.6312C54.9771 43.1091 55.4413 42.1227 55.7894 40.6722H56.2245L55.9634 45.0237H44.3594Z"
+								fill="black" />
+							<path
+								d="M58.0312 45.0242V44.444H59.7719V30.171H58.0312V29.5908H69.4903V33.3041H68.9971C68.823 32.1147 68.4459 31.3024 67.8947 30.8673C67.3435 30.4031 66.3862 30.2 64.9937 30.2H62.0927V36.7563H62.5568C63.5722 36.7563 64.2684 36.5823 64.7036 36.2051C65.1387 35.828 65.3708 35.2188 65.4579 34.3195H65.951V40.1215H65.4579C65.3998 39.0771 65.1387 38.3809 64.6746 37.9457C64.2104 37.5396 63.3981 37.3365 62.2667 37.3365H62.1507V44.502H65.4288C66.7053 44.502 67.6336 44.241 68.2428 43.6898C68.852 43.1386 69.2872 42.1522 69.5773 40.7017H70.0995L69.8674 45.1113H58.0312V45.0242Z"
+								fill="black" />
+							<path
+								d="M83.9357 40.8753H84.3708V44.9947H83.8777L83.1524 44.2985C82.6883 44.6756 82.1371 44.9367 81.5278 45.1107C80.8896 45.2848 80.1934 45.3718 79.4391 45.3718C77.5244 45.3718 75.9289 44.6466 74.7105 43.1671C73.492 41.6875 72.8828 39.8309 72.8828 37.5101C72.8828 36.4077 73.0279 35.3633 73.347 34.377C73.6661 33.4197 74.1303 32.5203 74.7395 31.7661C75.3487 30.9828 76.1029 30.3736 77.0023 29.9094C77.9016 29.4743 78.8009 29.2422 79.7292 29.2422C80.3674 29.2422 80.9476 29.3292 81.4988 29.5323C82.05 29.7354 82.6012 30.0545 83.1234 30.4896L83.9067 29.7063H84.2548V33.6517H83.7616C83.4425 32.4043 82.9203 31.476 82.2241 30.8377C81.5278 30.1995 80.6575 29.8804 79.6422 29.8804C78.2207 29.8804 77.1763 30.5186 76.5381 31.7951C75.8999 33.0715 75.5808 35.1603 75.5808 38.0613C75.5808 39.4248 75.6388 40.4981 75.7838 41.2524C75.8999 42.0067 76.132 42.6159 76.4221 43.109C76.7412 43.6312 77.1763 44.0664 77.6985 44.3565C78.2497 44.6756 78.8299 44.8206 79.4681 44.8206C80.5995 44.8206 81.5278 44.5015 82.3111 43.8343C82.9784 43.1381 83.5586 42.1807 83.9357 40.8753Z"
+								fill="black" />
+							<path
+								d="M89.7336 45.0237V44.4435H91.6773V30.1705C91.5902 30.1705 91.4742 30.1705 91.3581 30.1415C91.2421 30.1415 91.097 30.1415 90.894 30.1415C89.8206 30.1415 89.0083 30.4316 88.4571 30.9828C87.9349 31.534 87.4998 32.5494 87.2097 34.0579H86.6875L86.8906 29.5903H98.8138L98.9878 34.0579H98.4656C98.2626 32.6364 97.8564 31.6501 97.3052 31.0408C96.725 30.4606 95.8547 30.1415 94.6943 30.1415C94.4912 30.1415 94.3462 30.1415 94.2592 30.1415C94.1721 30.1415 94.0851 30.1415 94.0271 30.1705V44.4435H95.9417V45.0237H89.7336Z"
+								fill="black" />
+							<path
+								d="M100.555 45.0237V44.4435H102.498V30.1705H100.555V29.5903H106.85V30.1705H104.848V44.4435H106.85V45.0237H100.555Z"
+								fill="black" />
+							<path
+								d="M115.899 45.4007C114.855 45.4007 113.955 45.1977 113.172 44.8205C112.389 44.4434 111.663 43.8052 111.025 42.9929C110.445 42.2386 110.01 41.3683 109.691 40.382C109.372 39.3956 109.227 38.3513 109.227 37.2489C109.227 36.2045 109.372 35.2182 109.691 34.2898C110.01 33.3615 110.445 32.5492 111.054 31.824C111.75 30.9827 112.505 30.3445 113.288 29.9383C114.1 29.5322 114.971 29.3291 115.928 29.3291C116.856 29.3291 117.698 29.5032 118.452 29.8803C119.206 30.2574 119.902 30.8086 120.57 31.5629C121.237 32.3462 121.73 33.2165 122.107 34.2318C122.455 35.2182 122.629 36.2915 122.629 37.3939C122.629 38.4963 122.455 39.5407 122.136 40.527C121.817 41.5134 121.324 42.4127 120.715 43.167C120.076 43.9502 119.38 44.5304 118.626 44.9076C117.785 45.2267 116.914 45.4007 115.899 45.4007ZM115.899 29.8803C114.419 29.8803 113.375 30.4895 112.766 31.7079C112.157 32.9264 111.866 35.1311 111.866 38.3223C111.866 40.498 112.186 42.1226 112.853 43.196C113.52 44.2693 114.535 44.8205 115.899 44.8205C117.262 44.8205 118.249 44.2693 118.916 43.196C119.583 42.1226 119.902 40.469 119.902 38.2642C119.902 35.0441 119.612 32.8393 119.003 31.6499C118.394 30.4605 117.378 29.8803 115.899 29.8803Z"
+								fill="black" />
+							<path
+								d="M125.125 45.0237V44.4435H126.866V30.1705H125.154V29.5903H129.651L136.236 40.6432V30.1705H134.495V29.5903H138.789V30.1705H136.99V45.4009H136.352L127.591 30.4316V44.4435H129.331V45.0237H125.125Z"
+								fill="black" />
+						</svg>
+					</div>
+					<div class="page__img"><svg width="132" height="32" viewBox="0 0 132 32" fill="none"
+							xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M0.585938 24.2896V6.90682H2.88829V9.61209L2.77318 10.9935H2.83073C3.2912 9.95744 4.09703 8.92138 5.30577 7.94288C6.5145 6.96438 8.01103 6.50391 9.85292 6.50391C11.925 6.50391 13.4216 7.07949 14.3425 8.17311C15.2635 9.32429 15.6664 10.9935 15.6664 13.2383V24.2896H13.3065V13.8714C13.3065 12.2598 13.0762 10.9935 12.5582 10.0726C12.0402 9.15161 11.0617 8.7487 9.50756 8.7487C7.66568 8.7487 6.05403 9.43941 4.78774 10.7633C3.52144 12.1447 2.88829 13.8139 2.88829 15.8284V24.3472H0.585938V24.2896Z"
+								fill="#80827E" />
+							<path
+								d="M19.5781 19.6274C19.5781 15.5983 23.0892 13.5837 30.169 13.5837H31.205V13.1232C31.205 10.1302 29.766 8.63364 26.9457 8.63364C25.1613 8.63364 23.5497 9.20923 21.9956 10.3029L20.902 8.51853C21.5927 7.94294 22.5136 7.42491 23.6072 7.07955C24.7584 6.7342 25.852 6.56152 27.0032 6.56152C29.0753 6.56152 30.687 7.13711 31.8382 8.28829C32.9318 9.43947 33.5074 11.1087 33.5074 13.2384V24.3472H31.2626V22.3327L31.3777 20.8937H31.3201C30.8597 21.9873 30.0538 22.9082 29.0178 23.6565C27.9817 24.4048 26.773 24.8077 25.4491 24.8077C23.8375 24.8077 22.4561 24.3472 21.3049 23.4838C20.1537 22.4478 19.5781 21.1815 19.5781 19.6274ZM21.938 19.3972C21.938 20.2605 22.2834 21.0664 22.9741 21.6995C23.6648 22.3902 24.6433 22.678 25.852 22.678C27.4637 22.678 28.73 21.9873 29.7085 20.6635C30.687 19.3396 31.1475 17.8431 31.1475 16.1739V15.368H30.169C29.4207 15.368 28.7875 15.368 28.2695 15.4256C27.7515 15.4256 27.0032 15.5407 26.1398 15.7134C25.2765 15.8861 24.5857 16.0587 24.0102 16.289C23.4346 16.5192 22.9741 16.9221 22.5712 17.4402C22.1683 18.0157 21.938 18.6489 21.938 19.3972Z"
+								fill="#80827E" />
+							<path
+								d="M39.5524 17.9586V9.03695H37.25V7.07995H39.5524V2.12988H41.8547V7.07995H46.2292V9.03695H41.8547V17.7283C41.8547 18.6493 41.9698 19.4551 42.2576 20.1458C42.5454 20.779 42.8908 21.297 43.3512 21.5848C43.8117 21.8726 44.2146 22.0453 44.6175 22.1604C45.0204 22.2755 45.4234 22.3331 45.8263 22.3331C46.1716 22.3331 46.4019 22.3331 46.6321 22.2755V24.4052C46.3443 24.4627 45.999 24.4627 45.6536 24.4627C45.1931 24.4627 44.6751 24.4052 44.2146 24.3476C43.7542 24.2901 43.2361 24.1174 42.6605 23.8296C42.0849 23.5418 41.5669 23.1964 41.1064 22.7935C40.646 22.3906 40.3006 21.6999 40.0128 20.8941C39.725 20.0307 39.5524 19.0522 39.5524 17.9586Z"
+								fill="#80827E" />
+							<path
+								d="M49.9688 17.9585V6.90723H52.3287V17.3254C52.3287 18.937 52.5589 20.2033 53.0769 21.1243C53.595 22.0452 54.5735 22.4481 56.1275 22.4481C58.027 22.4481 59.5811 21.7574 60.7898 20.3184C61.9986 18.8795 62.5741 17.2103 62.5741 15.1957V6.90723H64.9341V24.29H62.6317V21.5847L62.7468 20.2033H62.6893C62.2864 21.2969 61.4805 22.333 60.2718 23.254C59.0631 24.2325 57.5665 24.6929 55.8398 24.6929C53.8252 24.6929 52.3287 24.1173 51.4077 23.0237C50.4868 21.9301 49.9688 20.2609 49.9688 17.9585Z"
+								fill="#80827E" />
+							<path
+								d="M70.4609 24.2889V6.90613H72.7633V10.1294L72.6482 11.5108H72.7057C73.1662 10.1294 73.8569 8.97825 74.893 8.11487C75.8715 7.19393 77.0226 6.79102 78.2889 6.79102C78.6343 6.79102 78.9221 6.84857 79.2099 6.90613V9.20849C79.0948 9.15093 78.807 9.15093 78.3465 9.15093C77.1378 9.15093 76.1017 9.55384 75.1808 10.4172C74.3174 11.2806 73.6842 12.2591 73.3389 13.4103C72.9935 14.5615 72.8209 15.7702 72.8209 16.9789V24.3465H70.4609V24.2889Z"
+								fill="#80827E" />
+							<path
+								d="M81.1094 19.6274C81.1094 15.5983 84.6205 13.5837 91.7002 13.5837H92.7363V13.1232C92.7363 10.1302 91.2973 8.63364 88.4769 8.63364C86.6926 8.63364 85.0809 9.20923 83.5269 10.3029L82.4332 8.51853C83.1239 7.94294 84.0449 7.42491 85.1385 7.07955C86.2897 6.7342 87.3833 6.56152 88.5345 6.56152C90.6066 6.56152 92.2182 7.13711 93.3694 8.28829C94.463 9.43947 95.0386 11.1087 95.0386 13.2384V24.3472H92.7938V22.3327L92.9089 20.8937H92.8514C92.3909 21.9873 91.5851 22.9082 90.549 23.6565C89.513 24.4048 88.3042 24.8077 86.9804 24.8077C85.3687 24.8077 83.9873 24.3472 82.8361 23.4838C81.685 22.4478 81.1094 21.1815 81.1094 19.6274ZM83.5269 19.3972C83.5269 20.2605 83.8722 21.0664 84.5629 21.6995C85.2536 22.3902 86.2321 22.678 87.4409 22.678C89.0525 22.678 90.3188 21.9873 91.2973 20.6635C92.2758 19.3396 92.7363 17.8431 92.7363 16.1739V15.368H91.7578C91.0095 15.368 90.3764 15.368 89.8583 15.4256C89.3403 15.4256 88.592 15.5407 87.7286 15.7134C86.8653 15.8861 86.1746 16.0587 85.599 16.289C85.0234 16.5192 84.5629 16.9221 84.16 17.4402C83.6995 18.0157 83.5269 18.6489 83.5269 19.3972Z"
+								fill="#80827E" />
+							<path
+								d="M100.508 20.1456V0H102.868V19.6276C102.868 21.3543 103.501 22.2753 104.825 22.2753C105.055 22.2753 105.228 22.2753 105.4 22.2177V24.3474C105.113 24.405 104.825 24.405 104.537 24.405C104.192 24.405 103.846 24.405 103.558 24.3474C103.271 24.2899 102.925 24.1747 102.522 24.0021C102.119 23.8294 101.774 23.5991 101.544 23.3113C101.256 23.0236 101.026 22.5631 100.853 22.0451C100.565 21.527 100.508 20.8939 100.508 20.1456Z"
+								fill="#80827E" />
+							<path
+								d="M108.969 20.1456V0H111.329V19.6276C111.329 21.3543 111.962 22.2753 113.286 22.2753C113.516 22.2753 113.689 22.2753 113.861 22.2177V24.3474C113.573 24.405 113.286 24.405 112.998 24.405C112.653 24.405 112.307 24.405 112.019 24.3474C111.732 24.2899 111.386 24.1747 110.983 24.0021C110.58 23.8294 110.235 23.5991 110.005 23.3113C109.717 23.0236 109.487 22.5631 109.314 22.0451C109.084 21.527 108.969 20.8939 108.969 20.1456Z"
+								fill="#80827E" />
+							<path
+								d="M115.934 28.6069C116.568 29.125 117.258 29.4128 118.007 29.4128C119.388 29.4128 120.482 28.4918 121.345 26.5924L122.381 24.1173L115.129 6.90723H117.719L122.784 19.5702L123.417 21.4121H123.475C123.647 20.7789 123.82 20.1458 124.05 19.5702L129.058 6.90723H131.591L123.014 27.9162C122.554 29.0674 121.863 29.9308 121 30.5639C120.136 31.1971 119.158 31.5424 118.007 31.5424C117.489 31.5424 116.971 31.4849 116.453 31.3122C115.934 31.1395 115.532 30.9668 115.301 30.7942L114.898 30.5064L115.934 28.6069Z"
+								fill="#80827E" />
+						</svg>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="subscribe">
+			<div class="wrapper">
+				<div class="bg-grey">
+					<p class="page__text_solena">Подпишитесь на рассылку</p>
+					<p class="page__text_gilroy_sm">Узнавайте первыми о новинках, акциях и актуалной информации</p>
+					<form class="form" action="">
+						<input type="text" placeholder="Ваш Email">
+					</form>
+					<div class="button">
+						<div class="bg-button"></div><a href="#">
+							<button class="page__btn_1"><span> Подписаться</button></a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="second-subscribe">
+			<div class="wrapper-1370">
+				<div class="second-subscribe-wrapper">
+					<div class="left">
+						<div class="second-subscribe-item" data-aos="zoom-in" data-aos-duration="400"
+							data-aos-delay="200">
+							<div class="page__img"><img src="assets/img/phone-icon-white.svg"></div>
+							<p class="page__text_gilroy_sm">Контакты</p><a class="page__text_19"
+								href="+7-906-742-88-28">+ 7 906 742 88 28</a><a class="page__text"
+								href="zakaz@hristina.ru">zakaz@hristina.ru</a>
+						</div>
+						<div class="second-subscribe-item" data-aos="zoom-in" data-aos-duration="400"
+							data-aos-delay="200">
+							<div class="page__img"><img src="assets/img/clock-icon-white.svg"></div>
+							<p class="page__text_gilroy_sm">Время работы</p><a class="page__text_19"
+								href="+7-906-742-88-28">Работаем без выходных </a><a class="page__text"
+								href="zakaz@hristina.ru">с 10:00 до 22:00</a>
+						</div>
+					</div>
+					<div class="right" data-aos="zoom-in" data-aos-duration="400" data-aos-delay="200">
+						<p class="page__text_gilroy_sm">Подпишитесь на рассылку</p>
+						<p class="page__text_sm">Чтобы первыми узнавать о новинках, акциях и актуалной информации</p>
+						<div class="row">
+							<form class="form" action="">
+								<input type="text" placeholder="Ваш Email...">
+							</form>
+							<div class="button">
+								<div class="bg-button"></div><a href="#">
+									<button class="page__btn_1"><span> Подписаться</button></a>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="prevArrow" id="prevArrow-4"><img src="assets/img/arrow-black-left.svg"></div>
-				<div class="nextArrow" id="nextArrow-4"><img src="assets/img/arrow-black-right.svg"></div>
-			</section>
-			<section class="instagram">
-				<div class="wrapper">
-					<div class="text">
-						<p class="page__text_solena">Подписывайтесь</p>
-						<h2 class="page__title-h2">Мы в инстаграм</h2><a class="page__link" href="https://www.instagram.com/hristina.cosmetics/">@hristina.cosmetics</a>
+			</div>
+		</section>
+		<footer class="footer">
+			<div class="wrapper-1465">
+				<div class="footer-wrapper">
+					<div class="left"><a href="../">
+							<div class="page__img"><img src="assets/img/logo.svg" alt=""></div>
+						</a>
+						<p class="page__text_sm">Легенда болгарской органики</p>
 					</div>
-				</div>
-				<div class="instagram-slider">
-					<div class="instagram-item"><a href="https://www.instagram.com/hristina.cosmetics/">
-							<div class="page__img"><img src="assets/img/instagram-item-1.png"></div></a></div>
-					<div class="instagram-item"><a href="https://www.instagram.com/hristina.cosmetics/">
-							<div class="page__img"><img src="assets/img/instagram-item-2.png"></div></a></div>
-					<div class="instagram-item"><a href="https://www.instagram.com/hristina.cosmetics/">
-							<div class="page__img"><img src="assets/img/instagram-item-3.png"></div></a></div>
-					<div class="instagram-item"><a href="https://www.instagram.com/hristina.cosmetics/">
-							<div class="page__img"><img src="assets/img/instagram-item-4.png"></div></a></div>
-					<div class="instagram-item"><a href="https://www.instagram.com/hristina.cosmetics/">
-							<div class="page__img"><img src="assets/img/instagram-item-5.png"></div></a></div>
-					<div class="instagram-item"><a href="https://www.instagram.com/hristina.cosmetics/">
-							<div class="page__img"><img src="assets/img/instagram-item-1.png"></div></a></div>
-					<div class="instagram-item"><a href="https://www.instagram.com/hristina.cosmetics/">
-							<div class="page__img"><img src="assets/img/instagram-item-2.png"></div></a></div>
-					<div class="instagram-item"><a href="https://www.instagram.com/hristina.cosmetics/">
-							<div class="page__img"><img src="assets/img/instagram-item-3.png"></div></a></div>
-					<div class="instagram-item"><a href="https://www.instagram.com/hristina.cosmetics/">
-							<div class="page__img"><img src="assets/img/instagram-item-4.png"></div></a></div>
-					<div class="instagram-item"><a href="https://www.instagram.com/hristina.cosmetics/">
-							<div class="page__img"><img src="assets/img/instagram-item-5.png"></div></a></div>
-				</div>
-			</section>
-			<section class="brands">
-				<div class="wrapper-1370">
-					<div class="text">
-						<div class="page__img"><img src="assets/img/icon-flower.svg"></div>
-						<h2 class="page__title-h2">Сертифицированные бренды производителя</h2>
+					<div class="left-mid">
+						<p class="page__text_gilroy_sm">Актуальное</p>
+						<div class="hover-bg-grey"><a class="page__text_sm" href="">Главная страница</a></div>
+						<div class="hover-bg-grey"><a class="page__text_sm"
+								href="pageCatalog/pageCatalog.html">Каталог</a></div>
+						<div class="hover-bg-grey"><a class="page__text_sm" href="">О бренде</a></div>
+						<div class="hover-bg-grey"><a class="page__text_sm" href="">Контакты</a></div>
 					</div>
-					<div class="brands-wrapper">
-						<div class="page__img"><svg width="140" height="59" viewBox="0 0 140 59" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M52.7877 22.0394C52.7877 22.0394 51.7783 21.865 51.7783 20.4195C51.7783 18.974 52.8624 18.164 54.6444 17.8027C56.4138 17.4538 63.0432 15.9584 63.0805 11.5721C63.1055 7.1858 56.7129 6.76212 55.0057 10.4132C53.635 13.3416 53.5104 17.1298 54.7814 19.0737C56.0525 21.0176 58.0462 22.5753 62.2332 22.4507C66.4201 22.326 69.9965 18.1142 69.9965 18.1142V4.2699C69.9965 4.2699 67.9778 0.843096 64.065 0.182657C58.8936 -0.677159 56.2269 1.77768 56.2269 1.77768C56.2269 1.77768 61.3983 0.980168 63.5416 2.61257C66.3578 4.74342 67.9653 7.06119 67.9653 12.0581C67.9653 17.055 64.4886 21.8151 59.9653 21.5535C55.2923 21.2793 53.9465 16.3073 55.5789 12.8182C57.2114 9.32911 60.6132 8.64375 60.6257 11.7092C60.6382 14.3136 57.6973 15.8961 53.635 17.1796C49.8842 18.3634 49.8095 20.6563 50.3079 21.3665C50.8063 22.0768 52.0275 22.0145 52.7877 22.0394Z" fill="#80827E"/>
-<path d="M87.169 0.419672C87.169 0.419672 88.1783 0.594127 88.1783 2.03962C88.1783 3.48511 87.0942 4.29508 85.3123 4.65645C83.5303 5.01782 76.9135 6.50069 76.8761 10.887C76.8512 15.2733 83.2437 15.697 84.9509 12.0459C86.3216 9.11753 86.4462 5.32935 85.1752 3.38542C83.9042 1.44148 81.9104 -0.116156 77.7359 0.00845498C73.549 0.133066 69.9727 4.34492 69.9727 4.34492V18.1892C69.9727 18.1892 71.9914 21.616 75.9041 22.2765C81.0755 23.1363 83.7422 20.6814 83.7422 20.6814C83.7422 20.6814 78.5708 21.479 76.4275 19.8465C73.6113 17.7157 72.0038 15.3979 72.0038 10.401C72.0038 5.40412 75.4805 0.643972 80.0039 0.905655C84.6768 1.1798 86.0226 6.15178 84.3902 9.64089C82.7702 13.1425 79.3559 13.8154 79.3434 10.7499C79.331 8.14556 82.2718 6.563 86.3341 5.27951C90.0849 4.0957 90.1597 1.80286 89.6612 1.09257C89.1378 0.394749 87.9291 0.444594 87.169 0.419672Z" fill="#80827E"/>
-<path d="M2.39253 33.2295H0V46.0894H2.39253V33.2295Z" fill="#80827E"/>
-<path d="M10.1816 33.2295H7.78906V46.0894H10.1816V33.2295Z" fill="#80827E"/>
-<path d="M44.2285 33.2295H41.8359V46.0894H44.2285V33.2295Z" fill="#80827E"/>
-<path d="M78.9668 33.2295H76.5742V46.0894H78.9668V33.2295Z" fill="#80827E"/>
-<path d="M95.416 33.2295H93.0234V46.0894H95.416V33.2295Z" fill="#80827E"/>
-<path d="M109.283 33.2295H106.891V46.0894H109.283V33.2295Z" fill="#80827E"/>
-<path d="M117.607 33.2295H115.215V46.0894H117.607V33.2295Z" fill="#80827E"/>
-<path d="M132.695 34.2514L134.913 33.3667L139.998 46.0895H137.418L132.695 34.2514Z" fill="#80827E"/>
-<path d="M134.83 34.2514L132.611 33.3667L127.527 46.0895H130.107L134.83 34.2514Z" fill="#80827E"/>
-<path d="M23.9785 33.2295H21.5859V46.0894H23.9785V33.2295Z" fill="#80827E"/>
-<path d="M2.15234 38.4039V40.46H8.12122V38.4039H2.15234Z" fill="#80827E"/>
-<path d="M72.7461 33.2213V35.2773H82.7898V33.2213H72.7461Z" fill="#80827E"/>
-<path d="M130.438 41.1109V43.167H137.092V41.1109H130.438Z" fill="#80827E"/>
-<path d="M109.195 33.1375L107.516 34.3232L115.399 45.4915L117.079 44.3058L109.195 33.1375Z" fill="#80827E"/>
-<path d="M30.8395 37.0428C30.8395 41.5787 25.7055 41.1799 23.9609 41.1799V39.4104H26.3535C26.9391 39.4104 27.4625 39.1737 27.8488 38.7874C28.2351 38.4011 28.4719 37.8777 28.4719 37.292C28.4719 36.1331 27.5248 35.1861 26.3659 35.1861H23.9734V33.2297C23.9734 33.2297 30.8395 32.507 30.8395 37.0428Z" fill="#80827E"/>
-<path d="M24.1602 41.18C24.1602 41.18 25.7676 45.7408 30.7022 46.0897L31.0262 44.0959C31.0262 44.0959 27.9733 43.9214 26.5153 41.1177L24.1602 41.18Z" fill="#80827E"/>
-<path d="M132.613 33.3667H134.919L133.76 33.8278L132.613 33.3667Z" fill="#80827E"/>
-<path d="M62.3178 35.7839C62.3801 35.8088 63.0156 33.9272 63.0156 33.9272C63.0156 33.9272 61.8692 33.0923 59.2648 33.0923C56.7975 33.0923 55.0156 34.1639 55.0156 36.6312C55.0156 39.0985 56.2742 39.5098 58.9159 40.5814C60.8599 41.3665 61.1714 41.9771 61.134 42.787C61.1091 43.3852 60.9222 44.245 58.6542 44.245C56.3863 44.245 55.514 43.3478 55.514 43.3478L54.7539 45.3665C54.7539 45.3665 55.6636 46.2512 58.9408 46.2512C62.3801 46.2512 63.5639 44.731 63.5639 42.5627C63.5639 40.3945 62.4175 39.7091 60.7975 38.949C59.4393 38.301 57.4954 38.1141 57.4954 36.3446C57.4954 34.7621 60.324 34.7995 62.3178 35.7839Z" fill="#80827E"/>
-<path d="M17.0469 52.906L17.2338 52.3079C17.2338 52.3079 16.7478 51.9839 15.5764 51.9839C14.4051 51.9839 12.7852 52.4574 12.7852 55.3235C12.7852 58.1895 14.8537 58.3764 15.8381 58.3764C16.8226 58.3764 17.2338 58.0151 17.2338 58.0151V57.2549C17.2338 57.2549 16.9846 57.7409 15.8132 57.7409C14.6419 57.7409 13.5702 57.1179 13.5702 55.2861C13.5702 53.4543 14.5422 52.6319 15.5764 52.6319C16.6107 52.6194 17.0469 52.906 17.0469 52.906Z" fill="#80827E"/>
-<path d="M28.971 51.9712C27.4258 51.9712 26.1797 53.4042 26.1797 55.1737C26.1797 56.9432 27.4258 58.3762 28.971 58.3762C30.5162 58.3762 31.7623 56.9432 31.7623 55.1737C31.7623 53.4042 30.5162 51.9712 28.971 51.9712ZM28.971 57.8279C27.8246 57.8279 26.89 56.6441 26.89 55.1737C26.89 53.7157 27.8246 52.5195 28.971 52.5195C30.1174 52.5195 31.052 53.7033 31.052 55.1737C31.052 56.6316 30.1174 57.8279 28.971 57.8279Z" fill="#80827E"/>
-<path d="M44.4958 52.9185L44.7076 52.3577C44.7076 52.3577 44.3338 51.9839 43.0628 51.9839C41.7917 51.9839 40.9319 52.4699 40.9319 53.6786C40.9319 54.8873 42.2029 55.1365 43.0129 55.5353C43.8603 55.959 44.2216 56.1085 44.2216 56.8437C44.2216 57.5789 43.4864 57.7658 42.6142 57.7658C41.7419 57.7658 41.0067 57.3546 41.0067 57.3546L40.8945 58.0524C40.8945 58.0524 41.1811 58.4387 42.6765 58.4387C44.1593 58.4387 45.0067 57.8032 45.0067 56.7191C45.0067 55.635 44.3089 55.4107 43.312 54.9746C42.3151 54.5384 41.692 54.2269 41.692 53.5914C41.692 52.9559 42.2777 52.6194 43.1126 52.6194C43.9475 52.6194 44.4958 52.9185 44.4958 52.9185Z" fill="#80827E"/>
-<path d="M114.066 52.906L114.253 52.3079C114.253 52.3079 113.767 51.9839 112.596 51.9839C111.425 51.9839 109.805 52.4574 109.805 55.3235C109.805 58.1895 111.873 58.3764 112.858 58.3764C113.842 58.3764 114.253 58.0151 114.253 58.0151V57.2549C114.253 57.2549 114.004 57.7409 112.833 57.7409C111.661 57.7409 110.59 57.1179 110.59 55.2861C110.59 53.4543 111.562 52.6319 112.596 52.6319C113.63 52.6319 114.066 52.906 114.066 52.906Z" fill="#80827E"/>
-<path d="M126.742 52.9185L126.954 52.3577C126.954 52.3577 126.58 51.9839 125.309 51.9839C124.038 51.9839 123.178 52.4699 123.178 53.6786C123.178 54.8873 124.449 55.1365 125.259 55.5353C126.106 55.959 126.468 56.1085 126.468 56.8437C126.468 57.5789 125.733 57.7658 124.86 57.7658C123.988 57.7658 123.253 57.3546 123.253 57.3546L123.141 58.0524C123.141 58.0524 123.427 58.4387 124.923 58.4387C126.405 58.4387 127.253 57.8032 127.253 56.7191C127.253 55.635 126.555 55.4107 125.558 54.9746C124.561 54.5384 123.938 54.2269 123.938 53.5914C123.938 52.9559 124.524 52.6194 125.359 52.6194C126.194 52.6194 126.742 52.9185 126.742 52.9185Z" fill="#80827E"/>
-<path d="M55.1422 52.3574H54.3945V58.4135H55.1422V52.3574Z" fill="#80827E"/>
-<path d="M58.9195 52.8931H58.1719V58.4258H58.9195V52.8931Z" fill="#80827E"/>
-<path d="M62.7047 53.4536H61.957V58.4131H62.7047V53.4536Z" fill="#80827E"/>
-<path d="M100.275 52.1704H99.5273V58.4134H100.275V52.1704Z" fill="#80827E"/>
-<path d="M54.3945 52.3577C54.3945 52.3577 55.1796 51.9839 56.6126 51.9839C58.0456 51.9839 58.4818 52.6194 58.4818 52.6194C58.4818 52.6194 58.8182 51.9839 60.6126 51.9839C62.407 51.9839 62.7186 53.4543 62.7186 53.4543H61.9709C61.9709 53.4543 61.46 52.6568 60.6002 52.6568C59.7403 52.6568 58.9428 53.23 58.9428 53.23L58.1952 53.5291C58.1952 53.5291 57.7466 52.6443 56.488 52.6443C55.2294 52.6443 55.1671 52.906 55.1671 52.906L54.3945 52.3577Z" fill="#80827E"/>
-<path d="M76.5749 52.7191C76.1263 52.2705 75.4908 51.9839 74.8055 51.9839C73.4223 51.9839 72.3008 53.1054 72.3008 54.4886V55.959C72.3008 57.3422 73.4223 58.4637 74.8055 58.4637H75.4908C75.8522 58.4637 76.3506 58.3515 76.8366 58.1646V57.5291C76.4628 57.7285 76.0142 57.8531 75.7151 57.8531H75.1045C74.1575 57.8531 73.0983 57.0805 73.0983 56.1334V55.4107H77.3226V54.4886C77.3101 53.7907 77.0235 53.1677 76.5749 52.7191ZM73.0858 54.663V54.364C73.0858 53.4169 73.8584 52.6443 74.8055 52.6443C75.279 52.6443 75.7151 52.8312 76.0142 53.1428C76.3257 53.4543 76.5126 53.878 76.5126 54.3515V54.6506H73.0858V54.663Z" fill="#80827E"/>
-<path d="M87.7031 52.7434V52.4568V52.1577H90.1704V52.7434H87.7031Z" fill="#80827E"/>
-<path d="M90.4811 58.027C90.045 58.2887 89.5465 58.4632 89.0232 58.4632C87.1041 58.4632 86.9297 56.7186 86.9297 56.7186V50.2264L87.7023 50.1392L87.7147 52.4445V52.7311L87.7272 56.6812C87.7272 56.6812 87.964 57.7529 89.0232 57.7778C89.4593 57.7778 89.883 57.6158 90.2693 57.3666L90.4811 58.027Z" fill="#80827E"/>
-<path d="M99.9121 50.812C100.256 50.812 100.535 50.5331 100.535 50.189C100.535 49.8449 100.256 49.5659 99.9121 49.5659C99.568 49.5659 99.2891 49.8449 99.2891 50.189C99.2891 50.5331 99.568 50.812 99.9121 50.812Z" fill="#80827E"/>
-</svg>
-						</div>
-						<div class="page__img"><svg width="120" height="70" viewBox="0 0 120 70" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M49.0028 30.125C49.5544 30.125 50.0016 29.6775 50.0016 29.1255C50.0016 28.5735 49.5544 28.126 49.0028 28.126C48.4511 28.126 48.0039 28.5735 48.0039 29.1255C48.0039 29.6775 48.4511 30.125 49.0028 30.125Z" fill="#80827E"/>
-<path d="M64.0418 8.29297C64.5935 8.29297 65.0407 7.84548 65.0407 7.29346C65.0407 6.74144 64.5935 6.29395 64.0418 6.29395C63.4902 6.29395 63.043 6.74144 63.043 7.29346C63.043 7.84548 63.4902 8.29297 64.0418 8.29297Z" fill="#80827E"/>
-<path d="M49.005 28.1255C49.005 28.1255 47.2175 28.6516 46.6918 29.6511C46.1661 30.598 46.7444 33.9648 50.7398 33.0178C54.7878 32.0709 66.3535 28.7042 67.8255 28.4937C69.2975 28.2833 71.6632 28.1255 72.1889 28.8094C72.662 29.4932 72.7146 30.3875 71.5055 30.5454C70.2963 30.6506 69.5078 31.2818 69.8758 32.3866C70.2438 33.4913 73.0826 32.7548 73.03 30.1771C72.9775 27.652 70.0335 26.1791 65.5123 27.2312C60.9912 28.2833 50.3192 31.6501 48.5318 31.6501C46.7444 31.6501 46.8495 30.4928 47.3227 30.0193C47.7432 29.5459 49.005 30.1245 49.005 30.1245V28.1255Z" fill="#80827E"/>
-<path d="M54.4704 30.2299V16.605L52.4727 18.7618V30.756L54.4704 30.2299Z" fill="#80827E"/>
-<path d="M68.1401 15.7627H66.0898V27.1782H68.1401V15.7627Z" fill="#80827E"/>
-<path d="M68.1369 15.7638C68.1369 15.7638 72.4477 15.0273 72.2374 8.39894C72.0271 1.77059 68.4523 1.56016 65.4557 2.71749L65.0352 2.19143C65.0352 2.19143 66.6649 1.40234 68.6626 1.40234C70.6077 1.40234 74.5506 3.40137 74.5506 8.39894C74.5506 13.3965 69.8717 16.3424 68.1894 16.3424C66.4546 16.3424 68.1369 15.7638 68.1369 15.7638Z" fill="#80827E"/>
-<path d="M63.4034 8.08293C63.4034 8.08293 65.0857 8.92463 66.0846 8.08293C67.0834 7.24123 67.6092 3.76924 64.7703 1.92803C61.9315 0.139427 59.8286 -0.860087 55.7806 0.981122C51.7326 2.82233 51.7852 6.13651 51.7852 6.13651L53.0995 7.50426C53.0995 7.50426 53.4675 1.665 59.8286 1.40197C66.1897 1.13894 66.4 5.03178 66.2423 6.29433C66.0846 7.55687 65.7692 7.45166 65.0857 7.29384C64.3497 7.13602 63.4034 8.08293 63.4034 8.08293Z" fill="#80827E"/>
-<path d="M54.4703 8.03002C54.4703 8.03002 51.9995 4.82105 47.1629 6.55705C42.3264 8.29305 42.3789 13.6589 42.3789 15.1844C42.3789 16.71 44.4292 21.1815 48.4246 21.1815C52.42 21.1815 53.6818 18.0778 53.6818 18.0778L52.4726 18.8142C52.4726 18.8142 51.4212 20.4976 48.6875 20.4976C46.0063 20.4976 44.6921 16.9204 44.6921 13.8167C44.6921 10.7129 46.6898 6.9779 48.8452 6.82008C50.948 6.55705 52.7355 6.71487 54.4703 8.03002Z" fill="#80827E"/>
-<path d="M65.9525 25.4834L54.3242 28.6011L54.5963 29.6173L66.2246 26.4996L65.9525 25.4834Z" fill="#80827E"/>
-<path d="M118.028 55.7969H1.79297V56.849H118.028V55.7969Z" fill="#80827E"/>
-<path d="M14.6208 42.0669C16.8814 42.0669 17.0391 38.9632 15.7774 37.648C14.4631 36.3329 12.9385 36.2803 10.5202 36.2803C8.10195 36.2803 4.42196 37.7532 4.42196 40.4361C4.42196 43.1191 7.57624 45.3811 10.6254 47.3801C13.6745 49.3792 12.7282 53.9559 7.68138 53.535C2.63454 53.1142 3.10768 51.5886 3.00254 51.0099C2.8974 50.4313 5.31568 48.9057 3.31797 47.6432C1.32026 46.2754 0.479118 49.9052 1.32026 51.0099C2.10883 52.1147 3.31797 54.2715 7.8391 54.2715C12.3602 54.2715 14.8311 51.6938 14.8311 49.0635C14.8311 46.4858 7.8391 41.4883 7.36596 41.2252C6.89282 40.9096 6.52482 37.2798 10.7305 36.9642C14.9362 36.6485 15.4619 38.5949 14.8837 39.0684C14.3054 39.5418 13.4117 39.8049 13.4117 40.8044C13.4117 41.8039 13.9374 42.0669 14.6208 42.0669Z" fill="#80827E"/>
-<path d="M21.4014 35.8062C21.4014 35.8062 18.7728 37.4369 18.2997 39.5412C17.8265 41.6454 15.8288 50.5884 15.7763 51.5879C15.7237 52.5875 16.4071 54.0604 17.5637 54.0604C18.7203 54.0604 19.8768 53.3765 20.4025 51.5879C20.4025 51.5879 19.6665 53.3765 17.8265 53.3765C17.8265 53.3765 17.9317 50.1676 18.878 46.8534C19.8243 43.5918 21.2437 37.8052 21.4014 35.8062Z" fill="#80827E"/>
-<path d="M23.4033 41.9609H16.1484V42.487H23.4033V41.9609Z" fill="#80827E"/>
-<path d="M32.5442 44.0653C32.5442 44.0653 31.3351 41.8032 27.5499 41.8032C23.7648 41.8032 20.3477 44.9596 20.3477 48.3264C20.3477 51.6932 22.0299 54.0604 26.2356 54.0604C30.4413 54.0604 31.1773 51.3775 31.1773 51.3775C31.1773 51.3775 31.3351 50.9041 31.0196 51.2723C29.7053 52.9031 28.6539 53.6396 26.2356 53.6396C22.5031 53.6396 22.5557 49.0102 22.9237 47.6425C23.2391 46.2747 24.8162 42.3819 28.0231 42.3819C29.9156 42.3819 31.5979 43.0658 32.4916 44.2231C32.8071 44.8018 32.5442 44.0653 32.5442 44.0653Z" fill="#80827E"/>
-<path d="M99.4685 45.8544C99.4685 43.6975 98.4697 41.8037 94.632 41.8037C90.7943 41.8037 87.4297 44.9601 87.4297 48.3269C87.4297 51.6936 89.112 54.1661 93.3177 54.1661C97.4708 54.1661 99.048 52.1671 99.048 52.1671C99.048 52.1671 99.4159 51.0624 99.1531 51.4306C97.8388 53.0614 95.736 53.6927 93.2651 53.6927C89.5325 53.6927 89.5851 49.0633 89.9531 47.6956C90.2685 46.3278 91.9508 42.5928 95.1577 42.5928C96.1565 42.5928 97.3131 43.5397 97.3131 45.2757C97.3131 47.906 95.7885 48.5373 89.848 48.4321C89.3223 48.4321 89.848 48.8529 89.848 48.8529C89.848 48.8529 92.6343 49.0633 93.528 49.0107C96.6297 48.8003 99.4685 48.2742 99.4685 45.8544Z" fill="#80827E"/>
-<path d="M35.2825 42.2241C35.2825 42.2241 33.0745 42.2767 32.3911 44.4862C31.7077 46.6956 30.6563 51.2723 31.0768 52.5875C31.4974 53.9026 32.4963 54.2183 33.39 54.2183C34.2837 54.2183 36.9123 51.0619 36.9123 51.0619C36.9123 51.0619 34.3363 53.6396 33.3374 53.6396C32.3385 53.6396 35.2825 42.2241 35.2825 42.2241Z" fill="#80827E"/>
-<path d="M40.9105 42.2246C40.8053 42.2772 38.2293 42.2246 38.2293 42.2246L35.9688 54.061H38.4396L40.9105 42.2246Z" fill="#80827E"/>
-<path d="M38.222 42.2769H36.75V42.8029H38.222V42.2769Z" fill="#80827E"/>
-<path d="M77.757 35.8589H75.6016V36.385H77.757V35.8589Z" fill="#80827E"/>
-<path d="M78.2325 53.5869H71.9766V54.113H78.2325V53.5869Z" fill="#80827E"/>
-<path d="M52.4709 42.2769H50V42.8029H52.4709V42.2769Z" fill="#80827E"/>
-<path d="M39.7518 53.5342H34.6523V54.0602H39.7518V53.5342Z" fill="#80827E"/>
-<path d="M40.4351 44.4868C40.4351 44.4868 43.0636 42.0669 45.7448 42.0669C48.3733 42.0669 49.8453 43.2768 49.4247 45.6441C49.0042 48.0114 46.6385 53.798 47.8476 53.798C49.0568 53.798 50.4762 51.1677 50.4762 51.1677V51.6938C50.4762 51.6938 49.1619 54.4819 47.6899 54.4819C46.2179 54.4819 45.0613 53.1141 45.7973 50.1682C46.4808 47.2223 48.163 44.1185 46.7436 43.2242C45.3242 42.3299 41.7493 43.5925 40.2773 45.0654L40.4351 44.4868Z" fill="#80827E"/>
-<path d="M78.2866 44.4863C78.2866 44.4863 80.9152 42.0664 83.5963 42.0664C86.2249 42.0664 87.6969 43.2763 87.2763 45.6436C86.8557 48.0109 84.49 53.7975 85.6992 53.7975C86.9083 53.8501 88.3277 51.1672 88.3277 51.1672V51.6933C88.3277 51.6933 87.0135 54.4814 85.5415 54.4814C84.0695 54.4814 82.9129 53.1137 83.6489 50.1677C84.3323 47.2218 86.0146 44.118 84.5952 43.2237C83.1758 42.3294 79.6009 43.592 78.1289 45.0649L78.2866 44.4863Z" fill="#80827E"/>
-<path d="M52.264 42.2246H54.7874C54.7874 42.2246 52.264 51.378 52.4743 52.9036C52.6845 54.4292 53.8411 53.4297 55.0503 51.5885V52.325C55.0503 52.325 53.7885 54.1662 52.5268 54.1662C51.2651 54.1662 49.7931 53.5349 50.5291 50.3785C51.2651 47.2748 52.264 42.2246 52.264 42.2246Z" fill="#80827E"/>
-<path d="M54.4692 40.4876C55.4274 40.4876 56.2041 39.7104 56.2041 38.7516C56.2041 37.7929 55.4274 37.0156 54.4692 37.0156C53.5111 37.0156 52.7344 37.7929 52.7344 38.7516C52.7344 39.7104 53.5111 40.4876 54.4692 40.4876Z" fill="#80827E"/>
-<path d="M74.2322 42.7514C74.9581 42.7514 75.5465 42.1626 75.5465 41.4362C75.5465 40.7099 74.9581 40.1211 74.2322 40.1211C73.5064 40.1211 72.918 40.7099 72.918 41.4362C72.918 42.1626 73.5064 42.7514 74.2322 42.7514Z" fill="#80827E"/>
-<path d="M74.4988 51.7464V50.7995C74.4988 50.7995 72.5536 53.5876 68.4531 53.5876C64.3525 53.5876 63.8794 50.3261 63.8794 45.6967C63.8794 41.0674 67.0862 36.8063 70.7136 36.8063C74.3411 36.8063 75.6553 39.1736 75.6553 39.9101C75.6553 40.6466 74.1833 40.1205 74.1833 40.1205V42.8034C74.1833 42.8034 76.1811 43.4347 76.1811 40.0153C76.1811 36.5959 71.9228 36.2803 70.6085 36.2803C68.1902 36.2803 60.8828 37.1746 60.8828 46.7489C60.9354 55.4288 71.3971 55.6393 74.4988 51.7464Z" fill="#80827E"/>
-<path d="M63.4635 20.7606C63.6958 20.7606 63.8841 20.5722 63.8841 20.3398C63.8841 20.1074 63.6958 19.9189 63.4635 19.9189C63.2313 19.9189 63.043 20.1074 63.043 20.3398C63.043 20.5722 63.2313 20.7606 63.4635 20.7606Z" fill="#80827E"/>
-<path d="M63.5665 23.6011V23.2854C63.5665 23.2854 62.9357 24.1798 61.6214 24.1798C60.3071 24.1798 60.1494 23.1276 60.1494 21.6547C60.1494 20.1817 61.1483 18.8139 62.3574 18.8139C63.514 18.8139 63.9345 19.5504 63.9345 19.8135C63.9345 20.0765 63.4614 19.8661 63.4614 19.8661V20.7078C63.4614 20.7078 64.0923 20.9182 64.0923 19.8135C64.0923 18.7087 62.7254 18.6035 62.3048 18.6035C61.5163 18.6035 59.2031 18.8665 59.2031 21.9703C59.2031 24.811 62.5677 24.8636 63.5665 23.6011Z" fill="#80827E"/>
-<path d="M60.5714 15.5003C61.36 15.3425 61.2023 14.1852 60.6766 13.8169C60.0983 13.4487 59.5726 13.5013 58.6788 13.7117C57.7851 13.9221 56.576 14.7112 56.7863 15.6581C56.9966 16.605 58.3108 17.2363 59.5726 17.7098C60.8343 18.1832 60.8343 19.9192 58.9417 20.1823C57.1017 20.3927 57.1543 19.814 57.0491 19.6036C56.8914 19.1301 57.7326 18.6567 56.8914 18.341C56.0503 18.0254 56.0503 19.3932 56.4183 19.7614C56.7863 20.077 57.3646 20.8135 59.0468 20.4453C60.7291 20.077 61.4126 18.9723 61.2023 18.0254C60.992 17.0785 58.1006 15.816 57.8903 15.7107C57.68 15.6581 57.2594 14.343 58.784 13.9221C60.3086 13.5013 60.624 14.1326 60.4663 14.3956C60.3086 14.606 59.9931 14.7638 60.0457 15.1321C60.0983 15.5003 60.3086 15.5529 60.5714 15.5003Z" fill="#80827E"/>
-<path d="M80.2325 35.8584H77.6565L73.9766 53.8496H76.5526L80.2325 35.8584Z" fill="#80827E"/>
-<path d="M100.365 56.0072L104.518 38.9629H102.1L97.7891 56.0072H100.365Z" fill="#80827E"/>
-<path d="M104.52 38.9628C104.52 38.9628 104.73 36.8585 106.097 36.5429C107.464 36.2273 109.094 37.0163 108.095 38.4893C107.096 39.9623 107.516 40.9092 109.251 40.9092C110.986 40.9092 110.934 35.9116 106.728 35.9116C102.522 35.9116 102.102 39.0154 102.102 39.0154H104.52V38.9628Z" fill="#80827E"/>
-<path d="M112.983 40.3302C113.854 40.3302 114.561 39.6236 114.561 38.752C114.561 37.8804 113.854 37.1738 112.983 37.1738C112.112 37.1738 111.406 37.8804 111.406 38.752C111.406 39.6236 112.112 40.3302 112.983 40.3302Z" fill="#80827E"/>
-<path d="M117.555 46.5378C118.252 46.5378 118.816 45.9725 118.816 45.2752C118.816 44.578 118.252 44.0127 117.555 44.0127C116.858 44.0127 116.293 44.578 116.293 45.2752C116.293 45.9725 116.858 46.5378 117.555 46.5378Z" fill="#80827E"/>
-<path d="M114.51 38.2788C114.51 38.2788 114.878 40.4357 113.984 41.5404C113.09 42.6451 113.038 42.4873 113.038 42.4873C113.038 42.4873 113.406 40.9617 113.038 40.4357C112.617 39.857 114.51 38.2788 114.51 38.2788Z" fill="#80827E"/>
-<path d="M117.558 46.5384C117.558 46.5384 120.659 45.9071 119.187 43.2242C117.715 40.5413 109.094 41.3304 109.094 44.855C109.094 48.4322 115.613 48.6426 115.613 51.6938C115.613 54.7449 109.251 53.6402 108.673 52.8511C108.095 52.062 108.726 51.1677 109.462 51.0099C110.145 50.8521 110.355 49.1161 108.883 49.2739C107.464 49.4317 106.15 50.9047 107.306 52.5355C108.463 54.1663 110.881 54.1663 112.248 54.1663C113.615 54.1663 118.189 54.061 118.189 51.0099C118.189 47.9588 113.299 46.591 111.985 45.2758C110.671 43.9607 113.299 41.9091 115.35 41.9091C117.4 41.9091 119.03 43.6451 117.558 44.0133C116.138 44.3815 117.558 46.5384 117.558 46.5384Z" fill="#80827E"/>
-<path d="M10.681 62.2663V62.6346C10.681 63.6341 10.3655 64.318 9.68211 64.6336C10.5232 64.9492 10.8387 65.6857 10.8387 66.7378V67.5269C10.8387 69.0525 10.0501 69.8416 8.47297 69.8416H6.05469V59.9517H8.36782C9.99753 60.0043 10.681 60.7407 10.681 62.2663ZM7.63183 61.372V64.0023H8.26268C8.84097 64.0023 9.20897 63.7393 9.20897 62.9502V62.4241C9.20897 61.7403 8.94611 61.4246 8.4204 61.4246H7.63183V61.372ZM7.63183 65.4227V68.4738H8.52554C9.05125 68.4738 9.31411 68.2108 9.31411 67.5269V66.6852C9.31411 65.7909 8.99868 65.4753 8.31525 65.4753H7.63183V65.4227Z" fill="#80827E"/>
-<path d="M12.4141 62.3729C12.4141 60.7947 13.2552 59.9004 14.7798 59.9004C16.3043 59.9004 17.1455 60.7947 17.1455 62.3729V67.5283C17.1455 69.1064 16.3043 70.0007 14.7798 70.0007C13.2552 70.0007 12.4141 69.1064 12.4141 67.5283V62.3729ZM13.9386 67.5809C13.9386 68.2647 14.2541 68.5278 14.7272 68.5278C15.2003 68.5278 15.5158 68.2647 15.5158 67.5809V62.2677C15.5158 61.5838 15.2003 61.3208 14.7272 61.3208C14.2541 61.3208 13.9386 61.5838 13.9386 62.2677V67.5809Z" fill="#80827E"/>
-<path d="M18.8281 60.0059H21.299C22.8235 60.0059 23.6121 60.8476 23.6121 62.4257V67.4233C23.6121 69.0015 22.8761 69.8432 21.299 69.8432H18.8281V60.0059ZM20.4053 61.3736V68.4228H21.299C21.7721 68.4228 22.0875 68.1598 22.0875 67.4759V62.3205C22.0875 61.6366 21.7721 61.3736 21.299 61.3736H20.4053Z" fill="#80827E"/>
-<path d="M26.6131 66.5816L24.668 60.0059H26.2451L27.4542 64.4774L28.6634 60.0059H30.1354L28.1902 66.5816V69.8432H26.6657V66.5816H26.6131Z" fill="#80827E"/>
-<path d="M35.9699 64.372H37.9676V65.7924H35.9699V69.843H34.4453V59.9531H38.5459V61.3735H35.9699V64.372Z" fill="#80827E"/>
-<path d="M39.8555 62.3729C39.8555 60.7947 40.6966 59.9004 42.2212 59.9004C43.7457 59.9004 44.5869 60.7947 44.5869 62.3729V67.5283C44.5869 69.1064 43.7457 70.0007 42.2212 70.0007C40.6966 70.0007 39.8555 69.1064 39.8555 67.5283V62.3729ZM41.38 67.5809C41.38 68.2647 41.6955 68.5278 42.1686 68.5278C42.6417 68.5278 42.9572 68.2647 42.9572 67.5809V62.2677C42.9572 61.5838 42.6417 61.3208 42.1686 61.3208C41.6955 61.3208 41.38 61.5838 41.38 62.2677V67.5809Z" fill="#80827E"/>
-<path d="M46.168 62.3729C46.168 60.7947 47.0091 59.9004 48.5337 59.9004C50.0582 59.9004 50.8994 60.7947 50.8994 62.3729V67.5283C50.8994 69.1064 50.0582 70.0007 48.5337 70.0007C47.0091 70.0007 46.168 69.1064 46.168 67.5283V62.3729ZM47.7451 67.5809C47.7451 68.2647 48.0605 68.5278 48.5337 68.5278C49.0068 68.5278 49.3222 68.2647 49.3222 67.5809V62.2677C49.3222 61.5838 49.0068 61.3208 48.5337 61.3208C48.0605 61.3208 47.7451 61.5838 47.7451 62.2677V67.5809Z" fill="#80827E"/>
-<path d="M52.6367 60.0059H55.1076C56.6321 60.0059 57.4207 60.8476 57.4207 62.4257V67.4233C57.4207 69.0015 56.6847 69.8432 55.1076 69.8432H52.6367V60.0059ZM54.2139 61.3736V68.4228H55.1076C55.5807 68.4228 55.8961 68.1598 55.8961 67.4759V62.3205C55.8961 61.6366 55.5807 61.3736 55.1076 61.3736H54.2139Z" fill="#80827E"/>
-<path d="M68.7239 66.1604V67.4755C68.7239 69.0537 67.9354 69.948 66.4108 69.948C64.8862 69.948 64.0977 69.0537 64.0977 67.4755V62.3201C64.0977 60.742 64.8862 59.8477 66.4108 59.8477C67.9354 59.8477 68.7239 60.742 68.7239 62.3201V63.267H67.2519V62.2149C67.2519 61.531 66.9365 61.268 66.4634 61.268C65.9902 61.268 65.6748 61.531 65.6748 62.2149V67.5281C65.6748 68.212 65.9902 68.475 66.4634 68.475C66.9365 68.475 67.2519 68.212 67.2519 67.5281V66.1078H68.7239V66.1604Z" fill="#80827E"/>
-<path d="M70.2969 62.3729C70.2969 60.7947 71.138 59.9004 72.6626 59.9004C74.1871 59.9004 75.0283 60.7947 75.0283 62.3729V67.5283C75.0283 69.1064 74.1871 70.0007 72.6626 70.0007C71.138 70.0007 70.2969 69.1064 70.2969 67.5283V62.3729ZM71.874 67.5809C71.874 68.2647 72.1894 68.5278 72.6626 68.5278C73.1357 68.5278 73.4512 68.2647 73.4512 67.5809V62.2677C73.4512 61.5838 73.1357 61.3208 72.6626 61.3208C72.1894 61.3208 71.874 61.5838 71.874 62.2677V67.5809Z" fill="#80827E"/>
-<path d="M78.8149 59.8477C80.3395 59.8477 81.0755 60.742 81.0755 62.3201V62.6358H79.6035V62.2149C79.6035 61.531 79.3406 61.268 78.8149 61.268C78.3418 61.268 78.0264 61.531 78.0264 62.2149C78.0264 64.2666 81.0755 64.6348 81.0755 67.4229C81.0755 69.0011 80.2869 69.8954 78.7624 69.8954C77.2378 69.8954 76.4492 69.0011 76.4492 67.4229V66.7916H77.9212V67.4755C77.9212 68.1594 78.2366 68.4224 78.7098 68.4224C79.1829 68.4224 79.4984 68.1594 79.4984 67.4755C79.4984 65.4239 76.4492 65.0556 76.4492 62.2675C76.5544 60.7946 77.3429 59.8477 78.8149 59.8477Z" fill="#80827E"/>
-<path d="M86.0698 67.0025L87.1212 60.0059H89.2766V69.8958H87.8046V62.794L86.7532 69.8958H85.2812L84.1247 62.8992V69.8958H82.7578V60.0059H84.9132L86.0698 67.0025Z" fill="#80827E"/>
-<path d="M92.6925 64.1617H94.7954V65.5821H92.6925V68.4754H95.3737V69.8958H91.168V60.0059H95.3737V61.4262H92.6925V64.1617Z" fill="#80827E"/>
-<path d="M96.6328 60.0059H101.417V61.4262H99.7871V69.8958H98.2625V61.4262H96.6328V60.0059Z" fill="#80827E"/>
-<path d="M102.84 60.0059H104.364V69.8958H102.84V60.0059Z" fill="#80827E"/>
-<path d="M110.724 66.1604V67.4755C110.724 69.0537 109.935 69.948 108.411 69.948C106.886 69.948 106.098 69.0537 106.098 67.4755V62.3201C106.098 60.742 106.886 59.8477 108.411 59.8477C109.935 59.8477 110.724 60.742 110.724 62.3201V63.267H109.305V62.2149C109.305 61.531 108.989 61.268 108.516 61.268C108.043 61.268 107.727 61.531 107.727 62.2149V67.5281C107.727 68.212 108.043 68.475 108.516 68.475C108.989 68.475 109.305 68.212 109.305 67.5281V66.1078H110.724V66.1604Z" fill="#80827E"/>
-<path d="M114.512 59.8477C116.037 59.8477 116.773 60.742 116.773 62.3201V62.6358H115.301V62.2149C115.301 61.531 115.038 61.268 114.512 61.268C114.039 61.268 113.724 61.531 113.724 62.2149C113.724 64.2666 116.773 64.6348 116.773 67.4229C116.773 69.0011 115.984 69.8954 114.46 69.8954C112.935 69.8954 112.146 69.0011 112.146 67.4229V66.7916H113.618V67.4755C113.618 68.1594 113.934 68.4224 114.407 68.4224C114.88 68.4224 115.196 68.1594 115.196 67.4755C115.196 65.4239 112.146 65.0556 112.146 62.2675C112.252 60.7946 113.04 59.8477 114.512 59.8477Z" fill="#80827E"/>
-</svg>
-						</div>
-						<div class="page__img"><svg width="141" height="46" viewBox="0 0 141 46" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M15.1202 8.61544C15.1202 8.41236 15.1202 0.811702 15.1202 0.811702H14.1629V2.46528C14.1629 2.46528 10.2755 0.43457 7.89671 0.43457C5.51788 0.43457 1.39844 2.84241 1.39844 6.61373C1.39844 10.3851 7.02641 13.3151 10.3916 15.1137C13.7568 16.9123 13.8148 17.8407 13.8148 19.6973C13.8148 21.525 12.4803 23.5847 8.85405 23.5847C5.22778 23.5847 3.42915 21.728 2.58785 19.8424V17.3185H1.68854V24.8321H2.47181V23.4396C2.47181 23.4396 6.24314 24.8321 8.73801 24.8321C11.2329 24.8321 16.1936 24.2809 16.1936 18.711C16.1936 13.141 9.40524 10.9072 6.01105 9.05059C2.61686 7.19394 2.64587 2.75538 7.75166 2.55231C12.8865 2.34924 14.0759 5.13422 14.0759 8.55742L15.1202 8.61544Z" fill="black"/>
-<path d="M36.3213 6.70087H37.4527V1.59508L36.0892 0.84082H19.0892V1.9142C19.0892 1.9142 22.4834 2.00123 22.4834 3.79986C22.4834 5.59849 22.4834 22.4824 22.4834 22.4824C22.4834 22.4824 19.9885 23.7879 18.8281 23.7879V24.6292H36.0892L38.8161 19.0012H37.3366C37.3366 19.0012 36.3213 22.7435 33.9134 22.7435C31.5056 22.7435 25.4715 22.7435 25.4715 22.7435V13.2572H32.666C32.666 13.2572 34.2035 14.7947 34.2035 16.1292H35.0158V8.41247H34.0875C34.0875 8.41247 33.9714 11.1394 32.5209 11.1394C31.0704 11.1394 25.3554 11.1394 25.3554 11.1394V2.72648H33.7974C33.7684 2.72648 36.3213 2.92955 36.3213 6.70087Z" fill="black"/>
-<path d="M41.7829 6.87465V2.81322C41.7829 2.81322 42.2471 0.811523 43.6976 0.811523C45.1481 0.811523 59.2181 0.811523 59.2181 0.811523V2.34906L44.887 22.3371H55.5918C55.5918 22.3371 58.1737 21.3797 58.1737 19.349H59.2181V22.8012C59.2181 22.8012 58.4348 24.6289 57.3904 24.6289C56.3461 24.6289 39.7812 24.6289 39.7812 24.6289V22.4531L54.2863 2.98729H44.771C44.771 2.98729 43.1174 3.5965 43.1174 6.70059L41.7829 6.87465Z" fill="black"/>
-<path d="M86.2155 4.20571C86.2155 4.20571 86.2155 20.6835 86.2155 21.9889C86.2155 23.2654 89.2906 23.5555 89.2906 23.5555V24.6289H81.3998V23.7876C84.5619 23.7876 84.5329 22.134 84.5329 22.134V5.39513L75.8009 24.5999H74.9016L66.1405 5.39513V22.105C66.1405 22.105 66.0825 23.7586 69.2736 23.7586V24.5999H61.3828V23.5265C61.3828 23.5265 64.4579 23.2654 64.4579 21.9599C64.4579 20.6835 64.4579 4.1767 64.4579 4.1767C64.4579 4.1767 64.1968 2.26203 61.3828 2.26203V0.811523H67.591L75.3367 19.291L83.1114 0.811523H89.3196V2.29104C86.4766 2.29104 86.2155 4.20571 86.2155 4.20571Z" fill="black"/>
-<path d="M91.3906 24.6006V23.6143C91.3906 23.6143 92.9282 23.8464 94.0886 22.2218C95.278 20.5972 103.488 0 103.488 0V5.1348L96.5834 21.2354C96.5834 21.2354 96.5254 23.7593 98.7882 23.7593V24.6296H91.3906V24.6006Z" fill="black"/>
-<path d="M107.314 24.6006H115.843V23.6143C115.843 23.6143 114.218 23.8464 112.71 21.9027C111.23 19.959 103.484 0 103.484 0V5.1348L109.664 21.2645C109.664 21.2645 109.693 23.7013 107.343 23.7013L107.314 24.6006Z" fill="black"/>
-<path d="M108.271 15.375H98.3203V16.5934H108.271V15.375Z" fill="black"/>
-<path d="M117.352 24.6008H126.026V23.6435C126.026 23.6435 123.125 23.7885 123.125 22.193C123.125 20.5974 123.125 0.8125 123.125 0.8125H117.555V1.9439C117.555 1.9439 120.688 2.26301 120.688 3.68451C120.688 5.106 120.688 21.5548 120.688 21.5548C120.688 21.5548 120.311 23.5275 117.381 23.5275V24.6008H117.352Z" fill="black"/>
-<path d="M123.125 0.8125H129.652C129.652 0.8125 134.816 1.47973 134.816 7.13672C134.816 12.7937 127.157 14.0121 127.157 14.0121H123.125V12.0684H127.738C127.738 12.0684 131.48 10.2698 131.48 7.25276C131.48 4.2357 130.087 2.75618 128.956 2.75618C127.825 2.75618 123.125 2.75618 123.125 2.75618V0.8125Z" fill="black"/>
-<path d="M140.585 24.6011H133.768L125.906 13.9834H129.445L136.118 22.7155C136.118 22.7155 137.771 23.4697 140.585 23.4697V24.6011Z" fill="black"/>
-<path d="M87.3522 2.34961V23.6431H85.6406V2.9008L87.3522 2.34961Z" fill="black"/>
-<path d="M11.6678 40.8751H12.103V44.9945H11.6098L10.8845 44.2983C10.4204 44.6754 9.86919 44.9365 9.25998 45.1105C8.62175 45.2846 7.92551 45.3716 7.17125 45.3716C5.25657 45.3716 3.66102 44.6464 2.44259 43.1669C1.19515 41.7454 0.585938 39.8597 0.585938 37.5389C0.585938 36.4365 0.730988 35.3921 1.0501 34.4058C1.36921 33.4485 1.83337 32.5491 2.44259 31.7949C3.0518 31.0116 3.80607 30.4024 4.70538 29.9382C5.6047 29.5031 6.50401 29.271 7.43234 29.271C8.07056 29.271 8.65076 29.358 9.20196 29.5611C9.75315 29.7642 10.3043 30.0833 10.8265 30.5184L11.6098 29.7352H11.9579V33.6515H11.4647C11.1456 32.4041 10.6235 31.4758 9.92721 30.8375C9.23097 30.1993 8.36066 29.8802 7.34531 29.8802C5.92381 29.8802 4.87944 30.5184 4.24122 31.7949C3.60299 33.0713 3.28388 35.1601 3.28388 38.0611C3.28388 39.4246 3.3419 40.4979 3.48695 41.2522C3.60299 42.0065 3.83508 42.6157 4.12518 43.1088C4.44429 43.631 4.87944 44.0662 5.40163 44.3563C5.95282 44.6754 6.53302 44.8204 7.17125 44.8204C8.30264 44.8204 9.23097 44.5013 10.0142 43.8341C10.7105 43.1379 11.2907 42.1805 11.6678 40.8751Z" fill="black"/>
-<path d="M21.9614 45.4007C20.917 45.4007 20.0177 45.1977 19.2344 44.8205C18.4512 44.4434 17.7259 43.8052 17.0877 42.9929C16.5075 42.2386 16.0723 41.3683 15.7532 40.382C15.4341 39.3956 15.2891 38.3513 15.2891 37.2489C15.2891 36.2045 15.4341 35.2182 15.7532 34.2898C16.0723 33.3615 16.5075 32.5492 17.1167 31.824C17.8129 30.9827 18.5672 30.3445 19.3505 29.9383C20.1628 29.5322 21.0331 29.3291 21.9904 29.3291C22.9187 29.3291 23.76 29.5032 24.5143 29.8803C25.2686 30.2574 25.9648 30.8086 26.632 31.5629C27.2993 32.3462 27.7924 33.2165 28.1696 34.2318C28.5177 35.2182 28.6918 36.2915 28.6918 37.3939C28.6918 38.4963 28.5177 39.5407 28.1986 40.527C27.8795 41.5134 27.3863 42.4127 26.7771 43.167C26.1389 43.9502 25.4426 44.5304 24.6884 44.9076C23.8471 45.2267 22.9477 45.4007 21.9614 45.4007ZM21.9614 29.8803C20.4819 29.8803 19.4375 30.4895 18.8283 31.7079C18.2191 32.9264 17.929 35.1311 17.929 38.3223C17.929 40.498 18.2481 42.1226 18.9153 43.196C19.5826 44.2693 20.5979 44.8205 21.9614 44.8205C23.3249 44.8205 24.3112 44.2693 24.9785 43.196C25.6457 42.1226 25.9648 40.469 25.9648 38.2642C25.9648 35.0441 25.6747 32.8393 25.0655 31.6499C24.4563 30.4605 23.4409 29.8803 21.9614 29.8803Z" fill="black"/>
-<path d="M30.9297 45.0242V44.444H32.8444V30.171H30.9877V29.5908H37.3119V30.171H35.1942V44.444H38.3853C39.5457 44.444 40.416 44.1829 40.9672 43.6317C41.5184 43.1096 41.9826 42.1232 42.3307 40.6727H42.7658L42.5047 45.0242H30.9297Z" fill="black"/>
-<path d="M44.3594 45.0237V44.4435H46.274V30.1705H44.4174V29.5903H50.7706V30.1705H48.6529V44.4435H51.844C53.0044 44.4435 53.8747 44.1824 54.4259 43.6312C54.9771 43.1091 55.4413 42.1227 55.7894 40.6722H56.2245L55.9634 45.0237H44.3594Z" fill="black"/>
-<path d="M58.0312 45.0242V44.444H59.7719V30.171H58.0312V29.5908H69.4903V33.3041H68.9971C68.823 32.1147 68.4459 31.3024 67.8947 30.8673C67.3435 30.4031 66.3862 30.2 64.9937 30.2H62.0927V36.7563H62.5568C63.5722 36.7563 64.2684 36.5823 64.7036 36.2051C65.1387 35.828 65.3708 35.2188 65.4579 34.3195H65.951V40.1215H65.4579C65.3998 39.0771 65.1387 38.3809 64.6746 37.9457C64.2104 37.5396 63.3981 37.3365 62.2667 37.3365H62.1507V44.502H65.4288C66.7053 44.502 67.6336 44.241 68.2428 43.6898C68.852 43.1386 69.2872 42.1522 69.5773 40.7017H70.0995L69.8674 45.1113H58.0312V45.0242Z" fill="black"/>
-<path d="M83.9357 40.8753H84.3708V44.9947H83.8777L83.1524 44.2985C82.6883 44.6756 82.1371 44.9367 81.5278 45.1107C80.8896 45.2848 80.1934 45.3718 79.4391 45.3718C77.5244 45.3718 75.9289 44.6466 74.7105 43.1671C73.492 41.6875 72.8828 39.8309 72.8828 37.5101C72.8828 36.4077 73.0279 35.3633 73.347 34.377C73.6661 33.4197 74.1303 32.5203 74.7395 31.7661C75.3487 30.9828 76.1029 30.3736 77.0023 29.9094C77.9016 29.4743 78.8009 29.2422 79.7292 29.2422C80.3674 29.2422 80.9476 29.3292 81.4988 29.5323C82.05 29.7354 82.6012 30.0545 83.1234 30.4896L83.9067 29.7063H84.2548V33.6517H83.7616C83.4425 32.4043 82.9203 31.476 82.2241 30.8377C81.5278 30.1995 80.6575 29.8804 79.6422 29.8804C78.2207 29.8804 77.1763 30.5186 76.5381 31.7951C75.8999 33.0715 75.5808 35.1603 75.5808 38.0613C75.5808 39.4248 75.6388 40.4981 75.7838 41.2524C75.8999 42.0067 76.132 42.6159 76.4221 43.109C76.7412 43.6312 77.1763 44.0664 77.6985 44.3565C78.2497 44.6756 78.8299 44.8206 79.4681 44.8206C80.5995 44.8206 81.5278 44.5015 82.3111 43.8343C82.9784 43.1381 83.5586 42.1807 83.9357 40.8753Z" fill="black"/>
-<path d="M89.7336 45.0237V44.4435H91.6773V30.1705C91.5902 30.1705 91.4742 30.1705 91.3581 30.1415C91.2421 30.1415 91.097 30.1415 90.894 30.1415C89.8206 30.1415 89.0083 30.4316 88.4571 30.9828C87.9349 31.534 87.4998 32.5494 87.2097 34.0579H86.6875L86.8906 29.5903H98.8138L98.9878 34.0579H98.4656C98.2626 32.6364 97.8564 31.6501 97.3052 31.0408C96.725 30.4606 95.8547 30.1415 94.6943 30.1415C94.4912 30.1415 94.3462 30.1415 94.2592 30.1415C94.1721 30.1415 94.0851 30.1415 94.0271 30.1705V44.4435H95.9417V45.0237H89.7336Z" fill="black"/>
-<path d="M100.555 45.0237V44.4435H102.498V30.1705H100.555V29.5903H106.85V30.1705H104.848V44.4435H106.85V45.0237H100.555Z" fill="black"/>
-<path d="M115.899 45.4007C114.855 45.4007 113.955 45.1977 113.172 44.8205C112.389 44.4434 111.663 43.8052 111.025 42.9929C110.445 42.2386 110.01 41.3683 109.691 40.382C109.372 39.3956 109.227 38.3513 109.227 37.2489C109.227 36.2045 109.372 35.2182 109.691 34.2898C110.01 33.3615 110.445 32.5492 111.054 31.824C111.75 30.9827 112.505 30.3445 113.288 29.9383C114.1 29.5322 114.971 29.3291 115.928 29.3291C116.856 29.3291 117.698 29.5032 118.452 29.8803C119.206 30.2574 119.902 30.8086 120.57 31.5629C121.237 32.3462 121.73 33.2165 122.107 34.2318C122.455 35.2182 122.629 36.2915 122.629 37.3939C122.629 38.4963 122.455 39.5407 122.136 40.527C121.817 41.5134 121.324 42.4127 120.715 43.167C120.076 43.9502 119.38 44.5304 118.626 44.9076C117.785 45.2267 116.914 45.4007 115.899 45.4007ZM115.899 29.8803C114.419 29.8803 113.375 30.4895 112.766 31.7079C112.157 32.9264 111.866 35.1311 111.866 38.3223C111.866 40.498 112.186 42.1226 112.853 43.196C113.52 44.2693 114.535 44.8205 115.899 44.8205C117.262 44.8205 118.249 44.2693 118.916 43.196C119.583 42.1226 119.902 40.469 119.902 38.2642C119.902 35.0441 119.612 32.8393 119.003 31.6499C118.394 30.4605 117.378 29.8803 115.899 29.8803Z" fill="black"/>
-<path d="M125.125 45.0237V44.4435H126.866V30.1705H125.154V29.5903H129.651L136.236 40.6432V30.1705H134.495V29.5903H138.789V30.1705H136.99V45.4009H136.352L127.591 30.4316V44.4435H129.331V45.0237H125.125Z" fill="black"/>
-</svg>
-						</div>
-						<div class="page__img"><svg width="132" height="32" viewBox="0 0 132 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M0.585938 24.2896V6.90682H2.88829V9.61209L2.77318 10.9935H2.83073C3.2912 9.95744 4.09703 8.92138 5.30577 7.94288C6.5145 6.96438 8.01103 6.50391 9.85292 6.50391C11.925 6.50391 13.4216 7.07949 14.3425 8.17311C15.2635 9.32429 15.6664 10.9935 15.6664 13.2383V24.2896H13.3065V13.8714C13.3065 12.2598 13.0762 10.9935 12.5582 10.0726C12.0402 9.15161 11.0617 8.7487 9.50756 8.7487C7.66568 8.7487 6.05403 9.43941 4.78774 10.7633C3.52144 12.1447 2.88829 13.8139 2.88829 15.8284V24.3472H0.585938V24.2896Z" fill="#80827E"/>
-<path d="M19.5781 19.6274C19.5781 15.5983 23.0892 13.5837 30.169 13.5837H31.205V13.1232C31.205 10.1302 29.766 8.63364 26.9457 8.63364C25.1613 8.63364 23.5497 9.20923 21.9956 10.3029L20.902 8.51853C21.5927 7.94294 22.5136 7.42491 23.6072 7.07955C24.7584 6.7342 25.852 6.56152 27.0032 6.56152C29.0753 6.56152 30.687 7.13711 31.8382 8.28829C32.9318 9.43947 33.5074 11.1087 33.5074 13.2384V24.3472H31.2626V22.3327L31.3777 20.8937H31.3201C30.8597 21.9873 30.0538 22.9082 29.0178 23.6565C27.9817 24.4048 26.773 24.8077 25.4491 24.8077C23.8375 24.8077 22.4561 24.3472 21.3049 23.4838C20.1537 22.4478 19.5781 21.1815 19.5781 19.6274ZM21.938 19.3972C21.938 20.2605 22.2834 21.0664 22.9741 21.6995C23.6648 22.3902 24.6433 22.678 25.852 22.678C27.4637 22.678 28.73 21.9873 29.7085 20.6635C30.687 19.3396 31.1475 17.8431 31.1475 16.1739V15.368H30.169C29.4207 15.368 28.7875 15.368 28.2695 15.4256C27.7515 15.4256 27.0032 15.5407 26.1398 15.7134C25.2765 15.8861 24.5857 16.0587 24.0102 16.289C23.4346 16.5192 22.9741 16.9221 22.5712 17.4402C22.1683 18.0157 21.938 18.6489 21.938 19.3972Z" fill="#80827E"/>
-<path d="M39.5524 17.9586V9.03695H37.25V7.07995H39.5524V2.12988H41.8547V7.07995H46.2292V9.03695H41.8547V17.7283C41.8547 18.6493 41.9698 19.4551 42.2576 20.1458C42.5454 20.779 42.8908 21.297 43.3512 21.5848C43.8117 21.8726 44.2146 22.0453 44.6175 22.1604C45.0204 22.2755 45.4234 22.3331 45.8263 22.3331C46.1716 22.3331 46.4019 22.3331 46.6321 22.2755V24.4052C46.3443 24.4627 45.999 24.4627 45.6536 24.4627C45.1931 24.4627 44.6751 24.4052 44.2146 24.3476C43.7542 24.2901 43.2361 24.1174 42.6605 23.8296C42.0849 23.5418 41.5669 23.1964 41.1064 22.7935C40.646 22.3906 40.3006 21.6999 40.0128 20.8941C39.725 20.0307 39.5524 19.0522 39.5524 17.9586Z" fill="#80827E"/>
-<path d="M49.9688 17.9585V6.90723H52.3287V17.3254C52.3287 18.937 52.5589 20.2033 53.0769 21.1243C53.595 22.0452 54.5735 22.4481 56.1275 22.4481C58.027 22.4481 59.5811 21.7574 60.7898 20.3184C61.9986 18.8795 62.5741 17.2103 62.5741 15.1957V6.90723H64.9341V24.29H62.6317V21.5847L62.7468 20.2033H62.6893C62.2864 21.2969 61.4805 22.333 60.2718 23.254C59.0631 24.2325 57.5665 24.6929 55.8398 24.6929C53.8252 24.6929 52.3287 24.1173 51.4077 23.0237C50.4868 21.9301 49.9688 20.2609 49.9688 17.9585Z" fill="#80827E"/>
-<path d="M70.4609 24.2889V6.90613H72.7633V10.1294L72.6482 11.5108H72.7057C73.1662 10.1294 73.8569 8.97825 74.893 8.11487C75.8715 7.19393 77.0226 6.79102 78.2889 6.79102C78.6343 6.79102 78.9221 6.84857 79.2099 6.90613V9.20849C79.0948 9.15093 78.807 9.15093 78.3465 9.15093C77.1378 9.15093 76.1017 9.55384 75.1808 10.4172C74.3174 11.2806 73.6842 12.2591 73.3389 13.4103C72.9935 14.5615 72.8209 15.7702 72.8209 16.9789V24.3465H70.4609V24.2889Z" fill="#80827E"/>
-<path d="M81.1094 19.6274C81.1094 15.5983 84.6205 13.5837 91.7002 13.5837H92.7363V13.1232C92.7363 10.1302 91.2973 8.63364 88.4769 8.63364C86.6926 8.63364 85.0809 9.20923 83.5269 10.3029L82.4332 8.51853C83.1239 7.94294 84.0449 7.42491 85.1385 7.07955C86.2897 6.7342 87.3833 6.56152 88.5345 6.56152C90.6066 6.56152 92.2182 7.13711 93.3694 8.28829C94.463 9.43947 95.0386 11.1087 95.0386 13.2384V24.3472H92.7938V22.3327L92.9089 20.8937H92.8514C92.3909 21.9873 91.5851 22.9082 90.549 23.6565C89.513 24.4048 88.3042 24.8077 86.9804 24.8077C85.3687 24.8077 83.9873 24.3472 82.8361 23.4838C81.685 22.4478 81.1094 21.1815 81.1094 19.6274ZM83.5269 19.3972C83.5269 20.2605 83.8722 21.0664 84.5629 21.6995C85.2536 22.3902 86.2321 22.678 87.4409 22.678C89.0525 22.678 90.3188 21.9873 91.2973 20.6635C92.2758 19.3396 92.7363 17.8431 92.7363 16.1739V15.368H91.7578C91.0095 15.368 90.3764 15.368 89.8583 15.4256C89.3403 15.4256 88.592 15.5407 87.7286 15.7134C86.8653 15.8861 86.1746 16.0587 85.599 16.289C85.0234 16.5192 84.5629 16.9221 84.16 17.4402C83.6995 18.0157 83.5269 18.6489 83.5269 19.3972Z" fill="#80827E"/>
-<path d="M100.508 20.1456V0H102.868V19.6276C102.868 21.3543 103.501 22.2753 104.825 22.2753C105.055 22.2753 105.228 22.2753 105.4 22.2177V24.3474C105.113 24.405 104.825 24.405 104.537 24.405C104.192 24.405 103.846 24.405 103.558 24.3474C103.271 24.2899 102.925 24.1747 102.522 24.0021C102.119 23.8294 101.774 23.5991 101.544 23.3113C101.256 23.0236 101.026 22.5631 100.853 22.0451C100.565 21.527 100.508 20.8939 100.508 20.1456Z" fill="#80827E"/>
-<path d="M108.969 20.1456V0H111.329V19.6276C111.329 21.3543 111.962 22.2753 113.286 22.2753C113.516 22.2753 113.689 22.2753 113.861 22.2177V24.3474C113.573 24.405 113.286 24.405 112.998 24.405C112.653 24.405 112.307 24.405 112.019 24.3474C111.732 24.2899 111.386 24.1747 110.983 24.0021C110.58 23.8294 110.235 23.5991 110.005 23.3113C109.717 23.0236 109.487 22.5631 109.314 22.0451C109.084 21.527 108.969 20.8939 108.969 20.1456Z" fill="#80827E"/>
-<path d="M115.934 28.6069C116.568 29.125 117.258 29.4128 118.007 29.4128C119.388 29.4128 120.482 28.4918 121.345 26.5924L122.381 24.1173L115.129 6.90723H117.719L122.784 19.5702L123.417 21.4121H123.475C123.647 20.7789 123.82 20.1458 124.05 19.5702L129.058 6.90723H131.591L123.014 27.9162C122.554 29.0674 121.863 29.9308 121 30.5639C120.136 31.1971 119.158 31.5424 118.007 31.5424C117.489 31.5424 116.971 31.4849 116.453 31.3122C115.934 31.1395 115.532 30.9668 115.301 30.7942L114.898 30.5064L115.934 28.6069Z" fill="#80827E"/>
-</svg>
+					<div class="right-mid">
+						<p class="page__text_gilroy_sm">Условия работы</p>
+						<div class="hover-bg-grey"><a class="page__text_sm" href="">Условия работы</a></div>
+						<div class="hover-bg-grey"><a class="page__text_sm"
+								href="pageDeliveryPay/pageDeliveryPay.html">Доставка/Оплата</a></div>
+						<div class="hover-bg-grey"><a class="page__text_sm" href="">Обмен/Возврат</a></div>
+						<div class="hover-bg-grey"><a class="page__text_sm" href="">Для Сертификаты</a></div>
+					</div>
+					<div class="right">
+						<p class="page__text_gilroy_sm">Способы оплаты</p>
+						<p class="page__text_sm">Вы можете оплатить свой заказ через наш сайт с помошью таких сервисов:
+						</p>
+						<div class="row">
+							<div class="page__img"><img src="assets/img/visa-icon.svg"></div>
+							<div class="page__img"><img src="assets/img/master-card-icon.svg"></div>
 						</div>
 					</div>
 				</div>
-			</section>
-			<section class="subscribe">
-				<div class="wrapper">
-					<div class="bg-grey">
-						<p class="page__text_solena">Подпишитесь на рассылку</p>
-						<p class="page__text_gilroy_sm">Узнавайте первыми о новинках, акциях и актуалной информации</p>
-						<form class="form" action="">
-							<input type="text" placeholder="Ваш Email">
-						</form>
-						<div class="button">
-							<div class="bg-button"></div><a href="#">
-								<button class="page__btn_1"><span> Подписаться</button></a>
-						</div>
+				<div class="copyright">
+					<div class="left">
+						<p>Hristina 2020. Все права защищены.</p>
+					</div>
+					<div class="right">
+						<p class="page__text_sm">Подпишитесь на нас:</p><a
+							href="https://www.instagram.com/hristina.cosmetics/">
+							<div class="page__img"><img src="assets/img/instagram-icon.svg"></div>
+						</a><a href="">
+							<div class="page__img"><img src="assets/img/vk-icon.svg"></div>
+						</a>
 					</div>
 				</div>
-			</section>
-			<section class="second-subscribe">
-				<div class="wrapper-1370">
-					<div class="second-subscribe-wrapper">
-						<div class="left">
-							<div class="second-subscribe-item" data-aos="zoom-in" data-aos-duration="400" data-aos-delay="200">
-								<div class="page__img"><img src="assets/img/phone-icon-white.svg"></div>
-								<p class="page__text_gilroy_sm">Контакты</p><a class="page__text_19" href="+7-906-742-88-28">+ 7 906 742 88 28</a><a class="page__text" href="zakaz@hristina.ru">zakaz@hristina.ru</a>
-							</div>
-							<div class="second-subscribe-item" data-aos="zoom-in" data-aos-duration="400" data-aos-delay="200">
-								<div class="page__img"><img src="assets/img/clock-icon-white.svg"></div>
-								<p class="page__text_gilroy_sm">Время работы</p><a class="page__text_19" href="+7-906-742-88-28">Работаем без выходных </a><a class="page__text" href="zakaz@hristina.ru">с 10:00 до 22:00</a>
-							</div>
-						</div>
-						<div class="right" data-aos="zoom-in" data-aos-duration="400" data-aos-delay="200">
-							<p class="page__text_gilroy_sm">Подпишитесь на рассылку</p>
-							<p class="page__text_sm">Чтобы первыми узнавать о новинках, акциях и актуалной информации</p>
-							<div class="row">
-								<form class="form" action="">
-									<input type="text" placeholder="Ваш Email...">
-								</form>
-								<div class="button">
-									<div class="bg-button"></div><a href="#">
-										<button class="page__btn_1"><span> Подписаться</button></a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<footer class="footer">
-				<div class="wrapper-1465">
-					<div class="footer-wrapper">
-						<div class="left"><a href="../">
-								<div class="page__img"><img src="assets/img/logo.svg" alt=""></div></a>
-							<p class="page__text_sm">Легенда болгарской органики</p>
-						</div>
-						<div class="left-mid">
-							<p class="page__text_gilroy_sm">Актуальное</p>
-							<div class="hover-bg-grey"><a class="page__text_sm" href="">Главная страница</a></div>
-							<div class="hover-bg-grey"><a class="page__text_sm" href="pageCatalog/pageCatalog.html">Каталог</a></div>
-							<div class="hover-bg-grey"><a class="page__text_sm" href="">О бренде</a></div>
-							<div class="hover-bg-grey"><a class="page__text_sm" href="">Контакты</a></div>
-						</div>
-						<div class="right-mid">
-							<p class="page__text_gilroy_sm">Условия работы</p>
-							<div class="hover-bg-grey"><a class="page__text_sm" href="">Условия работы</a></div>
-							<div class="hover-bg-grey"><a class="page__text_sm" href="pageDeliveryPay/pageDeliveryPay.html">Доставка/Оплата</a></div>
-							<div class="hover-bg-grey"><a class="page__text_sm" href="">Обмен/Возврат</a></div>
-							<div class="hover-bg-grey"><a class="page__text_sm" href="">Для Сертификаты</a></div>
-						</div>
-						<div class="right">
-							<p class="page__text_gilroy_sm">Способы оплаты</p>
-							<p class="page__text_sm">Вы можете оплатить свой заказ через наш сайт с помошью таких сервисов:</p>
-							<div class="row">
-								<div class="page__img"><img src="assets/img/visa-icon.svg"></div>
-								<div class="page__img"><img src="assets/img/master-card-icon.svg"></div>
-							</div>
-						</div>
-					</div>
-					<div class="copyright">
-						<div class="left">
-							<p>Hristina 2020. Все права защищены.</p>
-						</div>
-						<div class="right">
-							<p class="page__text_sm">Подпишитесь на нас:</p><a href="https://www.instagram.com/hristina.cosmetics/">
-								<div class="page__img"><img src="assets/img/instagram-icon.svg"></div></a><a href="">
-								<div class="page__img"><img src="assets/img/vk-icon.svg"></div></a>
-						</div>
-					</div>
-				</div>
-			</footer>
-		</div><script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-		<script src="js/main.js"></script>
-	</body>
+			</div>
+		</footer>
+	</div>
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+
 </html>

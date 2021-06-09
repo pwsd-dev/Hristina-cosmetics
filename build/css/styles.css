@@ -1289,7 +1289,7 @@ a {
 }
 
 .banner .slider-banner .slide .text .page__text_solena {
-  font-size: 80px;
+  font-size: 95px;
   line-height: 70px;
   margin-bottom: 47px;
 }
@@ -4560,7 +4560,7 @@ a {
 }
 
 .productPage-wrapper .productPage-left .text .page__text {
-  margin-bottom: 114px;
+  margin-bottom: 105px;
 }
 
 .productPage-wrapper .productPage-left .row-feedback {
@@ -4786,6 +4786,22 @@ a {
   width: 420px;
 }
 
+.productPage-wrapper .productPage-right .presence {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  background-color: #fafafa;
+  width: 180px;
+  height: 40px;
+  margin-bottom: 40px;
+  padding-left: 15px;
+}
+
+.productPage-wrapper .productPage-right .presence .page__img {
+  margin-right: 15px;
+}
+
 .productPage-wrapper .productPage-right .price {
   margin-bottom: 44px;
 }
@@ -4990,7 +5006,7 @@ a {
   height: 52px;
   width: 1px;
   background-color: #9CA896;
-  left: -30px;
+  left: -27px;
   top: -16px;
 }
 
@@ -5000,7 +5016,7 @@ a {
   height: 52px;
   width: 1px;
   background-color: #9CA896;
-  right: -20px;
+  right: -18px;
   top: -16px;
 }
 

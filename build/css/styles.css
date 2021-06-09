@@ -5255,6 +5255,191 @@ a {
   z-index: 100;
 }
 
+.pageContacts-wrapper {
+  display: -webkit-box;
+  display: flex;
+  margin-bottom: 120px;
+}
+
+.pageContacts-wrapper .left .row {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  margin-bottom: 50px;
+  max-width: 419px;
+}
+
+.pageContacts-wrapper .left .row .page__img {
+  margin-right: 15px;
+  position: relative;
+}
+
+.pageContacts-wrapper .left .border {
+  width: 68px;
+  height: 1px;
+  background-color: #9CA896;
+  position: relative;
+  top: -20px;
+}
+
+.pageContacts-wrapper .right .form-wrapper {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  max-width: 950px;
+  background-color: #F8F9F7;
+  padding: 60px 60px 60px 60px;
+}
+
+.pageContacts-wrapper .right .form-wrapper .page__img {
+  margin-bottom: 30px;
+}
+
+.pageContacts-wrapper .right .form-wrapper .page__text_gilroy_sm {
+  margin-bottom: 46px;
+}
+
+.pageContacts-wrapper .right .form-wrapper .form {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+}
+
+.pageContacts-wrapper .right .form-wrapper .form input {
+  border: none;
+  border-bottom: 1px solid #9CA896;
+  margin-bottom: 40px;
+  font-family: "Montserrat-Regular";
+  font-size: 16px;
+  line-height: 28px;
+  color: #80827e;
+  background: transparent;
+}
+
+.pageContacts-wrapper .right .form-wrapper .form input::-webkit-input-placeholder {
+  font-family: "Montserrat-Regular";
+  font-size: 16px;
+  line-height: 28px;
+  color: #80827e;
+}
+
+.pageContacts-wrapper .right .form-wrapper .form input::-moz-placeholder {
+  font-family: "Montserrat-Regular";
+  font-size: 16px;
+  line-height: 28px;
+  color: #80827e;
+}
+
+.pageContacts-wrapper .right .form-wrapper .form input:-ms-input-placeholder {
+  font-family: "Montserrat-Regular";
+  font-size: 16px;
+  line-height: 28px;
+  color: #80827e;
+}
+
+.pageContacts-wrapper .right .form-wrapper .form input::-ms-input-placeholder {
+  font-family: "Montserrat-Regular";
+  font-size: 16px;
+  line-height: 28px;
+  color: #80827e;
+}
+
+.pageContacts-wrapper .right .form-wrapper .form input::placeholder {
+  font-family: "Montserrat-Regular";
+  font-size: 16px;
+  line-height: 28px;
+  color: #80827e;
+}
+
+.pageContacts-wrapper .right .form-wrapper textarea {
+  border: 1px solid #9CA896;
+  outline: none;
+  padding: 20px 0 0 20px;
+  margin-bottom: 60px;
+  font-family: "Montserrat-Regular";
+  font-size: 16px;
+  line-height: 28px;
+  color: #80827e;
+}
+
+.pageContacts-wrapper .right .form-wrapper .button {
+  position: relative;
+  width: 200px;
+  height: 60px;
+}
+
+.pageContacts-wrapper .right .form-wrapper .button:hover .bg-button {
+  -webkit-transform: translate(5%, 5%);
+          transform: translate(5%, 5%);
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+.pageContacts-wrapper .right .form-wrapper .button .page__btn_1 {
+  position: relative;
+  color: #80827E;
+}
+
+.pageContacts-wrapper .right .form-wrapper .button .page__btn_1::after {
+  content: '';
+  position: absolute;
+  width: 98%;
+  height: 1px;
+  background-color: #9CA896;
+  left: -5px;
+  top: -6px;
+}
+
+.pageContacts-wrapper .right .form-wrapper .button .page__btn_1::before {
+  content: '';
+  position: absolute;
+  width: 98%;
+  height: 1px;
+  background-color: #9CA896;
+  left: -5px;
+  bottom: 6px;
+}
+
+.pageContacts-wrapper .right .form-wrapper .button .page__btn_1 span {
+  position: relative;
+}
+
+.pageContacts-wrapper .right .form-wrapper .button .page__btn_1 span::before {
+  content: '';
+  position: absolute;
+  height: 50px;
+  width: 1px;
+  background-color: #9CA896;
+  left: -65px;
+  top: -16px;
+}
+
+.pageContacts-wrapper .right .form-wrapper .button .page__btn_1 span::after {
+  content: '';
+  position: absolute;
+  height: 50px;
+  width: 1px;
+  background-color: #9CA896;
+  right: -51px;
+  top: -16px;
+}
+
+.pageContacts-wrapper .right .form-wrapper .button .bg-button {
+  background-color: #E9EBE7;
+  width: 200px;
+  height: 53px;
+  margin: 0 auto;
+  position: absolute;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  opacity: 0.5;
+}
+
 @media (min-width: 768px) {
 
 }

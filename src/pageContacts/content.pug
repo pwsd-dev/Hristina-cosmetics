@@ -1,0 +1,54 @@
+section.aboutBrandBanner
+        .wrapper
+            .banner-catalog-wrapper
+                .page__img(data-aos="fade-down-right" data-aos-duration="3000" data-aos-delay="500")
+                    img(src="assets/img/flower-white.svg")
+                h1.page__title-h1 Контакты
+section.pageContacts
+    .wrapper
+        include ../blocks/mixin/breadcrumbs-mixin.pug
+        +breadcrumbs-mixin(['Главная', 'Контакты'])
+        .pageContacts-wrapper
+            .left
+                .border
+                .row
+                    .page__img
+                        img(src="assets/img/contacts-icon-1.svg")
+                    p.page__text Юридические адрес: Москва, 117534, Чертановская ул., 61, корп. 2, кв. 46.
+                .row
+                    .page__img
+                        img(src="assets/img/contacts-icon-2.svg")
+                    p.page__text ИНН/КПП: 7726459848/772601001
+                .row
+                    .page__img
+                        img(src="assets/img/contacts-icon-3.svg")
+                    p.page__text ОГРН: 1197746685223
+                .row
+                    .page__img
+                        img(src="assets/img/contacts-icon-4.svg")
+                    p.page__text Фактический адрес: 117587 Москва, Дорожная ул., дом 1, стрн. 36
+                .row
+                    .page__img
+                        img(src="assets/img/contacts-icon-5.svg")
+                    a(href="tel:+7 (499) 964-97-27").page__text +7 (499) 964-97-27
+                .row
+                    .page__img
+                        img(src="assets/img/contacts-icon-6.svg")
+                    p.page__text ru@cocosolis.com
+            .right
+                .form-wrapper
+                    .page__img
+                        img(src="assets/img/icon-flower.svg")
+                    p.page__text_gilroy_sm Если хотите связаться с нами, Вы можете отправить сообщение через контактную форму. Мы ответим в ближайшее время. Спасибо!
+                    form.form(action="")
+                        input(type="text" placeholder="Имя")
+                        input(type="text" placeholder="Телефон")
+                        input(type="text" placeholder="Email")
+                    textarea.textarea(name="", cols="30", rows="10" placeholder="Сообщение...")
+                    .button
+                        .bg-button
+                        a(href="#")
+                            button.page__btn_1 <span> Отправить
+    include ../blocks/instagram
+    include ../blocks/second-subscribe
+

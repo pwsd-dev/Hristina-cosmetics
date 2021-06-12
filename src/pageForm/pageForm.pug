@@ -1,0 +1,13 @@
+extends ../templates/template
+block base
+    base(href='../')
+block title
+    title Оформление заказа
+block append style
+block content
+    include ../blocks/header
+    main.page
+        include content
+    include ../blocks/footer
+block append script
+    script(src='js/tabs.js')

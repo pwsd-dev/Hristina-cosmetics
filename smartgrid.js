@@ -23,12 +23,12 @@ module.exports = {
             width: "1440px",
             fields: "15px"
         },
-        laptopMd: {
-            width: "1367px",
-            fields: "15px"
-        },
         laptopMini: {
             width: "1200px",
+            fields: "15px"
+        },
+        laptopMd: {
+            width: "1367px",
             fields: "15px"
         },
         ipad: {

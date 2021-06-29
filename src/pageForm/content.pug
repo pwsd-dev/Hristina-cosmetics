@@ -1,0 +1,30 @@
+section.pageForm
+    .wrapper
+        //- h2.page__title-h2 Оформление заказа
+        include ../blocks/mixin/breadcrumbs-mixin.pug
+        +breadcrumbs-mixin(['Главная', 'Оформление заказа'])
+        .pageForm-wrapper
+            .left
+                p.page__text_gilroy_sm Ваши контактные данные
+                form(action="").form
+                    input(type="text" placeholder="Фамилия:")
+                    input(type="text" placeholder="Имя:")
+                    input(type="text" placeholder="Мобильный телефон:")
+                    input(type="text" placeholder="Email:")
+                    input(type="text" placeholder="Город:")
+                
+            .right
+                .itog-wrapper
+                    .page__img
+                        img(src="assets/img/icon-flower.svg")
+                    p.page__text_gilroy_sm Итоги заказа
+                    .row-numbers
+                        .page__text_15 Кол-во:
+                        .page__text_15 1 шт
+                    .row-numbers
+                        .page__text_15 Стоимость:
+                        .page__text_15 14 534 ₽
+                    .button
+                        .bg-button
+                        a(href="pageForm/pageForm.html")
+                            button.page__btn_1 <span> Заказ подтверждаю

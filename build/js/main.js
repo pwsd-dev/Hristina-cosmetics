@@ -166,6 +166,46 @@ $(document).ready(function () {
 
 });
 
+const selectSingle = document.querySelector('.__select');
+
+if (selectSingle) {
+    const selectSingle_title = selectSingle.querySelector('.__select__title');
+    const selectSingle_labels = selectSingle.querySelectorAll('.__select__label');
+    selectSingle_title.addEventListener('click', () => {
+        if ('active' === selectSingle.getAttribute('data-state')) {
+            selectSingle.setAttribute('data-state', '');
+        } else {
+            selectSingle.setAttribute('data-state', 'active');
+        }
+    });
+    for (let i = 0; i < selectSingle_labels.length; i++) {
+        selectSingle_labels[i].addEventListener('click', (evt) => {
+            selectSingle_title.textContent = evt.target.textContent;
+            selectSingle.setAttribute('data-state', '');
+        });
+    }
+}
+
+// const selectSingle_2 = document.querySelector('.__select-2');
+
+// if (selectSingle) {
+//     const selectSingle_title_2 = selectSingle.querySelector('.__select__title-2');
+//     const selectSingle_labels_10 = selectSingle.querySelectorAll('.__select__label-10');
+//     selectSingle_title_2.addEventListener('click', () => {
+//         if ('active' === selectSingle_2.getAttribute('data-state')) {
+//             selectSingle_2.setAttribute('data-state', '');
+//         } else {
+//             selectSingle_2.setAttribute('data-state', 'active');
+//         }
+//     });
+//     for (let i = 0; i < selectSingle_labels_10.length; i++) {
+//         selectSingle_labels_10[i].addEventListener('click', (evt) => {
+//             selectSingle_title_2.textContent = evt.target.textContent;
+//             selectSingle_2.setAttribute('data-state', '');
+//         });
+//     }
+// }
+
 
 $(document).ready(function () {
     $('.sliderProductPage').slick({

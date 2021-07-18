@@ -12,7 +12,108 @@ section.pageForm
                     input(type="text" placeholder="Мобильный телефон:")
                     input(type="text" placeholder="Email:")
                     input(type="text" placeholder="Город:")
-                
+                .counter-wrapper
+                    .counter
+                        p.page__text_sm_bold 1
+                    p.page__text_gilroy_sm Товары
+                .items-products-wrapper
+                    .items-products-item
+                        .left-side
+                            .page__img
+                                img(src="assets/img/item-products-item.png")
+                            .column
+                                p.page__text_sm Фармацевтический крем солнцезащитный - 50SPF,
+                                p.page__text_sm 50ml
+                        .right-side
+                            .column
+                                p.page__text_sm_s Цена
+                                p.page__text_sm 1920 ₽
+                            .column
+                                p.page__text_sm_s Количество
+                                p.page__text_sm 2
+                            .column
+                                p.page__text_sm_s Сумма
+                                p.page__text_sm 3840 ₽
+                    .items-products-item
+                        .left-side
+                            .page__img
+                                img(src="assets/img/item-products-item.png")
+                            .column
+                                p.page__text_sm Фармацевтический крем солнцезащитный - 50SPF,
+                                p.page__text_sm 50ml
+                        .right-side
+                            .column
+                                p.page__text_sm_s Цена
+                                p.page__text_sm 1920 ₽
+                            .column
+                                p.page__text_sm_s Количество
+                                p.page__text_sm 2
+                            .column
+                                p.page__text_sm_s Сумма
+                                p.page__text_sm 3840 ₽
+                    .items-products-item
+                        .left-side
+                            .page__img
+                                img(src="assets/img/item-products-item.png")
+                            .column
+                                p.page__text_sm Фармацевтический крем солнцезащитный - 50SPF,
+                                p.page__text_sm 50ml
+                        .right-side
+                            .column
+                                p.page__text_sm_s Цена
+                                p.page__text_sm 1920 ₽
+                            .column
+                                p.page__text_sm_s Количество
+                                p.page__text_sm 2
+                            .column
+                                p.page__text_sm_s Сумма
+                                p.page__text_sm 3840 ₽
+                .counter-wrapper.mb40
+                    .counter
+                        p.page__text_sm_bold 2
+                    p.page__text_gilroy_sm Выберите способ доставки
+                .__select(data-state="")
+                    .__select__title(data-default="1") Способ доставки 1
+                    .__select__content
+                        input#singleSelect0(type="radio" data-state="" checked).__select__input
+                        label(for="singleSelect0").__select__label Название Варианта
+                        input#singleSelect1(type="radio" name="singleSelect" value="1").__select__input
+                        label(for="singleSelect1").__select__label Название Варианта
+                        input#singleSelect1(type="radio" name="singleSelect" value="2").__select__input
+                        label(for="singleSelect1").__select__label Название Варианта
+                        input#singleSelect1(type="radio" name="singleSelect" value="2").__select__input
+                        label(for="singleSelect1").__select__label Название Варианта
+                .counter-wrapper.mb40
+                    .counter
+                        p.page__text_sm_bold 3
+                    p.page__text_gilroy_sm Адрес доставки
+                form.form-adress
+                    .long
+                        input(type="text" placeholder="Улица")
+                    .row-small-wrapper
+                        .small-form
+                            input(type="text" placeholder="Дом")
+                        .small-form
+                            input(type="text" placeholder="Строение")
+                        .small-form
+                            input(type="text" placeholder="Квартира*")
+                    .long
+                        input(type="text" placeholder="Индекс")
+                .counter-wrapper.mb40.mt20
+                    .counter
+                        p.page__text_sm_bold 4
+                    p.page__text_gilroy_sm Выберите способ оплаты
+                .__select-2(data-state="")
+                    .__select__title-2(data-default="1") Не выбрано
+                    .__select__content
+                        input#singleSelect0(type="radio" data-state="" checked).__select__input
+                        label(for="singleSelect0").__select__label-10 Название Варианта
+                        input#singleSelect1(type="radio" name="singleSelect" value="1").__select__input
+                        label(for="singleSelect1").__select__label Название Варианта
+                        input#singleSelect1(type="radio" name="singleSelect" value="2").__select__input
+                        label(for="singleSelect1").__select__label Название Варианта
+                        input#singleSelect1(type="radio" name="singleSelect" value="2").__select__input
+                        label(for="singleSelect1").__select__label Название Варианта
             .right
                 .itog-wrapper
                     .page__img

@@ -6,17 +6,118 @@
 
             justify-content: center;
             display: flex;
+            justify-content: space-evenly;
+
+
+            .right {
+
+                
+                
+            }
         }
     
     }
 
     
     .item-product {
+        width: 800px;
+        // display: flex;
+        // // justify-content: space-evenly;
+        .left {
+            display: flex;
+            align-items: center;
+        }
 
         .price-two {
 
             display: flex;
             flex-direction: row;
+            
+
+            .page__text_sm.green.mb-30 {
+
+                color: #2f3327;
+            }
+
+            .button {
+                position: relative;
+                width: 180px;
+                height: 60px;
+                margin: 0 auto;
+                margin-left: 20px;
+                &:hover {
+                  .bg-button {
+                    transform: translate(5%, 5%);
+                    transition: .5s ease-in-out;
+                  }
+                }
+          
+                .page__btn_1 {
+                  position: relative;
+                  color: #69755d;
+                  &::after {
+                    content: '';
+                    position: absolute;
+                    width: 98%;
+                    height: 1px;
+                    background-color: #9ca896;
+                    left: 0px;
+                    top: -6px;
+                  }
+          
+                  &::before {
+                    content: '';
+                    position: absolute;
+                    width: 98%;
+                    height: 1px;
+                    background-color: #9ca896;
+                    left: -0px;
+                    bottom: 6px;
+                  }
+          
+          
+                  span {
+                    position: relative;
+                    &::before {
+                      content: '';
+                      position: absolute;
+                      height: 50px;
+                      width: 1px;
+                      background-color: #9ca896;
+                      left: -26px;
+                      top: -16px;
+                    }
+                    
+                    &::after {
+                      content: '';
+                      position: absolute;
+                      height: 50px;
+                      width: 1px;
+                      background-color: #9ca896;
+                      right: -21px;
+                      top: -16px;
+                    }
+          
+                  }
+                }
+          
+                .bg-button {
+                 
+                  background-color: #e9ebe7;
+                  width: 200px;
+                  height: 53px;
+                  margin: 0 auto;
+                  position: absolute;
+                  transition: .5s ease;
+                  opacity: .5;
+                  &:hover { 
+                    // transform: translate(5%,5%);
+                    // transition: .5s ease-in-out;
+                  }
+            
+                  
+                }
+            }
         }
     }
 }

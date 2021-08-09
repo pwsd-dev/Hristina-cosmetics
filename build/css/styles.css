@@ -6150,6 +6150,13 @@ a {
   margin-top: 20px;
 }
 
+.pageForm-wrapper .left .textarea {
+  width: 800px;
+  height: 105px;
+  border: 1px solid #9CA896;
+  padding: 10px 0 0 10px;
+}
+
 .pageForm-wrapper .right .itog-wrapper {
   padding: 40px 30px 40px 30px;
   width: 400px;
@@ -6315,6 +6322,21 @@ a {
 
 .pageChange-wrapper .page__text_14 {
   margin-bottom: 30px;
+}
+
+.pageWish .left-side .row-name-price-number {
+  -webkit-box-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: flex;
+}
+
+.pageWish .item-product .price-two {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
 }
 
 @media (min-width: 768px) {
